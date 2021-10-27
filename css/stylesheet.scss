@@ -12,12 +12,17 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+//main content coding
+
 main{
     width: 100%;
     height: 100vh;
     display: grid;
     place-items: center;
 }
+
+//section coding start
+
 section{
     width: 70%;
     height: 600px;
@@ -28,33 +33,33 @@ section{
     box-shadow: 6px 37px 93px -33px rgba(0, 0, 0, 0.25);
     border-radius: 37px;
     padding: 4% 7.8%;
-    #head {
+    #head {                          //logo, signup and login css
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 60px;
-        img{
+        img{                         //logo
             width: 160px;
         }
-        ul{
+        ul{                        //signup and login
             
             list-style: none;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
-            li:nth-child(1){
+            flex-wrap: wrap; 
+            li:nth-child(1){                                                               //signup
                 background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
                 margin-right: 20px;
                 
             }
             li:nth-child(1):hover{
-                background: linear-gradient(90deg, #0072FF 0%,#00C6FF 100%);
+                background: linear-gradient(90deg, #0072FF 0%,#00C6FF 100%);           //signup hover effect
                 margin-right: 20px;
                 
-            }
-            li{
-                padding: 0 25px;
+            }                                        
+            li{                                                                            //login 
+                padding: 0 25px;                                
                 background: linear-gradient(90deg, #FF4E50 0%, #F9D423 100%);
                 display: flex;
                 justify-content: center;
@@ -68,26 +73,28 @@ section{
                     color: whitesmoke;
                 }
             }
-            li:hover{
+            li:hover{                                                                          //login hover effect
                 background: linear-gradient(90deg, #F9D423 0%,#FF4E50 100%);
             }
         }
     }
 
+//tagline style css
+
     #tagline{
         width: 50%;
         float: left;
-        h1{
+        h1{                                     //tagline heading
             font-size: 70px;
             line-height: 80px;
             margin-bottom: 40px;
         }
-        p{
+        p{                                      //why you should choose us
             width: 80%;
             color: #636363;
             margin-bottom: 30px;
         }
-        button{
+        button{                                //signin button (get started)
             padding: 15px 40px;
             border: none;
             background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
@@ -96,24 +103,24 @@ section{
             border-radius: 100px;
             cursor: pointer;
         }
-        button:hover{
+        button:hover{                                                                //signin button hover effect
             background: linear-gradient(90deg, #0072FF 0%,#00C6FF 100%);
         }
     }
 
-    #animation{
+    #animation{                                                           //right side animation
         width: 50%;
         float: left;
-        img{
+        img{                                                              //right side image
             width: 250px;
             z-index: -1;
             transform: translateX(-40px);
             float: left;
         }
-        aside{
+        aside{                                                              //right side div box
             position: relative;
             float: left;
-            #a{
+            #a{                                                                 //box 1
                 position: absolute;
                 padding: 15px 20px;
                 width: 150px;
@@ -135,12 +142,12 @@ section{
                     color: #08A0F7;
                 }
             }
-            @keyframes darpan {
+            @keyframes darpan {                                                                       //comming out effect
                 0%{padding: 15px 20px;}
                 50%{padding: 20px 25px;text-shadow: -4px -12px 4px rgba(0, 0, 0, 0.25);}
                 100%{padding: 15px 20px;}
             }
-            #b{
+            #b{                                                                //box 2
                 position: absolute;
                 padding: 10px 10px;
                 width: 230px;
@@ -164,12 +171,12 @@ section{
                     color: #58AF55;
                 }
             }
-            @keyframes darpan2 {
+            @keyframes darpan2 {                                           //animation 2
                 0%{padding: 11px 11px;}
                 50%{padding: 20px 25px;text-shadow: -4px -12px 4px rgba(0, 0, 0, 0.25);}
                 100%{padding: 11px 11px;}
             }
-            #c{
+            #c{                                                                         //box 2
                 position: absolute;
                 width: 200px;
                 height: 150px;
@@ -184,7 +191,7 @@ section{
                     transform: translate(8px);
                 }
             }
-            #d{
+            #d{                                                                    //box 4
                 position: absolute;
                 width: 160px;
                 height: 150px;
@@ -206,7 +213,7 @@ section{
                     color: #6033FF;
                 }
             }
-            #e{
+            #e{                                                                   //box 5
                 position: absolute;
                 width: 200px;
                 height: 65px;
@@ -225,7 +232,7 @@ section{
                     color: #F1393A;
                 }
             }
-            #f{
+            #f{                                                                       //box 6
                 position: absolute;
                 width: 198px;
                 height: 159px;
@@ -254,12 +261,17 @@ section{
 
 } 
 
-@media only screen and (max-width:1488px) and (min-width:701px){
+//section coding end
+
+
+//responsive coding started
+
+@media only screen and (max-width:1488px) and (min-width:701px){       //laptop and tablets
     #tagline-text{
         display: none;
     }
 }
-@media only screen and (max-width:700px){
+@media only screen and (max-width:700px){                      //tablets and mobile
     #tagline-text{
         display: none;
     }
@@ -277,7 +289,7 @@ section{
         padding: 15px 10px !important;
     }
 }
-@media only screen and (max-width:1370px) and (min-width:766px){
+@media only screen and (max-width:1370px) and (min-width:766px){                      //responsive for animation
     #b,#d,#f{
         display: none;
     }
@@ -292,3 +304,5 @@ section{
         display: none;
     }
 }
+
+//responsive code ended

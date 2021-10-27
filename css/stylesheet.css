@@ -12,13 +12,13 @@ body {
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: grid;
   place-items: center; }
 
 section {
   width: 70%;
-  height: 80%;
+  height: 600px;
   background: rgba(255, 255, 255, 0.39);
   border-top: 2px solid #FFFFFF;
   border-left: 2px solid #FFFFFF;
@@ -31,7 +31,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 70px; }
+    margin-bottom: 60px; }
     section #head img {
       width: 160px; }
     section #head ul {
@@ -60,7 +60,8 @@ section {
       section #head ul li:hover {
         background: linear-gradient(90deg, #F9D423 0%, #FF4E50 100%); }
   section #tagline {
-    width: 50%; }
+    width: 50%;
+    float: left; }
     section #tagline h1 {
       font-size: 70px;
       line-height: 80px;
@@ -79,12 +80,142 @@ section {
       cursor: pointer; }
     section #tagline button:hover {
       background: linear-gradient(90deg, #0072FF 0%, #00C6FF 100%); }
+  section #animation {
+    width: 50%;
+    float: left; }
+    section #animation img {
+      width: 250px;
+      z-index: -1;
+      transform: translateX(-40px);
+      float: left; }
+    section #animation aside {
+      position: relative;
+      float: left; }
+      section #animation aside #a {
+        position: absolute;
+        padding: 15px 20px;
+        width: 150px;
+        height: 100px;
+        transform: translateX(-60px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 5px 4px 91px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        animation: darpan 1s infinite; }
+        section #animation aside #a img {
+          width: 20px;
+          transform: translateX(0px); }
+        section #animation aside #a h4 {
+          transform: translateX(5px); }
+        section #animation aside #a p {
+          transform: translate(60px, -10px);
+          color: #08A0F7; }
+@keyframes darpan {
+  0% {
+    padding: 15px 20px; }
+  50% {
+    padding: 20px 25px;
+    text-shadow: -4px -12px 4px rgba(0, 0, 0, 0.25); }
+  100% {
+    padding: 15px 20px; } }
+      section #animation aside #b {
+        position: absolute;
+        padding: 10px 10px;
+        width: 230px;
+        height: 65px;
+        background: #FFFFFF;
+        transform: translate(120px, 25px);
+        box-shadow: 11px 4px 38px rgba(0, 0, 0, 0.25);
+        border-radius: 15px; }
+        section #animation aside #b img {
+          width: 40px;
+          transform: translateX(0px); }
+        section #animation aside #b h4 {
+          transform: translate(5px, 8px); }
+        section #animation aside #b h5 {
+          transform: translate(10px, 3px); }
+        section #animation aside #b p {
+          transform: translate(90px, -20px);
+          color: #58AF55; }
+@keyframes darpan2 {
+  0% {
+    padding: 11px 11px; }
+  50% {
+    padding: 20px 25px;
+    text-shadow: -4px -12px 4px rgba(0, 0, 0, 0.25); }
+  100% {
+    padding: 11px 11px; } }
+      section #animation aside #c {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        padding: 15px 20px;
+        background: #FFFFFF;
+        transform: translate(-95px, 120px);
+        box-shadow: 10px 4px 58px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        z-index: -2; }
+        section #animation aside #c img {
+          width: 138px;
+          transform: translate(8px); }
+      section #animation aside #d {
+        position: absolute;
+        width: 160px;
+        height: 150px;
+        padding: 10px 10px;
+        transform: translate(120px, 110px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 7px 4px 46px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        animation: darpan2 1s infinite; }
+        section #animation aside #d img {
+          width: 40px;
+          transform: translateX(0px); }
+        section #animation aside #d h4 {
+          transform: translate(5px, 8px); }
+        section #animation aside #d p {
+          transform: translate(15px);
+          color: #6033FF; }
+      section #animation aside #e {
+        position: absolute;
+        width: 200px;
+        height: 65px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-80px, 300px);
+        box-shadow: 8px 4px 43px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        animation: darpan 1s infinite; }
+        section #animation aside #e img {
+          width: 40px;
+          transform: translateX(0px); }
+        section #animation aside #e h4 {
+          transform: translate(5px, 8px);
+          color: #F1393A; }
+      section #animation aside #f {
+        position: absolute;
+        width: 198px;
+        height: 159px;
+        padding: 10px 20px;
+        background: #FFFFFF;
+        transform: translate(130px, 280px);
+        box-shadow: 11px 4px 80px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        animation: darpan3 1s infinite; }
+        section #animation aside #f img {
+          width: 40px;
+          transform: translateX(0px); }
+        section #animation aside #f h4 {
+          transform: translate(5px, 8px);
+          color: #F9D423; }
+        section #animation aside #f p {
+          transform: translate(45px, 0px);
+          color: #b49910; }
 
 @media only screen and (max-width: 1488px) and (min-width: 701px) {
-  p {
+  #tagline-text {
     display: none; } }
 @media only screen and (max-width: 700px) {
-  p {
+  #tagline-text {
     display: none; }
 
   #tagline {
@@ -98,5 +229,14 @@ section {
 
   button {
     padding: 15px 10px !important; } }
+@media only screen and (max-width: 1370px) and (min-width: 766px) {
+  #b, #d, #f {
+    display: none; } }
+@media only screen and (max-width: 765px) {
+  #b, #d, #f, #a, #c, #e {
+    display: none; } }
+@media only screen and (max-width: 428px) {
+  #animation img {
+    display: none; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

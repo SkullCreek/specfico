@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #D9DDFD;
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  place-items: center; }
+
+section {
+  width: 80%;
+  height: 80%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: 1px -2px 139px rgba(0, 0, 0, 0.25); }
+  section #left {
+    width: 50%;
+    height: 100%;
+    min-width: 280px;
+    border: 1px solid red;
+    padding: 4% 8%; }
+    section #left img {
+      width: 40px; }
+    section #left h1 {
+      font-size: 30px;
+      margin-top: px; }
+    section #left p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      color: #A19FAB; }
+    section #left #sign-google {
+      border: 1px solid #C4C4C4;
+      text-align: center;
+      border-radius: 50px;
+      padding-bottom: 2px;
+      margin-top: 5px; }
+      section #left #sign-google img {
+        width: 20px;
+        transform: translate(-5px, 2px); }
+      section #left #sign-google a {
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold; }
+    section #left fieldset {
+      text-align: center;
+      border-left: none;
+      border-right: none;
+      border-bottom: none; }
+      section #left fieldset a {
+        text-decoration: none;
+        color: #A19FAB;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600; }
+    section #left form ul {
+      width: 100%;
+      list-style: none;
+      margin-top: 20px; }
+      section #left form ul li {
+        width: 100%;
+        margin-bottom: 20px; }
+        section #left form ul li label {
+          font-size: 12px;
+          font-weight: bold; }
+          section #left form ul li label span {
+            color: #FF3061; }
+        section #left form ul li input {
+          width: 100%;
+          background-color: transparent;
+          padding: 8px 30px;
+          font-weight: 600;
+          font-size: 12px;
+          color: #A19FAB;
+          border: 1px solid #C4C4C4;
+          border-radius: 50px; }
+  section #right {
+    width: 50%;
+    height: 100%;
+    min-width: 280px;
+    border: 1px solid red;
+    padding: 4% 8%; }
+    section #right #logo {
+      width: 40px;
+      float: right; }
+    section #right h1 {
+      clear: right;
+      font-size: 30px; }
+    section #right p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      color: #A19FAB; }
+    section #right #sign-google {
+      border: 1px solid #C4C4C4;
+      text-align: center;
+      border-radius: 50px;
+      padding-bottom: 2px;
+      margin-top: 5px; }
+      section #right #sign-google img {
+        width: 20px;
+        transform: translate(-5px, 2px); }
+      section #right #sign-google a {
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold; }
+    section #right fieldset {
+      text-align: center;
+      border-left: none;
+      border-right: none;
+      border-bottom: none; }
+      section #right fieldset a {
+        text-decoration: none;
+        color: #A19FAB;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600; }
+
+/*# sourceMappingURL=sign.css.map */

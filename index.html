@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <title>specfico</title>
+    <title>Specfico</title>
+    <noscript>
+        <h1>Please Enable javascript</h1>
+        <style>
+            h1{
+                text-align: center;
+                color: yellow;
+            }
+            #webpage{
+                display: none;
+            }
+        </style>
+    </noscript>
 </head>
 <body>
-    <main>
+    <main id="webpage">
 
         <!--Hero section code start-->
 
@@ -23,8 +36,8 @@
             <div id="head">
                 <div><img src="images/logo.png" alt=""></div>
                 <ul>
-                    <li><a href="#">Signup</a></li>
-                    <li id="li2"><a href="#">Login</a></li>
+                    <li><a href="SignUp and Login/Signlogin.html">Signup</a></li>
+                    <li id="li2"><a href="SignUp and Login/Signlogin.html">Login</a></li>
                 </ul>
             </div>
 
@@ -34,7 +47,7 @@
             <div id="tagline">
                 <h1>Simple and Powerful</h1>
                 <p id="tagline-text">Store your playlist, business, contacts and many more and keep a track of them with specfico.</p>
-                <button>Get Started</button>
+                <button onclick = "getStarted()">Get Started</button>
             </div>
 
             <!--Tagline code end-->
@@ -86,6 +99,22 @@
 
         <!--Hero section code end-->
 
+        <!--Loading Effect start-->
+        <div class="loader-page">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!--Loading Effect end-->
+
     </main>
+
+
+    <script src="js/compatible.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

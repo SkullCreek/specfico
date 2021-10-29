@@ -306,7 +306,7 @@ input:focus {
 /*loading animation start*/
 @media only screen and (max-width: 650px) {
   body {
-    width: 100vw;
+    width: 50%;
     display: block; }
 
   section {
@@ -326,6 +326,8 @@ input:focus {
       transform: translateY(560px);
       animation: mobile 3s infinite; }
       section #bg-img h2:nth-child(2) {
+        display: none; }
+      section #bg-img #first {
         display: none; }
   @keyframes mobile {
     0% {

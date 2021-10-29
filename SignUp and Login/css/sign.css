@@ -306,21 +306,33 @@ input:focus {
 /*loading animation start*/
 @media only screen and (max-width: 650px) {
   body {
-    width: 100vh; }
+    width: 100vw;
+    display: block; }
 
   section {
-    width: 100%;
-    height: auto; }
+    width: 100vw; }
     section #left {
       width: 100%; }
     section #right {
+      width: 100%; }
+    section .loader-page {
+      height: 100%;
       width: 100%; }
     section #bg-img {
       animation: none;
       width: 100%;
       height: 50%;
-      bottom: 0;
       left: 0;
-      transform: translateY(550px); } }
+      transform: translateY(560px);
+      animation: mobile 3s infinite; }
+      section #bg-img h2:nth-child(2) {
+        display: none; }
+  @keyframes mobile {
+    0% {
+      transform: translateY(560px); }
+    50% {
+      transform: translateY(0px); }
+    0% {
+      transform: translateY(550px); } } }
 
 /*# sourceMappingURL=sign.css.map */

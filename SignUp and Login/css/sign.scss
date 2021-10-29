@@ -406,6 +406,19 @@ input:focus{
             #first{
                 display: none;
             }
+            #bg-design{
+                position: relative;
+            }
+            #bg-design::after{
+                content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                text-align: center;
+                position: absolute;
+                width: 200px;
+                transform: translate(-100px,80px);
+            }
         }
         @keyframes mobile {
             0%{transform: translateY(560px);}

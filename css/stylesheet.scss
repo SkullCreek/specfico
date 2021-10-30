@@ -7,7 +7,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: url("../images/especifico-bg.png") no-repeat center center; 
+    background: url("../images/especifico-bg.png") center center; 
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
@@ -94,16 +94,15 @@ section{
             color: #636363;
             margin-bottom: 30px;
         }
-        button{                                //signin button (get started)
+        a{                                //signin button (get started)
             padding: 15px 40px;
-            border: none;
             background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
             font-weight: 500;
             color: whitesmoke;
             border-radius: 100px;
             cursor: pointer;
         }
-        button:hover{                                                                //signin button hover effect
+        a:hover{                                                                //signin button hover effect
             background: linear-gradient(90deg, #0072FF 0%,#00C6FF 100%);
         }
     }
@@ -347,7 +346,7 @@ section{
     li:nth-child(1){
         display: none !important;
     }
-    button{
+    a{
         padding: 15px 10px !important;
     }
 }
@@ -365,6 +364,14 @@ section{
     #animation img{
         display: none;
     }
+    #tagline{
+        width: 100%!important;
+
+    a{
+        width: 100%;
+        padding: 10px!important;
+   }
+}
 }
 
 //responsive code ended

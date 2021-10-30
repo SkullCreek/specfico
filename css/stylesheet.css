@@ -6,7 +6,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: url("../images/especifico-bg.png") no-repeat center center;
+  background: url("../images/especifico-bg.png") center center;
   background-size: cover;
   font-family: 'Poppins', sans-serif; }
 
@@ -70,15 +70,14 @@ section {
       width: 80%;
       color: #636363;
       margin-bottom: 30px; }
-    section #tagline button {
+    section #tagline a {
       padding: 15px 40px;
-      border: none;
       background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%);
       font-weight: 500;
       color: whitesmoke;
       border-radius: 100px;
       cursor: pointer; }
-    section #tagline button:hover {
+    section #tagline a:hover {
       background: linear-gradient(90deg, #0072FF 0%, #00C6FF 100%); }
   section #animation {
     width: 50%;
@@ -281,7 +280,7 @@ section {
   li:nth-child(1) {
     display: none !important; }
 
-  button {
+  a {
     padding: 15px 10px !important; } }
 @media only screen and (max-width: 1370px) and (min-width: 766px) {
   #b, #d, #f {
@@ -291,6 +290,12 @@ section {
     display: none; } }
 @media only screen and (max-width: 428px) {
   #animation img {
-    display: none; } }
+    display: none; }
+
+  #tagline {
+    width: 100% !important; }
+    #tagline a {
+      width: 100%;
+      padding: 10px !important; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

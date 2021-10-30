@@ -262,7 +262,6 @@ section{                                                            //section st
         background-size: cover;
         display: grid;
         justify-content: center;
-        animation: slide 3s infinite;
 
         #bg-design{                                                             //slider design
             width: 250px;
@@ -303,7 +302,10 @@ section{                                                            //section st
 
 @keyframes slide{                                                    //animation for sliding
     0%{top:0;right: 0;}
-    50%{top: 0;right: 50%;}
+    100%{top: 0;right: 50%;}
+}
+@keyframes slide2{                                                    //animation for sliding
+    0%{top: 0;right: 50%;}
     100%{top:0;right: 0;}
 }
 
@@ -399,7 +401,6 @@ input:focus{                                                        //adding out
             height: 50%;
             left: 0;
             transform: translateY(560px);
-            animation: mobile 3s infinite;
             h2:nth-child(2){
                 display: none;
             }
@@ -422,8 +423,11 @@ input:focus{                                                        //adding out
         }
         @keyframes mobile {
             0%{transform: translateY(560px);}
-            50%{transform: translateY(0px);}
-            0%{transform: translateY(550px);}
+            100%{transform: translateY(0px);}
+        }
+        @keyframes mobile2 {
+            0%{transform: translateY(0px);}
+            100%{transform: translateY(560px);}
         }
     }
 

@@ -13,7 +13,7 @@ body{
     place-items: center;
 }
 
-section{
+section{                                                            //section start
     width: 80%;
     min-width: auto;
     background-color: whitesmoke;
@@ -23,26 +23,26 @@ section{
     box-shadow: 1px -2px 139px rgba(0, 0, 0, 0.25);
 
     
-    #left{
+    #left{                                                             //left div (sign up form) css
         width: 50%;
         height: 100%;
         min-width: 260px;
         padding: 3% 8%;
-        img{
+        img{                                                           //specfico icon
             width: 40px;
         }
-        h1{
+        h1{                                                           //heading
             font-size: 25px;
             padding-top: 25px;
         }
-        p{
+        p{                                                           //description
             font-style: normal;
             font-weight: 600;
             font-size: 12px;
             color: #A19FAB;
             padding-bottom: 25px;
         }
-        #sign-google{
+        #sign-google{                                             //google signup
             padding: 4px 0px 5px;
             border: 1px solid #C4C4C4;
             display: flex;
@@ -51,11 +51,11 @@ section{
             border-radius: 50px;
             margin-bottom: 20px;
 
-            img{
+            img{                                                //google icon
                 width: 20px;
                 transform: translate(-5px,2px);
             }
-            a{
+            a{                                                    //text
                 font-size: 12px;
                 text-decoration: none;
                 color: black;
@@ -63,7 +63,7 @@ section{
             }
         }
 
-        fieldset{
+        fieldset{                                             //sign up with email
             text-align: center;
             border-left: none;
             border-right: none;
@@ -76,7 +76,7 @@ section{
                 font-weight: 600;
             }
         }
-        form{
+        form{                                                  //signup form
             ul{
                 width: 100%;
                 list-style: none;
@@ -91,7 +91,7 @@ section{
                             color: #FF3061;
                         }
                     }
-                    input{
+                    input{                                      //input fields
                         width: 100%;
                         background-color: transparent;
                         padding: 8px 30px;
@@ -102,7 +102,7 @@ section{
                         border-radius: 50px;
                     }
                 }
-                #TnC{
+                #TnC{                                        //Terms and condition
                     width: 100%;
                     text-align: left;
                     display: flex;
@@ -115,7 +115,7 @@ section{
                         color: black !important;
                     }
                 }
-                input[type=submit]{
+                input[type=submit]{                                    //sign up button coding
                     background-color: #FF3061;
                     color: white;
                     font-size: 14px;
@@ -131,34 +131,34 @@ section{
         
         
     }
-    h6{
+    h6{                                                    //if already signedup
         a{
             color: #FF3061;
             text-decoration: none;
         }
-    }
-    #right{
+    }                                                       //signup coding end
+    #right{                                                  //login coding starts                            
         width: 50%;
         height: 100%;
         min-width: 260px;
         padding: 3% 8%;
-        #logo{
+        #logo{                                      //specfico logo
             width: 40px;
             float: right;
         }
-        h1{
+        h1{                                              //login heading
             clear: right;
             font-size: 25px;
             padding-top: 25px;
         }
-        p{
+        p{                                                //login description
             font-style: normal;
             font-weight: 600;
             font-size: 12px;
             color: #A19FAB;
             padding-bottom: 25px;
         }
-        #sign-google{
+        #sign-google{                                   //login with google
             padding: 4px 0px 5px;
             border: 1px solid #C4C4C4;
             display: flex;
@@ -166,18 +166,18 @@ section{
             align-items: center;
             border-radius: 50px;
             margin-bottom: 20px;
-            img{
+            img{                                         //google icon
                 width: 20px;
                 transform: translate(-5px,2px);
             }
-            a{
+            a{                                          //login with google
                 font-size: 12px;
                 text-decoration: none;
                 color: black;
                 font-weight: bold;
             }
         }
-        fieldset{
+        fieldset{                                       //login with email
             text-align: center;
             border-left: none;
             border-right: none;
@@ -190,7 +190,7 @@ section{
                 font-weight: 600;
             }
         }
-        form{
+        form{                                                     //login form
             ul{
                 width: 100%;
                 list-style: none;
@@ -205,7 +205,7 @@ section{
                             color: #FF3061;
                         }
                     }
-                    input{
+                    input{                                                       //email and password
                         width: 100%;
                         background-color: transparent;
                         padding: 8px 30px;
@@ -216,7 +216,7 @@ section{
                         border-radius: 50px;
                     }
                 }
-                #TnC{
+                #TnC{                                                          //terms and condition
                     width: 100%;
                     text-align: left;
                     display: flex;
@@ -229,7 +229,7 @@ section{
                         color: black !important;
                     }
                 }
-                input[type=submit]{
+                input[type=submit]{                                           //login submit button
                     background-color: #FF3061;
                     color: white;
                     font-size: 14px;
@@ -238,7 +238,7 @@ section{
                     border: none;
                     margin-top: 30px;
                 }
-                input[type=submit]:hover{
+                input[type=submit]:hover{                                    //submit button hover
                     background-color: #d42a52;
                 }
                 a{
@@ -251,7 +251,7 @@ section{
         }
 
     }
-    #bg-img{
+    #bg-img{                                                                   //slider box
         position: absolute;
         top: 0;
         right: 0;
@@ -262,9 +262,9 @@ section{
         background-size: cover;
         display: grid;
         justify-content: center;
-        animation: slide 1s infinite;
+        animation: slide 3s infinite;
 
-        #bg-design{
+        #bg-design{                                                             //slider design
             width: 250px;
             height: 200px;
             transform: translateY(120px);
@@ -281,33 +281,33 @@ section{
                     color: #FF3061;
                 }
             }
-            h2:nth-child(2){
+            h2:nth-child(2){                                                       //slider img
                 transform: translate(200px,100px);
             }
-            #first{
+            #first{                                                                 //slider user 1
                 transform: translate(120px,-100px);
             }
             #second{
-                transform: translate(-110px,-50px);
+                transform: translate(-110px,-50px);                                    //slider user 2
             }
         }
         #bg-design::after{
             content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
             color: white;
-            font-weight: bold;
+            font-weight: bold;                                                  //slider tagline
             font-size: 20px;
             text-align: center;
         }
     }
 }
 
-@keyframes slide{
+@keyframes slide{                                                    //animation for sliding
     0%{top:0;right: 0;}
     50%{top: 0;right: 50%;}
     100%{top:0;right: 0;}
 }
 
-input:focus{
+input:focus{                                                        //adding outline color
     outline: 2px solid #FF3061;
 }
 
@@ -376,7 +376,7 @@ input:focus{
 /*loading animation start*/
 
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:650px){                                  //sign up and login form for mobile
     body{
         width: 50%;
         display: block;

@@ -207,7 +207,7 @@ section {
     background-size: cover;
     display: grid;
     justify-content: center;
-    animation: slide 1s infinite; }
+    animation: slide 3s infinite; }
     section #bg-img #bg-design {
       width: 250px;
       height: 200px;

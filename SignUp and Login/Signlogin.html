@@ -23,23 +23,24 @@
             <p>see your growth with specfico</p>
             <div id="sign-google"><img src="images/google.svg" alt=""><a href="#">Sign up with google</a></div>
             <fieldset><legend><a href="#">or signup with Email</a></legend></fieldset>
-            <form action="">
+            <p id="warning" style="color: red;"></p>
+            <form action="" autocomplete="off" onsubmit="return signup()">
                 <ul>
                     <li>
                         <label for="">Name<span>*</span></label><br>
-                        <input type="text" placeholder="Name">
+                        <input type="text" id="signup-name" placeholder="Name" required>
                     </li>
                     <li>
                         <label for="">Email<span>*</span></label><br>
-                        <input type="email" placeholder="Email">
+                        <input type="email" onchange="signup_check()" id="signup-email" placeholder="Email" required>
                     </li>
                     <li>
                         <label for="">Password<span>*</span></label><br>
-                        <input type="password" placeholder="Password">
+                        <input type="password" id="signup-password" placeholder="Password" required>
                     </li>
                     <li id="TnC">
-                        <input type="checkbox" class="checkbox">
-                        <label for="">I agree to<span> Terms and Conditions</span></label><br>
+                        <input type="checkbox" class="checkbox" required>
+                        <label for="">I agree to<span> Terms and Conditions</span><span id="signup-success" style="color: rgb(0, 255, 0);"></span></label><br>
                     </li>
                     <li>
                         <input type="submit" id="sign-up-btn" value="Sign Up">
@@ -59,22 +60,23 @@
             <p>see your growth with specfico</p>
             <div id="sign-google"><img src="images/google.svg" alt=""><a href="#">Sign in with google</a></div>
             <fieldset><legend><a href="#">or signin with Email</a></legend></fieldset>
-            <form action="">
+            <p id="warning2" style="color: red;"></p>
+            <form action="" id="login-redirect" onsubmit="return login()" autocomplete="off">
                 <ul>
                     <li>
                         <label for="">Email<span>*</span></label><br>
-                        <input type="email" placeholder="Email">
+                        <input id="login-email" type="email" placeholder="Email" required>
                     </li>
                     <li>
                         <label for="">Password<span>*</span></label><br>
-                        <input type="password" placeholder="Password">
+                        <input id="login-password" type="password" placeholder="Password" required>
                     </li>
                     <li id="TnC">
-                        <input type="checkbox" class="checkbox">
-                        <label for="">Remember me</label><a href=""> Forget Password ?</a><br>
+                        <input type="checkbox" class="checkbox" required>
+                        <label for="">Remember me</label><a href="#"> Forget Password ?</a><br>
                     </li>
                     <li>
-                        <input type="submit" value="Login">
+                        <input type="submit" value="Login" >
                     </li>
                 </ul>
             </form>
@@ -98,7 +100,7 @@
     </section>
 
     <!--Loading Effect start-->
-    <div class="loader-page">
+    <!-- <div class="loader-page">
         <ul>
             <li></li>
             <li></li>
@@ -106,7 +108,7 @@
             <li></li>
             <li></li>
         </ul>
-    </div>
+    </div> -->
     <!--Loading Effect end-->
     <script src="js/sign.js"></script>
 </body>

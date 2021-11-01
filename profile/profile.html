@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style_profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Profile</title>
 </head>
 <body>
-    hi
+
+
+    <!--Welcome message coding start-->
+    <section id="welcome">
+        <div id="card">
+            <img src="images/moonlight.svg" alt="">
+            <h1>welcome</h1>
+            <h3 id="wlc-result"></h3>
+            <div id="bottom">
+                <div id="upload" onchange="upload_pic()">
+                    <p id="text">UPLOAD</p>
+                    <input type="file" accept="image/*" id="profile-img">
+                </div>
+                <div>
+                    <p id="wlc-msg">We are delighted to have you among us.</p>
+                </div>
+                <div>
+                <button id="next-btn">NEXT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Welcome message coding start-->
+    <script src="js/script_profile.js"></script>
 </body>
 </html>

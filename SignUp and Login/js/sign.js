@@ -72,9 +72,9 @@ login_check();
 //signup validation
 
 function signup(){
-    var name = document.getElementById("signup-name").value;
-    var email = document.getElementById("signup-email").value;
-    var password = document.getElementById("signup-password").value;
+    var name = btoa(document.getElementById("signup-name").value);
+    var email = btoa(document.getElementById("signup-email").value);
+    var password = btoa(document.getElementById("signup-password").value);
     if(name!="" && email!="" && password!="")
     {
         var user_input = {name:name,email:email,password:password};
@@ -94,7 +94,7 @@ function signup(){
 
 function signup_check(){
     var pwd = document.getElementById("signup-password");
-    var email = document.getElementById("signup-email").value;
+    var email = btoa(document.getElementById("signup-email").value);
     var eml = document.getElementById("signup-email");
     var sub = document.getElementById("sign-up-btn");
     var warning = document.getElementById("warning");
@@ -117,8 +117,8 @@ function signup_check(){
 //login validation
 
 function login(){
-    var username = document.getElementById("login-email").value;
-    var password = document.getElementById("login-password").value;
+    var username = btoa(document.getElementById("login-email").value);
+    var password = btoa(document.getElementById("login-password").value);
     var login_input = {username:username,password:password};
     var login_data = JSON.stringify(login_input);
     sessionStorage.setItem(username,login_data);

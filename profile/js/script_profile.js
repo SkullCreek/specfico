@@ -23,7 +23,7 @@ function upload_pic(){
 }
 
 function profile_name(){
-    var result = document.getElementById("result");
+    var result = document.getElementById("wlc-result");
     var user_mail = sessionStorage.getItem('user_mail');
     var user_details = localStorage.getItem(user_mail);
     var user_data=JSON.parse(user_details);

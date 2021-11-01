@@ -49,6 +49,11 @@ body{
     color: #F51866;
 }
 
+#wlc-result{
+    font-family: 'poppins',sans-serif;
+    text-transform: capitalize;
+}
+
 #bottom{
     width: 100%;
     display: flex;
@@ -130,4 +135,21 @@ input[type='file']{
     width: 10%;
     height: 28%;
     transform: rotate(360deg);
+}
+
+@media screen and (max-width:850px) and (min-width:601px){
+    #wlc-msg{
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    #card{
+        width: 95%;
+    }
+    #wlc-msg{
+        display: none;
+    }
+    #bottom{
+        padding: 20px;
+    }
 }

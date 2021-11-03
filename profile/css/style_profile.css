@@ -28,12 +28,12 @@ main {
       border-radius: 15px;
       padding: 15px 16px;
       display: flex; }
-      main #left #profile-info #profile-img {
+      main #left #profile-info #profile-img-section {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         background-color: black; }
-        main #left #profile-info #profile-img #status {
+        main #left #profile-info #profile-img-section #status {
           width: 10px;
           height: 10px;
           border-radius: 50%;
@@ -79,8 +79,8 @@ main {
         color: black; }
   main #right {
     width: 100%;
-    min-height: 10px;
-    padding: 35px; }
+    padding: 35px 35px 0 35px;
+    overflow: hidden; }
     main #right ul {
       display: flex;
       list-style: none;
@@ -99,11 +99,111 @@ main {
       font-style: normal;
       font-weight: 600;
       font-size: 25px; }
+    main #right #about-sec {
+      width: 80%;
+      height: 543px;
+      background: #F5F5F5;
+      border-radius: 40px 40px 0 0;
+      padding: 35px 39px;
+      float: left;
+      word-wrap: break-word;
+      overflow-y: scroll; }
+      main #right #about-sec img {
+        width: 100%;
+        height: 40vh;
+        margin-bottom: 18px; }
+      main #right #about-sec #features-about {
+        width: 100%;
+        height: 543px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        main #right #about-sec #features-about #features {
+          width: 540px;
+          background-color: white;
+          border-radius: 20px;
+          padding: 20px 32px; }
+          main #right #about-sec #features-about #features img {
+            width: 50px;
+            height: 50px;
+            float: left; }
+          main #right #about-sec #features-about #features #features-intro-me {
+            margin-top: 10px;
+            padding-left: 22px;
+            width: 85%;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            float: left; }
+          main #right #about-sec #features-about #features ul {
+            clear: left;
+            display: block;
+            line-height: 50px;
+            padding: 10px;
+            margin-bottom: 30px; }
+            main #right #about-sec #features-about #features ul li {
+              display: flex;
+              align-items: center; }
+              main #right #about-sec #features-about #features ul li p {
+                padding-left: 30px;
+                margin-top: 5px; }
+          main #right #about-sec #features-about #features p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            color: #B2B7C6; }
+        main #right #about-sec #features-about #about-me {
+          width: 260px;
+          background-color: white;
+          border-radius: 20px;
+          padding: 20px 17px; }
+          main #right #about-sec #features-about #about-me h4 {
+            padding-left: 10px;
+            padding-bottom: 20px; }
+          main #right #about-sec #features-about #about-me p {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            color: #B2B7C6;
+            padding: 10px; }
+          main #right #about-sec #features-about #about-me h5 {
+            font-size: 15px;
+            padding-top: 20px; }
+    main #right #right-sidebar-home {
+      width: 20%;
+      float: left;
+      padding-left: 20px;
+      padding-bottom: 30px; }
+      main #right #right-sidebar-home div {
+        width: 100%;
+        padding: 21px;
+        background-color: #FAFAFC;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px; }
+        main #right #right-sidebar-home div img {
+          cursor: pointer; }
+    main #right #about-sec::-webkit-scrollbar {
+      width: 6px; }
+    main #right #about-sec::-webkit-scrollbar-track {
+      background-color: white;
+      width: 6px; }
+    main #right #about-sec::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, rgba(233, 220, 255, 0) 0%, #7F30FF 100%);
+      border-radius: 10px;
+      width: 6px; }
 
 /*welcome card*/
 #welcome {
   width: 50%;
   height: 100vh;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: grid;
   place-items: center;
   background: url("../images/welcomeBg.svg") repeat-y;

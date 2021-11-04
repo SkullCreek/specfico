@@ -12,7 +12,7 @@ function url_secure()
     }
 }
 url_secure();
-
+//url copy paste security
 
 //upload pic
 function upload_pic(){
@@ -48,7 +48,7 @@ function profile_name(){
     result.innerHTML = atob(fullname);
 }
 profile_name();
-
+//upload pic
 
 //stop showing upload
 
@@ -62,3 +62,34 @@ function stop_upload(){
 
 stop_upload();
 
+//stop showing upload
+
+
+
+//menubar coding
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      var menu = document.getElementById("menu-bar");
+        menu.onclick=function()
+        {
+            var menu_option=document.getElementById("left");
+            menu_option.style.animation="darpan_slide 1s";
+            menu_option.style.animationFillMode="forwards";
+            var menu_exit = document.getElementById("close");
+            menu_exit.onclick=function(){
+            var menu_option=document.getElementById("left");
+            menu_option.style.animation="darpan_slide_exit 0.5s";
+            menu_option.style.animationFillMode="forwards";
+        }
+
+        }
+        
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addEventListener(myFunction) // Attach listener function on state changes
+  
+//menubar coding

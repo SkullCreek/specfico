@@ -16,6 +16,7 @@
     <main id="profile-page">
         <!--Home Page Coding Start-->
         <aside id="left">
+            <div id="close" style="display: none;">x</div>
             <img src="images/logo.png" id="logo-profile" alt="">
             <div id="profile-info">
                 <div id="profile-img-section"><div id="status"></div></div>
@@ -36,8 +37,13 @@
         </aside>
         <aside id="right">
             <ul>
-                <li><span class="material-icons" style="width:20px;height:20px;transform: translate(50px,5px);">search</span><input type="search" placeholder="Search" ></li>
-                <li><span class="material-icons" style="width:20px;height:20px; color: #C4C4C4;">notifications</span></li>
+                <div id="menu-bar" style="display: none;">
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                </div>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px;transform: translate(50px,5px);">search</span><input type="search" placeholder="Search" ></li>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px; color: #C4C4C4;">notifications</span></li>
                 <li><img src="images/emote.png" alt=""></li>
             </ul>
             <h1>Home</h1>

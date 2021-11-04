@@ -13,7 +13,7 @@ main{
     width: 100%;
     display: flex;
     #left{
-        width: 245px;
+        width: 300px;
         min-height: 100vh;
         border-right: 2px solid #F5F5F5;
         padding:15px;
@@ -26,11 +26,11 @@ main{
         }
         #profile-info{
             width: 100%;
-            height: 70px;
             background: #FAFAFC;
             border-radius: 15px;
             padding: 15px 16px;
             display: flex;
+            overflow: hidden;
             #profile-img-section{
                 width: 40px;
                 height: 40px;
@@ -158,7 +158,7 @@ main{
                         width: 85%;
                         font-style: normal;
                         font-weight: normal;
-                        font-size: 12px;
+                        font-size: 15px;
                         float: left;
                     }
                     ul{

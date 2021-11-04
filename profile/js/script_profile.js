@@ -34,6 +34,7 @@ function upload_pic(){
             localStorage.setItem(sessionStorage.getItem('user_mail')+"image_url",image);
             var hide_uploadbox = document.getElementById("welcome");
             hide_uploadbox.style.display = "none";
+            window.location=location.href;
         }
 
     }
@@ -88,8 +89,39 @@ function myFunction(x) {
     }
   }
   
-  var x = window.matchMedia("(max-width: 700px)")
-  myFunction(x) // Call listener function at run time
-  x.addEventListener(myFunction) // Attach listener function on state changes
+  var x = window.matchMedia("(max-width: 751px)");
+  myFunction(x) ;
   
 //menubar coding
+
+//profile photo 
+
+function showing_pic_name(){
+    var name  = document.getElementById("user-name");
+    var user_mail = sessionStorage.getItem("user_mail");
+    var emailid = document.getElementById("email-id");
+    var user_details = localStorage.getItem(user_mail);
+    var user_data= JSON.parse(user_details);
+    var fullname = user_data.name;
+    name.innerHTML=atob(fullname);
+    emailid.innerHTML=atob(user_mail);
+
+    var pic_box = document.getElementById("profile-img-section");
+    var image_name = localStorage.getItem(user_mail+"image_url");
+    pic_box.style.background="url("+image_name+")";
+    pic_box.style.backgroundRepeat="no-repeat";
+    pic_box.style.backgroundSize="contain";
+}
+
+showing_pic_name();
+//profile photo
+
+//logout coding
+
+function logout(){
+    sessionStorage.clear();
+    setTimeout(function(){
+        window.location="../../index.html";
+    },1000);
+}
+//logout coding

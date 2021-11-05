@@ -59,12 +59,12 @@
                 </aside>
                 <aside id="about-sec-right">
                     <h3>Add New +</h3>
-                    <section>
-                        <input type="text" placeholder="Name">
-                        <input type="text" pattern="\d*" placeholder="Mobile-1" maxlength="10">
-                        <input type="text" pattern="\d*" placeholder="Mobile-2" maxlength="10">
-                        <img src="images/addnew.svg" alt="">
-                    </section>
+                    <form>
+                        <input id="fullname" type="text" placeholder="Name">
+                        <input id="pnum" type="text" pattern="\d*" placeholder="Mobile-1" maxlength="10">
+                        <input id="snum" type="text" pattern="\d*" placeholder="Mobile-2" maxlength="10">
+                        <input type="image" onclick="add_contacts()" src="images/addnew.svg" name="button">
+                    </form>
                 </aside>
             </section>
         </aside>

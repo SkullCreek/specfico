@@ -1,3 +1,34 @@
+
+//add contact coding
+
+function add_contacts(){
+    var fullname2 = document.getElementById("fullname").value;
+    var pnum = document.getElementById("pnum").value;
+    var snum = document.getElementById("snum").value;
+    if(fullname2 != "" && pnum != "" && snum != ""){
+        if(isNaN(pnum)){
+            alert("please enter a valid primary number");
+        }
+        else{
+            if(isNaN(snum))
+            {
+                alert("please enter a valid secondary number");
+            }
+            else{
+                var user = {fullname:fullname2,pnum:pnum,snum:snum}
+                var user_details = JSON.stringify(user);
+                localStorage.setItem(fullname2+"contact",user_details);
+            }
+        }
+    }
+    else{
+        alert("Some fields are empty");
+    }
+}
+
+//add contact coding
+
+
 //menubar coding
 
 function myFunction(x) {
@@ -56,3 +87,4 @@ function logout(){
     },1000);
 }
 //logout coding
+

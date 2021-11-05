@@ -374,12 +374,12 @@ input[type='file']{
     transform: rotate(360deg);
 }
 @keyframes darpan_slide{
-    0%{left: -247px;}
+    0%{left: -300px;}
     100%{left: 0;}
 }
 @keyframes darpan_slide_exit{
     0%{left: 0;}
-    100%{left: -247;}
+    100%{left: -300;}
 }
 @media screen and (max-width:1250px) and (min-width:1120px){
     #right-sidebar-home{
@@ -426,7 +426,7 @@ input[type='file']{
         // display: none!important;
         position: absolute;
         top: 0;
-        left: -247px;
+        left: -300px;
         z-index: 1000;
         background-color: white;
     }

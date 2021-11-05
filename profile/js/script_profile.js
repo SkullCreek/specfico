@@ -1,5 +1,4 @@
 //url copy paste security
-
 function url_secure()
 {
     if(sessionStorage.length<=0)

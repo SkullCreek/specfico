@@ -315,14 +315,14 @@ input[type='file'] {
 
 @keyframes darpan_slide {
   0% {
-    left: -247px; }
+    left: -300px; }
   100% {
     left: 0; } }
 @keyframes darpan_slide_exit {
   0% {
     left: 0; }
   100% {
-    left: -247; } }
+    left: -300; } }
 @media screen and (max-width: 1250px) and (min-width: 1120px) {
   #right-sidebar-home {
     display: none; }
@@ -360,7 +360,7 @@ input[type='file'] {
   #left {
     position: absolute;
     top: 0;
-    left: -247px;
+    left: -300px;
     z-index: 1000;
     background-color: white; }
 

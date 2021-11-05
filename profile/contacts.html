@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_contacts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Contacts</title>
+</head>
+<body>
+    <main id="profile-page">
+        <!--Home Page Coding Start-->
+        <aside id="left">
+            <div id="close" style="display: none;">x</div>
+            <img src="images/logo.png" id="logo-profile" alt="">
+            <div id="profile-info">
+                <div id="profile-img-section"><div id="status"></div></div>
+                <div id="user">
+                    <h1 id="user-name"></h1>
+                    <p id="email-id"></p>
+                </div>
+            </div>
+            <ul>
+                <li><span class="material-icons" style="width:20px;height:20px;">home</span><a href="profile.html">Home</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;color: black;">contacts</span><a href="contacts.html" style="color: black;">Contacts</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">speaker_notes</span><a href="#">Notes</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">business</span><a href="#">Business</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">playlist_play</span><a href="#">Playlists</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">settings</span><a href="#">Settings</a></li>
+                <li><span class="material-icons"  style="width:20px;height:20px;">logout</span><a onclick="logout()" href="#">LogOut</a></li>
+            </ul>
+        </aside>
+        <aside id="right">
+            <ul>
+                <div id="menu-bar" style="display: none;">
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                </div>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px;transform: translate(50px,5px);">search</span><input type="search" placeholder="Search" ></li>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px; color: #C4C4C4;">notifications</span></li>
+                <li><img src="images/emote.png" alt=""></li>
+            </ul>
+            <h1>Contacts</h1>
+            <section id="about-sec">
+                <aside id="about-sec-left">
+                    <section>
+                        <div>Names</div>
+                        <div class="mobile">Mobile-1</div>
+                        <div class="mobile2">Mobile-2</div>
+                        <div></div>
+                    </section>
+                    <hr>
+                </aside>
+                <aside id="about-sec-right">
+                    <h3>Add New +</h3>
+                    <section>
+                        <input type="text" placeholder="Name">
+                        <input type="text" pattern="\d*" placeholder="Mobile-1" maxlength="10">
+                        <input type="text" pattern="\d*" placeholder="Mobile-2" maxlength="10">
+                        <img src="images/addnew.svg" alt="">
+                    </section>
+                </aside>
+            </section>
+        </aside>
+    </main>
+    <script src="js/script_profile.js"></script>
+    <script src="js/script_contacts.js"></script>
+</body>
+</html>

@@ -98,7 +98,6 @@ main{
         // border: 1px solid red;
         height: 100vh;
         padding: 35px 35px 0 35px;
-        overflow: scroll;
         ul{
             display: flex;
             list-style: none;
@@ -129,15 +128,25 @@ main{
             justify-content: space-between;
             #about-sec-left{
                 width: 70%;
-                min-height: 70vh;
-                overflow: scroll;
-                section{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 20px;
-                    div{
+                height: 535px;
+                overflow-y: scroll;
+                table{
+                    width: 100%;
+                    text-align: left;
+                    
+                    #border-bottom th{
+                        border-bottom: 2px solid #DBD9E6;
+                    }
+                    tr{
+                        height: 40px;
+                    }
+                    th{
                         color: #6E7087;
-                        font-size: 14px;
+                        
+                        
+                    }
+                    th,td{
+                        padding: 20px;
                     }
                 }
             }

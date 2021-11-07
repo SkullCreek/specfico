@@ -67,6 +67,7 @@ function logout(){
 }
 //logout coding
 
+
 //add contact coding
 
 function add_contacts(){
@@ -170,3 +171,21 @@ function del_contact(contact_name, del_btn){
 }
 
 //add contact coding
+
+
+function search_contact(user_input){
+    var keyword = user_input.value;
+    var contact_list = document.getElementById("contact");
+    var td = contact_list.getElementsByTagName("TD");
+    
+    var i;
+    for (i=0;i<td.length;i++)
+    {
+        if(td[i].innerHTML.indexOf(keyword) != -1){
+            td[i].parentElement.style.display="table";
+        }
+        else{
+            td[i].parentElement.style.display="none";
+        }
+    }
+}

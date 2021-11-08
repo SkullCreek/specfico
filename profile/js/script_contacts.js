@@ -162,33 +162,9 @@ function edit_contact(contact_name, edit_btn, save_btn, user_name, user_number1,
         user_name.focus();
         user_number1.setAttribute("contenteditable","true");
         user_number2.setAttribute("contenteditable","true");
-        var recent_name;
-        var current_name;
-        user_name.onclick = function(){
-            recent_name = this.innerHTML;
-        }
-        user_name.onchange = function(){
-            current_name = this.innerHTML;
-        }
-        var recent_number;
-        var current_number;
-        user_number1.onclick = function(){
-            recent_number=this.innerHTML;
-        }
-        user_number1.onchange = function(){
-            current_number=this.innerHTML;
-        }
-        var recent_number2;
-        var current_number2;
-        user_number2.onclick = function(){
-            recent_number2=this.innerHTML;
-        }
-        user_number2.onchange = function(){
-            current_number2=this.innerHTML;
-        }
 
         save_btn.onclick = function(){
-            var edit_data = {fullname:current_name, pnum:current_number, snum:current_number2};
+            var edit_data = {fullname:user_name.innerHTML, pnum:user_number1.innerHTML, snum:user_number2.innerHTML};
             var final_data = JSON.stringify(edit_data);
             var txt = localStorage.getItem(contact_name);
             localStorage.setItem(contact_name, txt.replace(txt, final_data));

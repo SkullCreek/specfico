@@ -119,6 +119,14 @@ main {
             color: #6E7087; }
           main #right #about-sec #about-sec-left table th, main #right #about-sec #about-sec-left table td {
             padding: 20px; }
+      main #right #about-sec #about-sec-left::-webkit-scrollbar {
+        width: 3px; }
+      main #right #about-sec #about-sec-left::-webkit-scrollbar-track {
+        width: 3px;
+        background-color: transparent; }
+      main #right #about-sec #about-sec-left::-webkit-scrollbar-thumb {
+        width: 3px;
+        background: linear-gradient(#EC008C 0%, #FC6767 100%); }
       main #right #about-sec #about-sec-right {
         width: 26%;
         min-height: 70vh; }

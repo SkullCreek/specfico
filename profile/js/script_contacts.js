@@ -127,7 +127,7 @@ function show_contacts(){
             a_3.setAttribute("href","#");
             con.appendChild(tr);
             tr.appendChild(td_1);
-            td_1.appendChild(span);
+            // td_1.appendChild(span);
             tr.appendChild(td_2);
             tr.appendChild(td_3);
             tr.appendChild(td_4);
@@ -147,11 +147,55 @@ function show_contacts(){
             img_1.setAttribute("src","images/edit.svg");
             img_2.setAttribute("src","images/delete.svg");
             img_3.setAttribute("src","images/save.svg");  
+            a_3.style.display="none";
+            edit_contact(keys, a_1, a_3, td_1, td_2, td_3);
             del_contact(keys, a_2);       
         }
     }
 }
 show_contacts();
+
+function edit_contact(contact_name, edit_btn, save_btn, user_name, user_number1, user_number2){
+    edit_btn.onclick=function(){
+        save_btn.style.display="table";
+        user_name.setAttribute("contenteditable","true");
+        user_name.focus();
+        user_number1.setAttribute("contenteditable","true");
+        user_number2.setAttribute("contenteditable","true");
+        var recent_name;
+        var current_name;
+        user_name.onclick = function(){
+            recent_name = this.innerHTML;
+        }
+        user_name.onchange = function(){
+            current_name = this.innerHTML;
+        }
+        var recent_number;
+        var current_number;
+        user_number1.onclick = function(){
+            recent_number=this.innerHTML;
+        }
+        user_number1.onchange = function(){
+            current_number=this.innerHTML;
+        }
+        var recent_number2;
+        var current_number2;
+        user_number2.onclick = function(){
+            recent_number2=this.innerHTML;
+        }
+        user_number2.onchange = function(){
+            current_number2=this.innerHTML;
+        }
+
+        save_btn.onclick = function(){
+            var edit_data = {fullname:current_name, pnum:current_number, snum:current_number2};
+            var final_data = JSON.stringify(edit_data);
+            var txt = localStorage.getItem(contact_name);
+            localStorage.setItem(contact_name, txt.replace(txt, final_data));
+        }
+        
+    }
+}
 
 function del_contact(contact_name, del_btn){
     del_btn.onclick = function(){
@@ -172,6 +216,7 @@ function del_contact(contact_name, del_btn){
 
 //add contact coding
 
+// search contact coding start
 
 function search_contact(user_input){
     var keyword = user_input.value;
@@ -190,3 +235,5 @@ function search_contact(user_input){
         }
     }
 }
+// search contact coding end
+

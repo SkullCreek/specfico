@@ -150,6 +150,17 @@ main{
                     }
                 }
             }
+            #about-sec-left::-webkit-scrollbar{
+                width: 3px;
+            }
+            #about-sec-left::-webkit-scrollbar-track{
+                width: 3px;
+                background-color: transparent;
+            }
+            #about-sec-left::-webkit-scrollbar-thumb{
+                width: 3px;
+                background: linear-gradient(#EC008C 0%, #FC6767 100%);
+            }
             #about-sec-right{
                 width: 26%;
                 min-height: 70vh;

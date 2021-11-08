@@ -176,16 +176,17 @@ function del_contact(contact_name, del_btn){
 function search_contact(user_input){
     var keyword = user_input.value;
     var contact_list = document.getElementById("contact");
+    var tr = contact_list.getElementsByTagName("TR")
     var td = contact_list.getElementsByTagName("TD");
-    
     var i;
-    for (i=0;i<td.length;i++)
+    for (i=0;i<tr.length;i++)
     {
-        if(td[i].innerHTML.indexOf(keyword) != -1){
-            td[i].parentElement.style.display="table";
+        if(tr[i].innerText.indexOf(keyword) < 0){
+            tr[i].style.display="none";
+            console.log(tr[i]);
         }
-        else{
-            td[i].parentElement.style.display="none";
+        else if(tr[i].innerText.indexOf(keyword) >= 0){
+            tr[i].style.display="";
         }
     }
 }

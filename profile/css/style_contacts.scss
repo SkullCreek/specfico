@@ -164,6 +164,7 @@ main{
             #about-sec-right{
                 width: 26%;
                 min-height: 70vh;
+                position: relative;
                 h3{
                     color: #9D9D9D;
                 }
@@ -188,6 +189,17 @@ main{
                     input[type=image]{
                         transform: translateY(70px);
                         cursor: pointer;
+                    }
+                }
+                #restore{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    img{
+                        padding-left: 10px;
                     }
                 }
             }
@@ -273,4 +285,39 @@ main{
         #nortification{display: none;
         }
     } 
+}
+#restore-table{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+//restore contacts
+#restore-option{
+    height: 0vh;
+    width: 80%;
+    position: absolute;
+    background-color: white;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{
+        overflow-y: scroll;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div::-webkit-scrollbar{
+        width: 3px;
+    }
+    div::-webkit-scrollbar-track{
+        width: 3px;
+        background-color: transparent;
+    }
+    div::-webkit-scrollbar-thumb{
+        width: 3px;
+        background: linear-gradient(#EC008C 0%, #FC6767 100%);
+    }
+
 }

@@ -129,7 +129,8 @@ main {
         background: linear-gradient(#EC008C 0%, #FC6767 100%); }
       main #right #about-sec #about-sec-right {
         width: 26%;
-        min-height: 70vh; }
+        min-height: 70vh;
+        position: relative; }
         main #right #about-sec #about-sec-right h3 {
           color: #9D9D9D; }
         main #right #about-sec #about-sec-right form {
@@ -151,6 +152,15 @@ main {
           main #right #about-sec #about-sec-right form input[type=image] {
             transform: translateY(70px);
             cursor: pointer; }
+        main #right #about-sec #about-sec-right #restore {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer; }
+          main #right #about-sec #about-sec-right #restore img {
+            padding-left: 10px; }
 
 @keyframes darpan_slide {
   0% {
@@ -215,5 +225,33 @@ main {
     display: none; }
   #right ul li #nortification {
     display: none; } }
+#restore-table {
+  width: 100%;
+  text-align: center;
+  padding: 10px; }
+
+#restore-option {
+  height: 0vh;
+  width: 80%;
+  position: absolute;
+  background-color: white;
+  bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #restore-option div {
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #restore-option div::-webkit-scrollbar {
+    width: 3px; }
+  #restore-option div::-webkit-scrollbar-track {
+    width: 3px;
+    background-color: transparent; }
+  #restore-option div::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: linear-gradient(#EC008C 0%, #FC6767 100%); }
 
 /*# sourceMappingURL=style_contacts.css.map */

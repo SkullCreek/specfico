@@ -73,7 +73,25 @@
                         <input id="snum" type="text" pattern="\d*" placeholder="Mobile-2" maxlength="10">
                         <input type="image" onclick="add_contacts()" src="images/addnew.svg" name="button">
                     </form>
+                    <br><br><br>
+                    <div id="restore" onclick="restore()">
+                        Restore Contacts <img src="images/restore.svg" alt="restore">
+                    </div>
                 </aside>
+            </section>
+            <section id="restore-option">
+                <div>
+                    <span class="material-icons" id="close-restore" style="align-self:flex-end;">close</span>
+                    <h1 id="restore-notice"></h1>
+                    <table id="restore-table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Mobile-1</th>
+                            <th>Mobile-2</th>
+                            <th>Restore Now</th>
+                        </tr>
+                    </table>
+                </div>
             </section>
         </aside>
     </main>

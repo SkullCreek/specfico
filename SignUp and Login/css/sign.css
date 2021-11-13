@@ -1,356 +1,633 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 body {
   width: 100%;
   height: 100vh;
   background: #FFD4DE;
   font-family: 'Poppins', sans-serif;
+  display: -ms-grid;
   display: grid;
-  place-items: center; }
+  place-items: center;
+}
 
 section {
   width: 80%;
   min-width: auto;
   background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
-  box-shadow: 1px -2px 139px rgba(0, 0, 0, 0.25); }
-  section #left {
-    width: 50%;
-    height: 100%;
-    min-width: 260px;
-    padding: 3% 8%; }
-    section #left img {
-      width: 40px; }
-    section #left h1 {
-      font-size: 25px;
-      padding-top: 25px; }
-    section #left p {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 12px;
-      color: #A19FAB;
-      padding-bottom: 25px; }
-    section #left #sign-google {
-      padding: 4px 0px 5px;
-      border: 1px solid #C4C4C4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50px;
-      margin-bottom: 20px; }
-      section #left #sign-google img {
-        width: 20px;
-        transform: translate(-5px, 2px); }
-      section #left #sign-google a {
-        font-size: 12px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold; }
-    section #left fieldset {
-      text-align: center;
-      border-left: none;
-      border-right: none;
-      border-bottom: none; }
-      section #left fieldset a {
-        text-decoration: none;
-        color: #A19FAB;
-        padding: 0 5px;
-        font-size: 12px;
-        font-weight: 600; }
-    section #left form ul {
-      width: 100%;
-      list-style: none;
-      margin-top: 20px; }
-      section #left form ul li {
-        width: 100%;
-        margin-bottom: 10px; }
-        section #left form ul li label {
-          font-size: 12px;
-          font-weight: bold; }
-          section #left form ul li label span {
-            color: #FF3061; }
-        section #left form ul li input {
-          width: 100%;
-          background-color: transparent;
-          padding: 8px 30px;
-          font-weight: 600;
-          font-size: 12px;
-          color: #A19FAB;
-          border: 1px solid #C4C4C4;
-          border-radius: 50px; }
-      section #left form ul #TnC {
-        width: 100%;
-        text-align: left;
-        display: flex;
-        justify-content: space-between; }
-        section #left form ul #TnC input[type=checkbox] {
-          width: 8%; }
-        section #left form ul #TnC input[type=checkbox]:checked:after {
-          background: green !important;
-          color: black !important; }
-      section #left form ul input[type=submit] {
-        background-color: #FF3061;
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        border: none; }
-      section #left form ul input[type=submit]:hover {
-        background-color: #d42a52; }
-  section h6 a {
-    color: #FF3061;
-    text-decoration: none; }
-  section #right {
-    width: 50%;
-    height: 100%;
-    min-width: 260px;
-    padding: 3% 8%; }
-    section #right #logo {
-      width: 40px;
-      float: right; }
-    section #right h1 {
-      clear: right;
-      font-size: 25px;
-      padding-top: 25px; }
-    section #right p {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 12px;
-      color: #A19FAB;
-      padding-bottom: 25px; }
-    section #right #sign-google {
-      padding: 4px 0px 5px;
-      border: 1px solid #C4C4C4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50px;
-      margin-bottom: 20px; }
-      section #right #sign-google img {
-        width: 20px;
-        transform: translate(-5px, 2px); }
-      section #right #sign-google a {
-        font-size: 12px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold; }
-    section #right fieldset {
-      text-align: center;
-      border-left: none;
-      border-right: none;
-      border-bottom: none; }
-      section #right fieldset a {
-        text-decoration: none;
-        color: #A19FAB;
-        padding: 0 5px;
-        font-size: 12px;
-        font-weight: 600; }
-    section #right form ul {
-      width: 100%;
-      list-style: none;
-      margin-top: 20px; }
-      section #right form ul li {
-        width: 100%;
-        margin-bottom: 10px; }
-        section #right form ul li label {
-          font-size: 12px;
-          font-weight: bold; }
-          section #right form ul li label span {
-            color: #FF3061; }
-        section #right form ul li input {
-          width: 100%;
-          background-color: transparent;
-          padding: 8px 30px;
-          font-weight: 600;
-          font-size: 12px;
-          color: #A19FAB;
-          border: 1px solid #C4C4C4;
-          border-radius: 50px; }
-      section #right form ul #TnC {
-        width: 100%;
-        text-align: left;
-        display: flex;
-        justify-content: space-between; }
-        section #right form ul #TnC input[type=checkbox] {
-          width: 8%; }
-        section #right form ul #TnC input[type=checkbox]:checked:after {
-          background: green !important;
-          color: black !important; }
-      section #right form ul input[type=submit] {
-        background-color: #FF3061;
-        color: white;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        border: none;
-        margin-top: 30px; }
-      section #right form ul input[type=submit]:hover {
-        background-color: #d42a52; }
-      section #right form ul a {
-        color: #FF3061;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 600; }
-  section #bg-img {
-    position: absolute;
+  -webkit-box-shadow: 1px -2px 139px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px -2px 139px rgba(0, 0, 0, 0.25);
+}
+
+section #left {
+  width: 50%;
+  height: 100%;
+  min-width: 260px;
+  padding: 3% 8%;
+}
+
+section #left img {
+  width: 40px;
+}
+
+section #left h1 {
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+section #left p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #A19FAB;
+  padding-bottom: 25px;
+}
+
+section #left #sign-google {
+  padding: 4px 0px 5px;
+  border: 1px solid #C4C4C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+section #left #sign-google img {
+  width: 20px;
+  -webkit-transform: translate(-5px, 2px);
+          transform: translate(-5px, 2px);
+}
+
+section #left #sign-google a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+section #left fieldset {
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+section #left fieldset a {
+  text-decoration: none;
+  color: #A19FAB;
+  padding: 0 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+section #left form ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 20px;
+}
+
+section #left form ul li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section #left form ul li label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+section #left form ul li label span {
+  color: #FF3061;
+}
+
+section #left form ul li input {
+  width: 100%;
+  background-color: transparent;
+  padding: 8px 30px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #A19FAB;
+  border: 1px solid #C4C4C4;
+  border-radius: 50px;
+}
+
+section #left form ul #TnC {
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section #left form ul #TnC input[type=checkbox] {
+  width: 8%;
+}
+
+section #left form ul #TnC input[type=checkbox]:checked:after {
+  background: green !important;
+  color: black !important;
+}
+
+section #left form ul input[type=submit] {
+  background-color: #FF3061;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+section #left form ul input[type=submit]:hover {
+  background-color: #d42a52;
+}
+
+section h6 a {
+  color: #FF3061;
+  text-decoration: none;
+}
+
+section #right {
+  width: 50%;
+  height: 100%;
+  min-width: 260px;
+  padding: 3% 8%;
+}
+
+section #right #logo {
+  width: 40px;
+  float: right;
+}
+
+section #right h1 {
+  clear: right;
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+section #right p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #A19FAB;
+  padding-bottom: 25px;
+}
+
+section #right #sign-google {
+  padding: 4px 0px 5px;
+  border: 1px solid #C4C4C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+section #right #sign-google img {
+  width: 20px;
+  -webkit-transform: translate(-5px, 2px);
+          transform: translate(-5px, 2px);
+}
+
+section #right #sign-google a {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+section #right fieldset {
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+section #right fieldset a {
+  text-decoration: none;
+  color: #A19FAB;
+  padding: 0 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+section #right form ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 20px;
+}
+
+section #right form ul li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section #right form ul li label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+section #right form ul li label span {
+  color: #FF3061;
+}
+
+section #right form ul li input {
+  width: 100%;
+  background-color: transparent;
+  padding: 8px 30px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #A19FAB;
+  border: 1px solid #C4C4C4;
+  border-radius: 50px;
+}
+
+section #right form ul #TnC {
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section #right form ul #TnC input[type=checkbox] {
+  width: 8%;
+}
+
+section #right form ul #TnC input[type=checkbox]:checked:after {
+  background: green !important;
+  color: black !important;
+}
+
+section #right form ul input[type=submit] {
+  background-color: #FF3061;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-top: 30px;
+}
+
+section #right form ul input[type=submit]:hover {
+  background-color: #d42a52;
+}
+
+section #right form ul a {
+  color: #FF3061;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+section #bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/background-img.png");
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section #bg-img #bg-design {
+  width: 250px;
+  height: 200px;
+  -webkit-transform: translateY(120px);
+          transform: translateY(120px);
+  background-image: url("../images/graph.png");
+  text-align: center;
+}
+
+section #bg-img #bg-design h2 {
+  width: 100px;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  -webkit-transform: translate(10px, -20px);
+          transform: translate(10px, -20px);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section #bg-img #bg-design h2 span {
+  color: #FF3061;
+}
+
+section #bg-img #bg-design h2:nth-child(2) {
+  -webkit-transform: translate(200px, 100px);
+          transform: translate(200px, 100px);
+}
+
+section #bg-img #bg-design #first {
+  -webkit-transform: translate(120px, -100px);
+          transform: translate(120px, -100px);
+}
+
+section #bg-img #bg-design #second {
+  -webkit-transform: translate(-110px, -50px);
+          transform: translate(-110px, -50px);
+}
+
+section #bg-img #bg-design::after {
+  content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+@-webkit-keyframes slide {
+  0% {
     top: 0;
     right: 0;
-    z-index: 1;
-    width: 50%;
-    height: 100%;
-    background-image: url("../images/background-img.png");
-    background-size: cover;
-    display: grid;
-    justify-content: center; }
-    section #bg-img #bg-design {
-      width: 250px;
-      height: 200px;
-      transform: translateY(120px);
-      background-image: url("../images/graph.png");
-      text-align: center; }
-      section #bg-img #bg-design h2 {
-        width: 100px;
-        background-color: white;
-        padding: 10px 20px;
-        font-size: 15px;
-        transform: translate(10px, -20px);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-        section #bg-img #bg-design h2 span {
-          color: #FF3061; }
-      section #bg-img #bg-design h2:nth-child(2) {
-        transform: translate(200px, 100px); }
-      section #bg-img #bg-design #first {
-        transform: translate(120px, -100px); }
-      section #bg-img #bg-design #second {
-        transform: translate(-110px, -50px); }
-    section #bg-img #bg-design::after {
-      content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      text-align: center; }
+  }
+  100% {
+    top: 0;
+    right: 50%;
+  }
+}
 
 @keyframes slide {
   0% {
     top: 0;
-    right: 0; }
+    right: 0;
+  }
   100% {
     top: 0;
-    right: 50%; } }
+    right: 50%;
+  }
+}
+
+@-webkit-keyframes slide2 {
+  0% {
+    top: 0;
+    right: 50%;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
 @keyframes slide2 {
   0% {
     top: 0;
-    right: 50%; }
+    right: 50%;
+  }
   100% {
     top: 0;
-    right: 0; } }
+    right: 0;
+  }
+}
+
 input:focus {
-  outline: 2px solid #FF3061; }
+  outline: 2px solid #FF3061;
+}
 
 /*loading animation start*/
 .loader-page {
   width: 100vw;
   height: 100%;
   place-items: center;
+  display: -ms-grid;
   display: grid;
   background-color: whitesmoke;
   position: absolute;
   top: 0;
   left: 0;
-  animation: hide 30s;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-  z-index: 20; }
-  .loader-page ul {
-    list-style: none;
-    display: flex;
-    border-bottom: 8px solid brown;
-    border-radius: 10px; }
-  .loader-page ul li {
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(90deg, #DA22FF 0%, #9733EE 100%);
-    margin: auto 15px;
-    border-radius: 50%;
-    animation: bouncing 1s linear infinite;
-    animation-fill-mode: forwards; }
+  -webkit-animation: hide 30s;
+          animation: hide 30s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 20;
+}
+
+.loader-page ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 8px solid brown;
+  border-radius: 10px;
+}
+
+.loader-page ul li {
+  width: 30px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#DA22FF), to(#9733EE));
+  background: linear-gradient(90deg, #DA22FF 0%, #9733EE 100%);
+  margin: auto 15px;
+  border-radius: 50%;
+  -webkit-animation: bouncing 1s linear infinite;
+          animation: bouncing 1s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bouncing {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-130px);
+            transform: translateY(-130px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @keyframes bouncing {
   0% {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   50% {
-    transform: translateY(-130px); }
+    -webkit-transform: translateY(-130px);
+            transform: translateY(-130px);
+  }
   100% {
-    transform: translateY(0); } }
-  .loader-page ul li:nth-child(2) {
-    animation-delay: 0.2s;
-    background: linear-gradient(90deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%); }
-  .loader-page ul li:nth-child(3) {
-    animation-delay: 0.4s;
-    background: linear-gradient(90deg, #FFE259 0%, #FFA751 100%); }
-  .loader-page ul li:nth-child(4) {
-    animation-delay: 0.6s;
-    background: linear-gradient(90deg, #EC008C 0%, #FC6767 100%); }
-  .loader-page ul li:nth-child(5) {
-    animation-delay: 0.8s;
-    background: linear-gradient(90deg, #4CB8C4 0%, #3CD3AD 100%); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.loader-page ul li:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  background: -webkit-gradient(linear, left top, right top, from(#0052D4), color-stop(50%, #4364F7), to(#6FB1FC));
+  background: linear-gradient(90deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+}
+
+.loader-page ul li:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  background: -webkit-gradient(linear, left top, right top, from(#FFE259), to(#FFA751));
+  background: linear-gradient(90deg, #FFE259 0%, #FFA751 100%);
+}
+
+.loader-page ul li:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  background: -webkit-gradient(linear, left top, right top, from(#EC008C), to(#FC6767));
+  background: linear-gradient(90deg, #EC008C 0%, #FC6767 100%);
+}
+
+.loader-page ul li:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  background: -webkit-gradient(linear, left top, right top, from(#4CB8C4), to(#3CD3AD));
+  background: linear-gradient(90deg, #4CB8C4 0%, #3CD3AD 100%);
+}
+
+@-webkit-keyframes hide {
+  10% {
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 
 @keyframes hide {
   10% {
     opacity: 0;
-    z-index: -1; }
+    z-index: -1;
+  }
   100% {
     opacity: 0;
-    z-index: -1; } }
+    z-index: -1;
+  }
+}
+
 /*loading animation start*/
 @media only screen and (max-width: 650px) {
   body {
     width: 50%;
-    display: block; }
-
+    display: block;
+  }
   section {
-    width: 100vw; }
-    section #left {
-      width: 100%; }
-    section #right {
-      width: 100%; }
-    section .loader-page {
-      height: 100%;
-      width: 100%; }
-    section #bg-img {
-      animation: none;
-      width: 100%;
-      height: 50%;
-      left: 0;
-      transform: translateY(560px); }
-      section #bg-img h2:nth-child(2) {
-        display: none; }
-      section #bg-img #first {
-        display: none; }
-      section #bg-img #bg-design {
-        position: relative; }
-      section #bg-img #bg-design::after {
-        content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        text-align: center;
-        position: absolute;
-        width: 200px;
-        transform: translate(-100px, 80px); }
+    width: 100vw;
+  }
+  section #left {
+    width: 100%;
+  }
+  section #right {
+    width: 100%;
+  }
+  section .loader-page {
+    height: 100%;
+    width: 100%;
+  }
+  section #bg-img {
+    -webkit-animation: none;
+            animation: none;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    -webkit-transform: translateY(560px);
+            transform: translateY(560px);
+  }
+  section #bg-img h2:nth-child(2) {
+    display: none;
+  }
+  section #bg-img #first {
+    display: none;
+  }
+  section #bg-img #bg-design {
+    position: relative;
+  }
+  section #bg-img #bg-design::after {
+    content: "Turn your ideas into reality. consistent quality and experience across all platforms and devices";
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    width: 200px;
+    -webkit-transform: translate(-100px, 80px);
+            transform: translate(-100px, 80px);
+  }
+  @-webkit-keyframes mobile {
+    0% {
+      -webkit-transform: translateY(560px);
+              transform: translateY(560px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
   @keyframes mobile {
     0% {
-      transform: translateY(560px); }
+      -webkit-transform: translateY(560px);
+              transform: translateY(560px);
+    }
     100% {
-      transform: translateY(0px); } }
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @-webkit-keyframes mobile2 {
+    0% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    100% {
+      -webkit-transform: translateY(560px);
+              transform: translateY(560px);
+    }
+  }
   @keyframes mobile2 {
     0% {
-      transform: translateY(0px); }
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
     100% {
-      transform: translateY(560px); } } }
-
+      -webkit-transform: translateY(560px);
+              transform: translateY(560px);
+    }
+  }
+}
 /*# sourceMappingURL=sign.css.map */

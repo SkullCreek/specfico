@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_playlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Profile</title>
+</head>
+<body>
+    <main id="profile-page">
+        <!--Home Page Coding Start-->
+        <aside id="left">
+            <div id="close" style="display: none;">x</div>
+            <img src="images/logo.png" id="logo-profile" alt="">
+            <div id="profile-info">
+                <div id="profile-img-section"><div id="status"></div></div>
+                <div id="user">
+                    <h1 id="user-name"></h1>
+                    <p id="email-id"></p>
+                </div>
+            </div>
+            <ul>
+                <li><span class="material-icons" style="width:20px;height:20px;">home</span><a href="profile.html">Home</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">contacts</span><a href="contacts.html">Contacts</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">speaker_notes</span><a href="#">Notes</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">business</span><a href="#">Business</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;color: black;">playlist_play</span><a href="playlist.html" style="color: black;">Playlists</a></li>
+                <li><span class="material-icons" style="width:20px;height:20px;">settings</span><a href="#">Settings</a></li>
+                <li><span class="material-icons"  style="width:20px;height:20px;">logout</span><a onclick="logout()" href="#">LogOut</a></li>
+            </ul>
+        </aside>
+        <aside id="right">
+            <ul>
+                <div id="menu-bar" style="display: none;">
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                    <div id="bar"></div>
+                </div>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px;transform: translate(50px,5px);">search</span><input type="search" placeholder="Search" ></li>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px; color: #C4C4C4;">notifications</span></li>
+                <li><img src="images/emote.png" alt=""></li>
+            </ul>
+            <h1>Musico</h1>
+            <section id="playlist">
+                <div id="player">
+                    <video controls poster="images/thumbnail.jpg" width="100%"> 
+                        <source src="images/1.mp4"></source>
+                    </video>
+                    <div id="Name">
+                        <h1>Phir Kabhi</h1>
+                    </div>
+                </div>
+                <div id="playlist-list">
+                    <div id="playlist-list-add">
+                        <h1>My Playlist</h1>
+                        <img src="images/playlist_add.svg" alt="" style="margin-right: 10px;">
+                    </div>  
+                    <h4 id="heading"><p>#</p> <p>Name</p></h4>
+                    <h5><p>01</p> <p>Mast Magan</p></h5>
+                    <h5><p><img src="images/volume1.svg" alt=""></p> <p>Phir Kabhi</p></h5>
+                    <h5><p>03</p> <p>Arziyaan</p></h5>
+                    <h5><p>04</p> <p>Dhoonde Akhiyaan</p></h5>
+                    <h5><p>05</p> <p>Mein Hoon Sath Tere</p></h5>
+                    <h5><p>07</p> <p>Kabira-Naina</p></h5>
+                    <h5><p>08</p> <p>Matargashti</p></h5>
+                    <h5><p>09</p> <p>Befikra</p></h5>
+                    <h5><p>10</p> <p>Humraah</p></h5>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <script src="js/script_profile.js"></script>
+    <script src="js/style_playlist.js"></script>
+</body>
+</html>

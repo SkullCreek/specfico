@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Profile</title>
+    <title>Playlists</title>
 </head>
 <body>
     <main id="profile-page">
@@ -46,18 +46,25 @@
                     <div id="bar"></div>
                 </div>
                 <li><span class="material-icons" id="nortification" style="width:20px;height:20px;transform: translate(50px,5px);">search</span><input type="search" placeholder="Search" ></li>
-                <li><span class="material-icons" id="nortification" style="width:20px;height:20px; color: #C4C4C4;">notifications</span></li>
+                <li><span class="material-icons" id="nortification" style="width:20px;height:20px; color: #000000;">notifications</span></li>
                 <li><img src="images/emote.png" alt=""></li>
             </ul>
             <h1>Musico</h1>
             <section id="playlist">
                 <div id="player">
-                    <video controls poster="images/thumbnail.jpg" width="100%"> 
+                    <video id="video" controls poster="images/thumbnail.jpg"  width="100%"> 
                         <source src="images/1.mp4"></source>
                     </video>
-                    <div id="Name">
+                    <div id="name">
                         <h1>Phir Kabhi</h1>
+                        <p>oct 20 2021</p>
+                        <div id="like-dislike-share">
+                            <img src="images/liked.svg" alt="">
+                            <img src="images/dislike.svg" alt="">
+                            <h3> <img src="images/share.svg" alt=""> SHARE </h3>
+                        </div>
                     </div>
+                    
                 </div>
                 <div id="playlist-list">
                     <div id="playlist-list-add">

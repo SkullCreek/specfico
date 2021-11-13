@@ -9,6 +9,18 @@ body{
     width: 100%;
 }
 
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    width: 5px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: transparent;
+}
+
 main{
     width: 100%;
     display: flex;
@@ -135,8 +147,29 @@ main{
                 }
                 #name{
                     width: 100%;
+                    border-bottom: 1px solid #c2c2c2;
+                    padding-bottom: 50px;
+                    position: relative;
+                    margin-bottom: 10px;
                     h1{
                         padding: 0;
+                        margin: 0;
+                        padding-top: 20px;
+                        font-weight: 600;
+                        font-size: 30px;
+                    }
+                    #like-dislike-share{
+                        width: 200px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        padding: 10px;
+                        img, h3{
+                            cursor: pointer;
+                        }
                     }
                 }
             }

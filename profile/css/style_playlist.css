@@ -10,6 +10,20 @@ body {
   width: 100%;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: transparent;
+}
+
 main {
   width: 100%;
   display: -webkit-box;
@@ -188,10 +202,38 @@ main #right #playlist #player video source {
 
 main #right #playlist #player #name {
   width: 100%;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 main #right #playlist #player #name h1 {
   padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+main #right #playlist #player #name #like-dislike-share {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+main #right #playlist #player #name #like-dislike-share img, main #right #playlist #player #name #like-dislike-share h3 {
+  cursor: pointer;
 }
 
 main #right #playlist #playlist-list {

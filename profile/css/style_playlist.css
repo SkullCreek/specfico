@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'poppins', sans-serif;
 }
 
 body {
@@ -234,6 +234,81 @@ main #right #playlist #player #name #like-dislike-share {
 
 main #right #playlist #player #name #like-dislike-share img, main #right #playlist #player #name #like-dislike-share h3 {
   cursor: pointer;
+}
+
+main #right #playlist #player #custom-player {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+main #right #playlist #player #custom-player #controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateY(85%) translateY(-4px);
+          transform: translateY(85%) translateY(-4px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button:before {
+  content: '\e037';
+  font-family: 'Material Icons';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 28px;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button.play:before {
+  content: '\e037';
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button.pause:before {
+  content: '\e034';
+}
+
+main #right #playlist #player #custom-player #controls #play-track {
+  height: 4px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 0%;
+  left: 0%;
+  width: 98%;
+  border-radius: 50px;
+  background: #C8C8C8;
+}
+
+main #right #playlist #player #custom-player #controls #play-track #play-bar {
+  height: 4px;
+  width: 0;
+  border-radius: 50px;
+  background: red;
+}
+
+main #right #playlist #player #custom-player:hover #controls {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 main #right #playlist #playlist-list {

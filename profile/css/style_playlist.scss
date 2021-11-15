@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 body{
@@ -171,6 +171,62 @@ main{
                             cursor: pointer;
                         }
                     }
+                }
+                #custom-player{
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    #controls{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        bottom: 0%;
+                        flex-wrap: wrap;
+                        transform: translateY(85%) translateY(-4px);
+                        transition: all 0.5s;
+                        #buttons #left-btn button{
+                            background: none;
+                            border: 0;
+                            outline: 0;
+                            cursor: pointer;
+                        }
+                        #buttons #left-btn button:before{
+                            content: '\e037';
+                            font-family: 'Material Icons';
+                            width: 30px;
+                            height: 30px;
+                            display: inline-block;
+                            font-size: 28px;
+                            padding: 13px;
+                            color: white;
+
+                        }
+                        #buttons #left-btn button.play:before{
+                            content: '\e037';
+                        }
+                        #buttons #left-btn button.pause:before{
+                            content: '\e034';
+                        }
+                        #play-track{
+                            height: 4px;
+                            align-self: center;
+                            top: 0%;
+                            left: 0%;
+                            width: 98%;
+                            border-radius: 50px;
+                            background: #C8C8C8;
+                            #play-bar{
+                                height: 4px;
+                                width: 0;
+                                border-radius: 50px;
+                                background: red;
+                            }
+                        }
+                    }
+                }
+                #custom-player:hover #controls{
+                    transform: translateY(0);
                 }
             }
 

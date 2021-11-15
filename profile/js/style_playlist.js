@@ -72,3 +72,27 @@ function logout(){
     },1000);
 }
 //logout coding
+
+//controls
+var video = document.getElementById('video');
+var bar1 = document.getElementById('play-bar');
+var play = document.getElementById('play-pause');
+
+play.onclick=function(){
+    if(video.paused){
+        play.className = 'pause';
+        video.play();
+    }
+    else{
+        play.className = 'play';
+        video.pause();
+    }
+}
+
+video.addEventListener('timeupdate',function(){
+    var barPos = video.currentTime /video.duration;
+    bar1.style.width = barPos*100 + "%";
+    if(video.ended){
+        BigInt.className = "play";
+    }
+});

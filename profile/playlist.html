@@ -52,9 +52,22 @@
             <h1>Musico</h1>
             <section id="playlist">
                 <div id="player">
-                    <video id="video" controls poster="images/thumbnail.jpg"  width="100%"> 
-                        <source src="images/1.mp4"></source>
-                    </video>
+                    <div id="custom-player">
+                        <video id="video" poster="images/thumbnail.jpg"  width="100%" oncontextmenu="return false"> 
+                            <source src="images/1.mp4"></source>
+                        </video>
+                        <div id="controls">
+                            <div id="play-track">
+                                <div id="play-bar"></div>
+                            </div>
+                            <div id="buttons">
+                                <div id="left-btn">
+                                    <button id="play-pause"></button>
+                                </div>
+                                <div id="right-btn"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="name">
                         <h1>Phir Kabhi</h1>
                         <p>oct 20 2021</p>

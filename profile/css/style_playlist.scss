@@ -191,8 +191,9 @@ main{
                             outline: 0;
                             cursor: pointer;
                         }
-                        #buttons #left-btn button:before{
+                        #buttons #left-btn button:nth-child(1)::before{
                             content: '\e037';
+                            align-self: flex-start;
                             font-family: 'Material Icons';
                             width: 30px;
                             height: 30px;
@@ -223,10 +224,85 @@ main{
                                 background: red;
                             }
                         }
+                        #sec-left{
+                            display: flex;
+                            align-items: center;
+                        }
+                        #buttons #left-btn button:nth-child(2)::before{
+                            content: '\e044';
+                            font-family: 'Material Icons';
+                            width: 30px;
+                            height: 30px;
+                            display: inline-block;
+                            font-size: 28px;
+                            padding: 13px 0px;
+                            color: white;
+                            align-self: flex-start;
+                        }
+                        #buttons #left-btn button:nth-child(3)::before{
+                            content: '\e050';
+                            font-family: 'Material Icons';
+                            display: inline-block;
+                            font-size: 20px;
+                            padding: 13px;
+                            color: white;
+                        }
+                        #left-btn{
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                        }
+                        #time{
+                            color: white;
+                            font-size: 14px;
+                        }
+                        #left-btn{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            section{
+                                align-self: end;
+                            }
+                        }
+                        
+                        #buttons #left-btn section button:nth-child(1)::before{
+                            content: url(../images/autoplay.svg);
+                            font-family: 'Material Icons';
+                            display: inline-block;
+                            font-size: 20px;
+                            padding: 13px;
+                            color: white;
+                        }
+                        #buttons #left-btn section button:nth-child(2)::before{
+                            content: '\e8b8';
+                            font-family: 'Material Icons';
+                            display: inline-block;
+                            font-size: 20px;
+                            padding: 13px;
+                            color: white;
+                        }
+                        #buttons #left-btn section button:nth-child(3)::before{
+                            content: url(../images/miniplayer.svg);
+                            display: inline-block;
+                            padding: 13px;
+                            color: white;
+                        }
+                        #buttons #left-btn section button:nth-child(4)::before{
+                            content: url(../images/theater-mode.svg);
+                            display: inline-block;
+                            padding: 13px;
+                            color: white;
+                        }
+                        #buttons #left-btn section button:nth-child(5)::before{
+                            content: url(../images/full-screen.svg);
+                            display: inline-block;
+                            padding: 13px;
+                            color: white;
+                        }
                     }
                 }
                 #custom-player:hover #controls{
-                    transform: translateY(0);
+                    transform: translateY(0px);
                 }
             }
 

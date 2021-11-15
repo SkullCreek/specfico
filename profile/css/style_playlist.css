@@ -268,8 +268,10 @@ main #right #playlist #player #custom-player #controls #buttons #left-btn button
   cursor: pointer;
 }
 
-main #right #playlist #player #custom-player #controls #buttons #left-btn button:before {
+main #right #playlist #player #custom-player #controls #buttons #left-btn button:nth-child(1)::before {
   content: '\e037';
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   font-family: 'Material Icons';
   width: 30px;
   height: 30px;
@@ -306,9 +308,112 @@ main #right #playlist #player #custom-player #controls #play-track #play-bar {
   background: red;
 }
 
+main #right #playlist #player #custom-player #controls #sec-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button:nth-child(2)::before {
+  content: '\e044';
+  font-family: 'Material Icons';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 28px;
+  padding: 13px 0px;
+  color: white;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn button:nth-child(3)::before {
+  content: '\e050';
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: 20px;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #left-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #right #playlist #player #custom-player #controls #time {
+  color: white;
+  font-size: 14px;
+}
+
+main #right #playlist #player #custom-player #controls #left-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #right #playlist #player #custom-player #controls #left-btn section {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(1)::before {
+  content: url(../images/autoplay.svg);
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: 20px;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(2)::before {
+  content: '\e8b8';
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: 20px;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(3)::before {
+  content: url(../images/miniplayer.svg);
+  display: inline-block;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(4)::before {
+  content: url(../images/theater-mode.svg);
+  display: inline-block;
+  padding: 13px;
+  color: white;
+}
+
+main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(5)::before {
+  content: url(../images/full-screen.svg);
+  display: inline-block;
+  padding: 13px;
+  color: white;
+}
+
 main #right #playlist #player #custom-player:hover #controls {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 main #right #playlist #playlist-list {

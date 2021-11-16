@@ -81,10 +81,12 @@ var play = document.getElementById('play-pause');
 play.onclick=function(){
     if(video.paused){
         play.className = 'pause';
+        play.title= "pause";
         video.play();
     }
     else{
         play.className = 'play';
+        play.title = 'play';
         video.pause();
     }
 }
@@ -95,4 +97,13 @@ video.addEventListener('timeupdate',function(){
     if(video.ended){
         BigInt.className = "play";
     }
+    var time = getElementById("time");
+    console.log(video.currentTime);
+    time.innerText = video.currentTime +"/"+ video.duration;
 });
+
+var fullscreen = document.getElementById("full-screen");
+fullscreen.onclick = function(){
+    video.webkitRequestFullscreen();
+}
+//controls

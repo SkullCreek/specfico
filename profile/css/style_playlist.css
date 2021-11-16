@@ -411,6 +411,31 @@ main #right #playlist #player #custom-player #controls #buttons #left-btn sectio
   color: white;
 }
 
+main #right #playlist #player #custom-player #controls #volume-slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 60px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.582);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+main #right #playlist #player #custom-player #controls #volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 15px;
+  width: 15px;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+  background-color: white;
+  border-radius: 50%;
+}
+
 main #right #playlist #player #custom-player:hover #controls {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);

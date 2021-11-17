@@ -97,13 +97,58 @@ video.addEventListener('timeupdate',function(){
     if(video.ended){
         BigInt.className = "play";
     }
-    var time = getElementById("time");
+    var time = document.getElementById("time");
     console.log(video.currentTime);
-    time.innerText = video.currentTime +"/"+ video.duration;
+    time.innerText = (parseInt((video.currentTime/60)) + ((video.currentTime%60)/100)).toFixed(2) +"/"+ (parseInt((video.duration/60)) + ((video.duration%60)/100)).toFixed(2);
 });
 
 var fullscreen = document.getElementById("full-screen");
 fullscreen.onclick = function(){
     video.webkitRequestFullscreen();
+}
+
+
+var speaker = document.getElementById("volume-up");
+speaker.onclick = function(){
+    var volume_slider = document.getElementById("volume-slider");
+    if(volume_slider.style.display=="none")
+    {
+        volume_slider.style.display="inline-block";
+        volume_slider.oninput = function(){
+            video.volume = this.value; 
+            if(this.value <= 0){
+                speaker.className = "mute";
+                speaker.title = this.value*100 + "%";
+            }
+            else{
+                speaker.className = "none";
+                speaker.title = this.value*100 + "%";
+            }
+        }
+    }
+    else{
+        volume_slider.style.display="none";
+    }
+}
+
+//forward and backward progress
+
+var progress_bar = document.getElementById("play-track");
+progress_bar.onclick = function(event){
+    var percent = event.offsetX/this.offsetWidth;
+    video.currentTime = percent*video.duration;
+}
+
+
+//download video coding
+
+var download = document.getElementById("download");
+download.onclick = function(){
+    var video_src = document.getElementById("video_src").src;
+    var a_tag = document.createElement("A");
+    a_tag.href = video_src;
+    a_tag.download = video_src;
+    document.body.appendChild(a_tag);
+    a_tag.click();
 }
 //controls

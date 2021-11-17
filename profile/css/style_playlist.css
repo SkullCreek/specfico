@@ -339,6 +339,10 @@ main #right #playlist #player #custom-player #controls #buttons #left-btn button
   color: white;
 }
 
+main #right #playlist #player #custom-player #controls #buttons #left-btn button.mute:nth-child(3)::before {
+  content: '\e04f';
+}
+
 main #right #playlist #player #custom-player #controls #left-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,15 +395,18 @@ main #right #playlist #player #custom-player #controls #buttons #left-btn sectio
 }
 
 main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(3)::before {
-  content: url(../images/miniplayer.svg);
+  content: '\f090';
+  font-family: 'Material Icons';
   display: inline-block;
   padding: 13px;
   color: white;
 }
 
 main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(4)::before {
-  content: url(../images/theater-mode.svg);
+  content: '\e434';
+  font-family: 'Material Icons';
   display: inline-block;
+  font-size: 20px;
   padding: 13px;
   color: white;
 }
@@ -418,7 +425,7 @@ main #right #playlist #player #custom-player #controls #volume-slider {
   width: 60px;
   height: 5px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.582);
+  background-color: rgba(255, 255, 255, 0.288);
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
   -webkit-transform: translateY(-8px);
@@ -434,6 +441,7 @@ main #right #playlist #player #custom-player #controls #volume-slider::-webkit-s
           box-shadow: 0px 0px 5px black;
   background-color: white;
   border-radius: 50%;
+  cursor: ew-resize;
 }
 
 main #right #playlist #player #custom-player:hover #controls {

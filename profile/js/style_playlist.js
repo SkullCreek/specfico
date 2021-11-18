@@ -151,4 +151,24 @@ download.onclick = function(){
     document.body.appendChild(a_tag);
     a_tag.click();
 }
+
+//settings
+
+var settings = document.getElementById("settings");
+settings.onclick = function demo()
+{
+    var settingsOption = document.getElementById("settings-options");
+    settingsOption.style.animation = "settings 1s";
+    settingsOption.style.animationFillMode = "forwards";
+    settings.onclick = function demo2(){
+        settingsOption.style.animation = "settingsClose 1s";
+        settingsOption.style.animationFillMode = "forwards";
+        
+    }
+
+}
+
+
+
+
 //controls

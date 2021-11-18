@@ -376,6 +376,10 @@ main #right #playlist #player #custom-player #controls #left-btn section {
       align-self: end;
 }
 
+main #right #playlist #player #custom-player #controls #buttons #left-btn p {
+  padding: 5px;
+}
+
 main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(1)::before {
   content: url(../images/autoplay.svg);
   font-family: 'Material Icons';
@@ -392,6 +396,120 @@ main #right #playlist #player #custom-player #controls #buttons #left-btn sectio
   font-size: 20px;
   padding: 13px;
   color: white;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options {
+  width: 151px;
+  height: 0px;
+  overflow: hidden;
+  background: #363636;
+  padding: 0px;
+  position: absolute;
+  top: -145px;
+  right: 12%;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul li {
+  width: 100%;
+  font-size: 12px;
+  color: white;
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul li img {
+  cursor: pointer;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul li:nth-child(4) {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 1px;
+  margin: 20px 5px 0px 5px;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  cursor: ew-resize;
+}
+
+main #right #playlist #player #custom-player #controls #settings-options ul input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  height: 16px;
+  width: 16px;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+  background-color: white;
+  border-radius: 50%;
+  cursor: ew-resize;
+}
+
+@-webkit-keyframes settings {
+  0% {
+    height: 0%;
+    padding: 0%;
+  }
+  100% {
+    height: 140px;
+    padding: 10px;
+  }
+}
+
+@keyframes settings {
+  0% {
+    height: 0%;
+    padding: 0%;
+  }
+  100% {
+    height: 140px;
+    padding: 10px;
+  }
+}
+
+@-webkit-keyframes settingsClose {
+  0% {
+    height: 140px;
+    padding: 10px;
+  }
+  100% {
+    height: 0%;
+    padding: 0%;
+  }
+}
+
+@keyframes settingsClose {
+  0% {
+    height: 140px;
+    padding: 10px;
+  }
+  100% {
+    height: 0%;
+    padding: 0%;
+  }
 }
 
 main #right #playlist #player #custom-player #controls #buttons #left-btn section button:nth-child(3)::before {

@@ -267,7 +267,11 @@ main{
                                 align-self: end;
                             }
                         }
-                        
+                        #buttons #left-btn{
+                            p{
+                                padding: 5px;
+                            }
+                        }
                         #buttons #left-btn section button:nth-child(1)::before{
                             content: url(../images/autoplay.svg);
                             font-family: 'Material Icons';
@@ -283,6 +287,66 @@ main{
                             font-size: 20px;
                             padding: 13px;
                             color: white;
+                        }
+                        #settings-options{
+                            width: 151px;
+                            height: 0px;
+                            overflow: hidden;
+                            background: #363636;
+                            padding: 0px;
+                            position: absolute;
+                            top: -145px;
+                            right: 12%;
+                            ul{
+                                width: 100%;
+                                display: flex;
+                                
+                                li{
+                                    width: 100%;
+                                    font-size: 12px;
+                                    color: white;
+                                    padding: 8px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    img{
+                                        cursor: pointer;
+                                    }
+                                }
+                                li:nth-child(4){
+                                    justify-content: right;
+                                    padding-top: 10px;
+                                    cursor: pointer;
+                                }
+                                input[type=range]{
+                                    appearance: none;
+                                    height: 1px;
+                                    margin: 20px 5px 0px 5px;
+
+                                    border-radius: 10px;
+                                    background-color: rgb(255, 255, 255);
+                                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+                                    transform: translateY(-8px);
+                                    cursor: ew-resize;
+                                }
+                                input[type=range]::-webkit-slider-thumb{
+                                    appearance: none;
+                                    height: 16px;
+                                    width: 16px;
+                                    box-shadow: 0px 0px 5px black;
+                                    background-color: white;
+                                    border-radius: 50%;
+                                    cursor: ew-resize;
+                                }
+                            }
+                        }
+                        @keyframes settings {
+                            0%{height: 0%;padding: 0%;}
+                            100%{height: 140px; padding: 10px;}
+                            
+                        }
+                        @keyframes settingsClose {
+                            0%{height: 140px; padding: 10px;}  
+                            100%{height: 0%;padding: 0%;} 
                         }
                         #buttons #left-btn section button:nth-child(3)::before{
                             content: '\f090';

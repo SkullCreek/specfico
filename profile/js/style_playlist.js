@@ -154,21 +154,56 @@ download.onclick = function(){
 
 //settings
 
-var settings = document.getElementById("settings");
-settings.onclick = function demo()
-{
-    var settingsOption = document.getElementById("settings-options");
-    settingsOption.style.animation = "settings 1s";
-    settingsOption.style.animationFillMode = "forwards";
-    settings.onclick = function demo2(){
-        settingsOption.style.animation = "settingsClose 1s";
-        settingsOption.style.animationFillMode = "forwards";
-        
+var setting_icon = document.getElementById("settings");
+setting_icon.onclick = function(){
+    var setting_toggle = document.getElementById("settings-options");
+    if(setting_toggle.offsetHeight == 0){
+        setting_toggle.style.width = "165px";
+        setting_toggle.style.height = "140px";
+        setting_toggle.style.padding = "10px";
+        setting_toggle.style.transition = "all 0.2s";
+    }
+    else{
+        setting_toggle.style.width = "0px";
+        setting_toggle.style.height = "0px";
+        setting_toggle.style.padding = "0px";
+        setting_toggle.style.transition = "all 0.2s";
+    }
+
+    //control video speed
+    var video_speed_slider = document.getElementById("speed-slider");
+    video_speed_slider.oninput = function(){
+        video.playbackRate = this.value;
+        document.getElementById("show-speed").innerHTML = this.value;
+    }
+
+    //reset video speed
+
+    var reset_speed = document.getElementById("reset-speed");
+    reset_speed.onclick = function(){
+        video.playbackRate = 1 ;
+        document.getElementById("show-speed").innerHTML = 1;
+        video_speed_slider.value = 1;
     }
 
 }
 
 
+//mini video player
 
+var miniplayer = document.getElementById("miniplayer");
+miniplayer.onclick = function(){
+    video.pause();
+    var large_video_time = video.currentTime;
+    var large_video_name = document.getElementById("video_src").src;
+    document.getElementById("custom-player").style.display = "none";
+    var miniplayer = document.getElementById("miniplayer-play");
+    miniplayer.style.display = "block";
+    miniplayer.style.transition="1s";
+    var mini_video_player = document.getElementById("minivideo");
+    document.getElementById("minivideo-source").src = large_video_name;
+    mini_video_player.currentTime = large_video_time;
+    mini_video_player.play();
+}
 
 //controls

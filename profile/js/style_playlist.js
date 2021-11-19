@@ -201,9 +201,26 @@ miniplayer.onclick = function(){
     miniplayer.style.display = "block";
     miniplayer.style.transition="1s";
     var mini_video_player = document.getElementById("minivideo");
+    mini_video_player.load();
     document.getElementById("minivideo-source").src = large_video_name;
     mini_video_player.currentTime = large_video_time;
     mini_video_player.play();
+    mini_video_player.onmouseover = function(){
+        this.controls = true;
+    }
+    //close mini video coding
+
+    var close = document.getElementById("miniplayer_close");
+    close.onclick = function(){
+        var mini_video_player = document.getElementById("minivideo");
+        mini_video_player.pause();
+        this.parentElement.style.display = "none";
+        document.getElementById("custom-player").style.display="block";
+        video.load();
+        video.currentTime = mini_video_player.currentTime;
+        large_video_name = document.getElementById("minivideo-source").src;
+        video.play();
+    }
 }
 
 //controls

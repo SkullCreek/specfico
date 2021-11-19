@@ -80,7 +80,7 @@
                                     <ul>
                                         <li>Annotations <img src="images/annotations.svg" alt=""></li>
                                         <li>Playback Speed <p id="show-speed">1</p></li>
-                                        <input type="range" min="0" max="2" step="0.25" style="width: 100%;" value="1" id="speed-slider">
+                                        <input type="range" min="0.25" max="2" step="0.25" style="width: 100%;" value="1" id="speed-slider">
                                         <li id="reset-speed">Reset</li>
 
                                     </ul>
@@ -89,8 +89,8 @@
                         </div>
                     </div>
                     <div id="miniplayer-play">
-                        <span class="material-icons">close</span>
-                        <video controls id="minivideo">
+                        <span class="material-icons" id="miniplayer_close">close</span>
+                        <video id="minivideo">
                             <source src="images/1.mp4" id="minivideo-source"></source>
                         </video>
                     </div>

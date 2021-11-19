@@ -137,6 +137,7 @@ main{
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             #player{
                 width: 70%;
                 video{
@@ -483,6 +484,24 @@ main{
     #right ul li input{
         width: 40vw !important;
 
+    }
+    
+}
+@media screen and (max-width:1320px){
+    #player{
+        width: 100%!important;
+        #custom-player{
+            width: 100%!important;
+            video{
+                width: 100%!important;
+            }
+        }
+    }
+    #playlist-list{
+        width: 100%!important;
+        h1{
+            padding-right: 150px!important;
+        }
     }
 }
 

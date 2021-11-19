@@ -186,6 +186,8 @@ main #right #playlist {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main #right #playlist #player {
@@ -675,6 +677,24 @@ main #right #playlist #playlist-list::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1119px) {
   #right ul li input {
     width: 40vw !important;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  #player {
+    width: 100% !important;
+  }
+  #player #custom-player {
+    width: 100% !important;
+  }
+  #player #custom-player video {
+    width: 100% !important;
+  }
+  #playlist-list {
+    width: 100% !important;
+  }
+  #playlist-list h1 {
+    padding-right: 150px !important;
   }
 }
 

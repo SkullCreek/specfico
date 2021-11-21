@@ -217,12 +217,20 @@ main{
                             left: 0%;
                             width: 98%;
                             border-radius: 50px;
-                            background: #C8C8C8;
+                            background: #c8c8c8a6;
+                            position: relative;
+                            #buffred-progress{
+                                width: 0px;
+                                height: 4px;
+                                background-color: rgba(238, 238, 238, 0.705);
+                                position: absolute;
+                            }
                             #play-bar{
                                 height: 4px;
                                 width: 0;
                                 border-radius: 50px;
                                 background: red;
+                                position: absolute;
                             }
                         }
                         #sec-left{

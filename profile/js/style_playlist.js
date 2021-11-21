@@ -223,4 +223,10 @@ miniplayer.onclick = function(){
     }
 }
 
+
+    video.onprogress = function(){
+        
+        var percentage = (video.buffered.end(0)/video.duration)*100;
+        document.getElementById("buffred-progress").style.width = percentage + "%";
+    }
 //controls

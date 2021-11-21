@@ -55,9 +55,11 @@
                     <div id="custom-player">
                         <video id="video" poster="images/thumbnail.jpg"  width="100%" oncontextmenu="return false"> 
                             <source src="images/1.mp4" id="video_src"></source>
+                            <!-- https://www.appsloveworld.com/wp-content/uploads/2018/10/sample-mp4-video.mp4 -->
                         </video>
                         <div id="controls">
                             <div id="play-track">
+                                <div id="buffred-progress"></div>
                                 <div id="play-bar"></div>
                             </div>
                             <div id="buttons">
@@ -66,7 +68,7 @@
                                         <button id="play-pause"></button>
                                         <button id="skip-next"></button>
                                         <button id="volume-up"><input type="range" min="0" max="1" step="0.1" id="volume-slider" style="display:none"></button>
-                                        <p id="time">0.00/58.12</p>
+                                        <p id="time">0.00/0.00</p>
                                     </div>
                                     <section id="sec-right">
                                         <button id="autoplay"></button>

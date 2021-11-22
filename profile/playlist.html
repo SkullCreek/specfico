@@ -54,7 +54,7 @@
                 <div id="player">
                     <div id="custom-player">
                         <video id="video" poster="images/thumbnail.jpg"  width="100%" oncontextmenu="return false"> 
-                            <source src="images/1.mp4" id="video_src"></source>
+                            <source src="images/1.mp4" id="video_src" type="video/*">
                             <!-- https://www.appsloveworld.com/wp-content/uploads/2018/10/sample-mp4-video.mp4 -->
                         </video>
                         <div id="controls">
@@ -110,6 +110,7 @@
                 <div id="playlist-list">
                     <div id="playlist-list-add">
                         <h1>My Playlist</h1>
+                        <input type="file" accept="video/*" id="upload-video" style="position: absolute; opacity: 0;cursor: pointer;">
                         <img src="images/playlist_add.svg" alt="" style="margin-right: 10px;">
                     </div>  
                     <h4 id="heading"><p>#</p> <p>Name</p></h4>

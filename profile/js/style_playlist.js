@@ -229,4 +229,38 @@ miniplayer.onclick = function(){
         var percentage = (video.buffered.end(0)/video.duration)*100;
         document.getElementById("buffred-progress").style.width = percentage + "%";
     }
+
+
+var upload_video = document.getElementById("upload-video");
+upload_video.onchange = function(){
+    var filename = this.files[0];
+    alert(filename);
+    var url = URL.createObjectURL(filename);
+    document.getElementById("video_src").src = url;
+    video.play();
+    play.className = 'pause';
+}
+
 //controls
+
+/*
+
+File manage (process)
+
+1. URL.createObjectURL(filename.files[0])
+
+2. fileReader
+
+we can process file with JavaScript
+
+we can develop file with C++, C, JAVA
+
+new FileReader();
+
+reader.readAsDataURL(filename);
+
+localStorage.setItem("Encode", teader.result)
+
+
+
+*/

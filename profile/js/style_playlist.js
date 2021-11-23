@@ -234,9 +234,8 @@ miniplayer.onclick = function(){
 var upload_video = document.getElementById("upload-video");
 upload_video.onchange = function(){
     var filename = this.files[0];
-    alert(filename);
     var url = URL.createObjectURL(filename);
-    document.getElementById("video_src").src = url;
+    video.src = url;
     video.play();
     play.className = 'pause';
 }

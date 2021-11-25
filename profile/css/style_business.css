@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -130,7 +130,6 @@ main #right {
   width: 100%;
   padding: 35px 35px 0 35px;
   overflow: hidden;
-  background-color: #E7DCF3;
 }
 
 main #right ul {
@@ -169,14 +168,414 @@ main #right #new-business {
   position: relative;
   z-index: 99;
   height: 513px;
+  padding: 0px 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #right #new-business #progressbar {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+main #right #new-business #progressbar ul {
+  width: 100%;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+}
+
+main #right #new-business #progressbar ul li {
+  width: 33%;
+  text-align: center;
+  padding: 10px 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+main #right #new-business #progressbar ul #company {
+  background-color: #323232;
+  color: white;
+}
+
+main #right #new-business #form-background {
+  width: 100%;
+  height: 600px;
+  background: url(../images/form-background.svg) no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+main #right #new-business #form-background #forms {
+  width: 54%;
+  min-height: 410px;
+  position: relative;
+}
+
+main #right #new-business #form-background #forms #company-form {
+  width: 100%;
+  min-height: 410px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 46px 70px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+main #right #new-business #form-background #forms #address-form {
+  width: 100%;
+  height: 410px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 46px 70px;
+  position: absolute;
+  bottom: -500px;
+}
+
+main #right #new-business #form-background #forms #details-form {
+  width: 100%;
+  height: 410px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 46px 70px;
+  position: absolute;
+  bottom: -500px;
+}
+
+main #right #new-business #form-background #forms #details-form input[type=text] {
+  width: 45%;
+  margin-right: 10px;
+  padding: 4px 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 25px;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+main #right #new-business #form-background #forms #details-form input[type=text]::nth-child(1) {
+  float: left;
+}
+
+main #right #new-business #form-background #forms #details-form input[type=text]::nth-child(2) {
+  float: right;
+}
+
+main #right #new-business #form-background #forms input[type=date] {
+  width: 45%;
+  margin-right: 10px;
+  padding: 4px 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 18px;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+main #right #new-business #form-background #forms select {
+  width: 48%;
+  margin-right: 10px;
+  padding: 4px 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 18px;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+main #right #new-business #form-background #forms h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  padding-bottom: 73px;
+}
+
+main #right #new-business #form-background #forms input[type=text] {
+  width: 100%;
+  padding: 4px 0px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  font-size: 25px;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+main #right #new-business #form-background #forms input[type=button] {
+  width: 140px;
+  padding: 11px 52px;
+  float: right;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #323232;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main #right #new-business #form-background #forms input[type=button]:hover {
   background-color: black;
 }
 
-main #right #new-business #new-company {
+main #right #new-business #form-background #forms #back {
+  float: left;
+  background-color: #b8b8b8;
+  color: black;
+}
+
+main #right #new-business #form-background #forms #back:hover {
+  background-color: #8d8d8d;
+}
+
+main #right #new-business #form-background #forms #back2 {
+  float: left;
+  background-color: #b8b8b8;
+  color: black;
+}
+
+main #right #new-business #form-background #forms #back2:hover {
+  background-color: #8d8d8d;
+}
+
+main #right #new-business #form-background #business-img {
   width: 100%;
-  height: 513px;
-  background-color: white;
-  padding: 0px 51px;
+  position: absolute;
+  -webkit-transform: translate(68%, -1%);
+          transform: translate(68%, -1%);
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    bottom: -500px;
+  }
+  70% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    bottom: -500px;
+  }
+  70% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes slide-down {
+  0% {
+    bottom: 0px;
+  }
+  70% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -500px;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    bottom: 0px;
+  }
+  70% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -500px;
+  }
+}
+
+@-webkit-keyframes popout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+  60% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+}
+
+@keyframes popout {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+  60% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+}
+
+@-webkit-keyframes popout2 {
+  0% {
+    bottom: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    bottom: 0;
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+  }
+}
+
+@keyframes popout2 {
+  0% {
+    bottom: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    bottom: 0;
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes popon {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+  60% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+}
+
+@keyframes popon {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+  60% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+}
+
+@-webkit-keyframes popon2 {
+  0% {
+    bottom: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+  60% {
+    bottom: 0;
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+}
+
+@keyframes popon2 {
+  0% {
+    bottom: 0;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 0.3;
+    display: none;
+  }
+  60% {
+    bottom: 0;
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    bottom: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
 }
 
 @-webkit-keyframes darpan_slide {

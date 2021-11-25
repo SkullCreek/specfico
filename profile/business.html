@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>Business</title>
 </head>
 <body>
@@ -52,9 +55,45 @@
 
             <!-- Start New Business Coding Starting-->
             <main id="new-business">
-                <form id="new-company">
-                    
-                </form>
+                <section id="progressbar">
+                    <ul>
+                        <li id="company">Company</li>
+                        <li id="address">Address</li>
+                        <li id="details">Details</li>
+                    </ul>
+                </section>
+                <section id="form-background">
+                    <div id="forms">
+                        <form id="company-form" action="">
+                            <h2>Let's Start With Company Name</h2>
+                            <input type="text" placeholder="Company Name" id="company-name" required>
+                            <input type="text" placeholder="Mailing Name" id="mailing-name" required>
+                            <input type="button" value="Next" name="Next" id="next">
+                        </form>
+                        <form id="address-form" action="">
+                            <h2>Provide Your Company Address</h2>
+                            <input type="text" placeholder="Address" id="company-address">
+                            <input type="text" maxlength="10" placeholder="Phone Number" id="company-number">
+                            <input type="button" value="Back" name="Back" id="back">
+                            <input type="button" value="Next" name="Next" id="next2">
+                        </form>
+                        <form id="details-form" action="">
+                            <h2>Provide Your Company Details</h2>
+                            <input type="text" placeholder="Fax Number" id="fax-number">
+                            <input type="text" placeholder="Website" id="website">
+                            <input type="date" placeholder="Date" id="date">
+                            <select name="cars" id="cars">
+                                <option value="volvo">Accounts Only</option>
+                                <option value="saab">Accounts With Inventory</option>
+                            </select>
+                            <input type="button" value="Back" name="Back" id="back2">
+                            <input type="button" value="Next" name="Next" id="next3">
+                        </form>
+                    </div>
+                    <div id="business-img">
+                        <img src="images/Billy.png" alt="">
+                    </div>
+                </section>  
             </main>
 
             <!-- Start New Business Coding Ending -->

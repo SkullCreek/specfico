@@ -66,7 +66,9 @@
                     <div id="forms">
                         <form id="company-form" action="">
                             <h2>Let's Start With Company Name</h2>
+                            <p id="warning-cmpny"></p>
                             <input type="text" placeholder="Company Name" id="company-name" required>
+                            <p id="warning-mail"></p>
                             <input type="text" placeholder="Mailing Name" id="mailing-name" required>
                             <input type="button" value="Next" name="Next" id="next">
                         </form>
@@ -81,10 +83,11 @@
                             <h2>Provide Your Company Details</h2>
                             <input type="text" placeholder="Fax Number" id="fax-number">
                             <input type="text" placeholder="Website" id="website">
+                            <p id="warning-date"></p>
                             <input type="date" placeholder="Date" id="date">
-                            <select name="cars" id="cars">
-                                <option value="volvo">Accounts Only</option>
-                                <option value="saab">Accounts With Inventory</option>
+                            <select name="stock" id="stock-type">
+                                <option value="Accounts Only">Accounts Only</option>
+                                <option value="Accounts With Inventory">Accounts With Inventory</option>
                             </select>
                             <input type="button" value="Back" name="Back" id="back2">
                             <input type="button" value="Next" name="Next" id="next3">

@@ -219,7 +219,7 @@ main{
                         outline: none;
                         border-bottom: 2px solid #000000;
                         font-size: 18px;
-                        margin-bottom: 60px;
+                        margin-bottom: 40px;
                         font-weight: 600;
                     }
                     select{
@@ -231,7 +231,7 @@ main{
                         outline: none;
                         border-bottom: 2px solid #000000;
                         font-size: 18px;
-                        margin-bottom: 60px;
+                        margin-bottom: 40px;
                         font-weight: 600;
                     }
                     h2{
@@ -282,6 +282,9 @@ main{
                     }
                     #back2:hover{
                         background-color: #8d8d8d;
+                    }
+                    p{
+                        font-size: 12px;
                     }
                 }
                 #business-img{
@@ -384,3 +387,71 @@ main{
     } 
 }
 //dashboard
+//responsive
+
+@media screen and (max-width:1413px) and (min-width:1120px){
+    #forms{
+        width: 80%!important;
+    }
+    #business-img{
+        transform: translate(60%,-1%)!important;
+    }
+}
+@media screen and (max-width:1119px) and (min-width:545px){
+    #new-business{
+        padding: 0!important;
+    }
+    #forms{
+        width: 100%!important;
+        h2, input[type=text]{
+            font-size: 18px!important;
+        }
+    }
+    #business-img{
+        display: none;
+    }
+}
+@media screen and (max-width:544px){
+    #new-business{
+        padding: 0!important;
+    }
+    #forms{
+        width: 100%!important;
+        h2{
+            padding-bottom: 50px!important;
+        }
+        h2, input[type=text],input[type=button],input[type=date],select{
+            font-size: 15px!important;
+        }
+        input[type=date],select{
+            width: 45%!important;
+            font-size: 12px!important;
+        }
+        input[type=button]{
+            width: 100%!important;
+            margin-bottom: 20px!important;
+        }
+    }
+    #details-form,#address-form,#company-form{
+        padding: 35px 22px!important;
+    }
+    #business-img{
+        display: none;
+    }
+    #form-background{
+        padding: 20px 20px!important;
+    }
+}
+@media screen and (max-width:840px){
+    #new-business{
+        padding: 0!important;
+    }
+    input[type=date],select{
+        width: 45%!important;
+        font-size: 12px!important;
+    }
+    input[type=button]{
+        width: 100%!important;
+        margin-bottom: 1px!important;
+    }
+}

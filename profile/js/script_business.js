@@ -150,3 +150,111 @@ back_btn2.onclick = function(){
         address.style.transition = "all 0.6s";
     },500);
 }
+
+function form_val(){
+    var company_name = document.getElementById("company-name");
+    var mailing_name = document.getElementById("mailing-name");
+    var company_address = document.getElementById("company-address");
+    company_name.onchange = function(){
+        if(isNaN(this.value)){
+            mailing_name.onchange = function(){
+                if(this.value == company_name.value){
+                    var wrn = document.getElementById("warning-mail"); 
+                    wrn.innerHTML="Mailing Name Should be Company name.pvt.ltd or .govt.ltd";
+                    wrn.style.color = "red";
+                    this.style.borderBottom = "2px solid red";
+                    this.onclick = function(){
+                        wrn.innerHTML="";
+                        this.value = "";
+                        wrn.style.color = "inherit";
+                        this.style.borderBottom = "2px solid black";
+                    }
+                }
+                else{
+                    var wrn = document.getElementById("warning-mail"); 
+                    if(this.value.indexOf(company_name+".pvt.ltd")!=0 || this.value.indexOf(company_name+".govt.ltd")!=0)
+                    {
+                        var date = document.getElementById("date");
+                        date.onchange = function(){
+                            var current_date = new Date();
+                            var selected_date = new Date(date.value);
+                            if(selected_date.getFullYear() >= current_date.getFullYear()){
+                                if(selected_date.getMonth()+1==4){
+                                    if(selected_date.getDate() == 1){
+                                        var phone_number = document.getElementById("company-number");
+                                        var fax_number = document.getElementById("fax-number");
+                                        var website = document.getElementById("website");
+                                        var stock_type=document.getElementById("stock-type");
+                                        var cmp_details = {cmp_name:company_name.value,mailing_name:mailing_name.value,address:company_address.value,phone:phone_number.value,fax:fax_number.value,website:website.value,fine:date.value,stock_type:stock_type.value};
+                                    }
+                                    else{
+                                        var wrn = document.getElementById("warning-date");
+                                        wrn.innerHTML = "Date Should be 1";
+                                        wrn.style.color = "red";
+                                        this.style.borderBottom = "2px solid red";
+                                        this.onclick = function(){
+                                            this.value="dd-mm-yyyy";
+                                            wrn.innerHTML="";
+                                            wrn.style.color = "inherit";
+                                            this.style.borderBottom = "2px solid black";
+                                        }
+                                    }
+                                }
+                                else{
+                                    var wrn = document.getElementById("warning-date");
+                                    wrn.innerHTML = "Month should be april";
+                                    wrn.style.color = "red";
+                                    this.style.borderBottom = "2px solid red";
+                                    this.onclick = function(){
+                                        this.value="dd-mm-yyyy"
+                                        wrn.innerHTML="";
+                                        wrn.style.color = "inherit";
+                                        this.style.borderBottom = "2px solid black";
+                                    } 
+                                }
+                            }
+                            else{
+                                var wrn = document.getElementById("warning-date");
+                                wrn.innerHTML = "Passed year not allowed";
+                                wrn.style.color = "red";
+                                this.style.borderBottom = "2px solid red";
+                                var next = document.getElementById("next");
+                                this.onclick = function(){
+                                    this.value="dd-mm-yyyy"
+                                    wrn.innerHTML="";
+                                    wrn.style.color = "inherit";
+                                    this.style.borderBottom = "2px solid black";
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        wrn.innerHTML = "Mailing Name Should be Company name.pvt.ltd or .govt.ltd";
+                        wrn.style.color = "red";
+                        this.style.borderBottom = "2px solid red";
+                        this.onclick = function(){
+                            wrn.innerHTML="";
+                            this.value = "";
+                            wrn.style.color = "inherit";
+                            this.style.borderBottom = "2px solid black";
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            var wrn = document.getElementById("warning-cmpny");
+            wrn.innerHTML = "Numbers not allowed";
+            wrn.style.color = "red";
+            this.style.borderBottom = "2px solid red"
+            this.onclick = function(){
+                wrn.innerHTML = "";
+                this.value = "";
+                wrn.style.color = "red";
+                this.style.borderBottom = "2px solid black";
+            }
+        }
+    }
+}
+
+form_val();

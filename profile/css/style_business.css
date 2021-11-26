@@ -283,7 +283,7 @@ main #right #new-business #form-background #forms input[type=date] {
   outline: none;
   border-bottom: 2px solid #000000;
   font-size: 18px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
@@ -296,7 +296,7 @@ main #right #new-business #form-background #forms select {
   outline: none;
   border-bottom: 2px solid #000000;
   font-size: 18px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
@@ -355,6 +355,10 @@ main #right #new-business #form-background #forms #back2 {
 
 main #right #new-business #form-background #forms #back2:hover {
   background-color: #8d8d8d;
+}
+
+main #right #new-business #form-background #forms p {
+  font-size: 12px;
 }
 
 main #right #new-business #form-background #business-img {
@@ -666,6 +670,77 @@ main #right #new-business #form-background #business-img {
   }
   #right ul li #nortification {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1413px) and (min-width: 1120px) {
+  #forms {
+    width: 80% !important;
+  }
+  #business-img {
+    -webkit-transform: translate(60%, -1%) !important;
+            transform: translate(60%, -1%) !important;
+  }
+}
+
+@media screen and (max-width: 1119px) and (min-width: 545px) {
+  #new-business {
+    padding: 0 !important;
+  }
+  #forms {
+    width: 100% !important;
+  }
+  #forms h2, #forms input[type=text] {
+    font-size: 18px !important;
+  }
+  #business-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  #new-business {
+    padding: 0 !important;
+  }
+  #forms {
+    width: 100% !important;
+  }
+  #forms h2 {
+    padding-bottom: 50px !important;
+  }
+  #forms h2, #forms input[type=text], #forms input[type=button], #forms input[type=date], #forms select {
+    font-size: 15px !important;
+  }
+  #forms input[type=date], #forms select {
+    width: 45% !important;
+    font-size: 12px !important;
+  }
+  #forms input[type=button] {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  #details-form, #address-form, #company-form {
+    padding: 35px 22px !important;
+  }
+  #business-img {
+    display: none;
+  }
+  #form-background {
+    padding: 20px 20px !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #new-business {
+    padding: 0 !important;
+  }
+  input[type=date], select {
+    width: 45% !important;
+    font-size: 12px !important;
+  }
+  input[type=button] {
+    width: 100% !important;
+    margin-bottom: 1px !important;
   }
 }
 /*# sourceMappingURL=style_business.css.map */

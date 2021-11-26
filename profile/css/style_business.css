@@ -130,6 +130,7 @@ main #right {
   width: 100%;
   padding: 35px 35px 0 35px;
   overflow: hidden;
+  background-color: #F1F1F1;
 }
 
 main #right ul {
@@ -298,6 +299,15 @@ main #right #new-business #form-background #forms select {
   font-size: 18px;
   margin-bottom: 40px;
   font-weight: 600;
+  border-radius: 0px;
+  outline: none;
+}
+
+main #right #new-business #form-background #forms select option {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  border-bottom: none;
 }
 
 main #right #new-business #form-background #forms h2 {

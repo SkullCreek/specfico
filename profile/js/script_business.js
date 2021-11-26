@@ -1,3 +1,14 @@
+// cjheck company
+window.onload=function check_cmp(){
+    if(localStorage.getItem("company") != null)
+    {
+        document.getElementById("new-business").style.display="none";
+    }
+}
+
+
+
+
 //profile photo 
 
 function showing_pic_name(){
@@ -181,11 +192,17 @@ function form_val(){
                             if(selected_date.getFullYear() >= current_date.getFullYear()){
                                 if(selected_date.getMonth()+1==4){
                                     if(selected_date.getDate() == 1){
-                                        var phone_number = document.getElementById("company-number");
-                                        var fax_number = document.getElementById("fax-number");
-                                        var website = document.getElementById("website");
-                                        var stock_type=document.getElementById("stock-type");
-                                        var cmp_details = {cmp_name:company_name.value,mailing_name:mailing_name.value,address:company_address.value,phone:phone_number.value,fax:fax_number.value,website:website.value,fine:date.value,stock_type:stock_type.value};
+                                        var next = document.getElementById("next3");
+                                        next.onclick = function(){
+                                            var phone_number = document.getElementById("company-number");
+                                            var fax_number = document.getElementById("fax-number");
+                                            var website = document.getElementById("website");
+                                            var stock_type=document.getElementById("stock-type");
+                                            var cmp_details = {cmp_name:company_name.value,mailing_name:mailing_name.value,address:company_address.value,phone:phone_number.value,fax:fax_number.value,website:website.value,fine:date.value,stock_type:stock_type.value};
+                                            var cmp_data = JSON.stringify(cmp_details);
+                                            localStorage.setItem("company",cmp_data);
+                                            document.getElementById("new-business").style.display="none";
+                                        }
                                     }
                                     else{
                                         var wrn = document.getElementById("warning-date");

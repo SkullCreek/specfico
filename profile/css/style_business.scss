@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -97,7 +99,7 @@ main{
         width: 100%;
         padding: 35px 35px 0 35px;
         overflow: hidden;
-        background-color: #F1F1F1;
+        position: relative;
         ul{
             display: flex;
             list-style: none;
@@ -124,6 +126,7 @@ main{
         #new-business{
             width: 100%;
             position: relative;
+            background-color: #F1F1F1;
             z-index: 99;
             height: 513px;
             padding: 0px 45px;
@@ -303,6 +306,63 @@ main{
                 }
             }
         }
+
+        #account-only{
+            width: 100%;
+            background: #F1F1F1;
+            height: 553px;
+            position: absolute;
+            overflow: hidden;
+            left: 0px;
+            padding: 40px 80px 40px 40px;
+            display: grid;
+            grid-template-columns: 313px 158px auto;
+            grid-template-rows: repeat(12, 1fr);
+            grid-gap: 30px;
+            #card, #clock, #invoice, #add-invoice, #tax{
+                background-color: white;
+                border-radius: 10px;
+            }  
+            #card{
+                grid-row-start: 1;
+                grid-row-end: 6;
+                grid-column-start: 1;
+                background: url(../images/card.svg) center center no-repeat;
+                width: 100%;
+                background-size: cover;
+                position: relative;
+                p{
+                    color: white;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 35px;
+                    font-family: 'Montserrat';
+                    font-size: 25px;
+                    font-weight: 500;
+                }
+            }
+            #clock{
+                grid-row-start: 1;
+                grid-row-end: 6;
+                background-color: #F9B80A;
+            }
+            #invoice{
+                grid-row-start: 1;
+                grid-row-end: 9;
+            }
+            #add-invoice{
+                grid-row-start: 6;
+                grid-row-end: 13;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                
+            }
+            #tax{
+                grid-row-start: 9;
+                grid-row-end: 13;
+            }
+        }
+
     }
 }
 @keyframes slide-up {

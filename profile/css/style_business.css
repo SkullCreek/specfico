@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -130,7 +131,7 @@ main #right {
   width: 100%;
   padding: 35px 35px 0 35px;
   overflow: hidden;
-  background-color: #F1F1F1;
+  position: relative;
 }
 
 main #right ul {
@@ -167,6 +168,7 @@ main #right h1 {
 main #right #new-business {
   width: 100%;
   position: relative;
+  background-color: #F1F1F1;
   z-index: 99;
   height: 513px;
   padding: 0px 45px;
@@ -376,6 +378,78 @@ main #right #new-business #form-background #business-img {
   position: absolute;
   -webkit-transform: translate(68%, -1%);
           transform: translate(68%, -1%);
+}
+
+main #right #account-only {
+  width: 100%;
+  background: #F1F1F1;
+  height: 553px;
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  padding: 40px 80px 40px 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 313px 158px auto;
+      grid-template-columns: 313px 158px auto;
+  -ms-grid-rows: (1fr)[12];
+      grid-template-rows: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+
+main #right #account-only #card, main #right #account-only #clock, main #right #account-only #invoice, main #right #account-only #add-invoice, main #right #account-only #tax {
+  background-color: white;
+  border-radius: 10px;
+}
+
+main #right #account-only #card {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 6;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  background: url(../images/card.svg) center center no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+main #right #account-only #card p {
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 35px;
+  font-family: 'Montserrat';
+  font-size: 25px;
+  font-weight: 500;
+}
+
+main #right #account-only #clock {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 6;
+  background-color: #F9B80A;
+}
+
+main #right #account-only #invoice {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 9;
+}
+
+main #right #account-only #add-invoice {
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  grid-row-end: 13;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+main #right #account-only #tax {
+  -ms-grid-row: 9;
+      grid-row-start: 9;
+  grid-row-end: 13;
 }
 
 @-webkit-keyframes slide-up {

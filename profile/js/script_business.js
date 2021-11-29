@@ -3,6 +3,7 @@ window.onload=function check_cmp(){
     if(localStorage.getItem("company") != null)
     {
         document.getElementById("new-business").style.display="none";
+        document.getElementById("account-only").style.display="grid";
     }
 }
 
@@ -202,6 +203,7 @@ function form_val(){
                                             var cmp_data = JSON.stringify(cmp_details);
                                             localStorage.setItem("company",cmp_data);
                                             document.getElementById("new-business").style.display="none";
+                                            document.getElementById("account-only").style.display="grid";
                                         }
                                     }
                                     else{

@@ -130,7 +130,7 @@ main #left ul li:hover, main #left ul a:hover {
 main #right {
   width: 100%;
   padding: 35px 35px 0 35px;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -168,7 +168,6 @@ main #right h1 {
 main #right #new-business {
   width: 100%;
   position: relative;
-  background-color: #F1F1F1;
   z-index: 99;
   height: 513px;
   padding: 0px 45px;
@@ -383,7 +382,7 @@ main #right #new-business #form-background #business-img {
 main #right #account-only {
   width: 100%;
   background: #F1F1F1;
-  height: 553px;
+  height: 700px;
   position: absolute;
   overflow: hidden;
   left: 0px;
@@ -395,23 +394,24 @@ main #right #account-only {
   -ms-grid-rows: (1fr)[12];
       grid-template-rows: repeat(12, 1fr);
   grid-gap: 30px;
+  display: none;
 }
 
 main #right #account-only #card, main #right #account-only #clock, main #right #account-only #invoice, main #right #account-only #add-invoice, main #right #account-only #tax {
   background-color: white;
   border-radius: 10px;
+  position: relative;
 }
 
 main #right #account-only #card {
   -ms-grid-row: 1;
       grid-row-start: 1;
-  grid-row-end: 6;
+  grid-row-end: 5;
   -ms-grid-column: 1;
       grid-column-start: 1;
   background: url(../images/card.svg) center center no-repeat;
   width: 100%;
-  background-size: cover;
-  position: relative;
+  background-size: contain;
 }
 
 main #right #account-only #card p {
@@ -427,8 +427,77 @@ main #right #account-only #card p {
 main #right #account-only #clock {
   -ms-grid-row: 1;
       grid-row-start: 1;
-  grid-row-end: 6;
+  grid-row-end: 5;
   background-color: #F9B80A;
+  padding: 15px 11px;
+}
+
+main #right #account-only #clock pre {
+  font-family: 'Montserrat';
+}
+
+main #right #account-only #clock #day {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.085em;
+  -webkit-transform: rotate(-90deg) translate(-100%);
+          transform: rotate(-90deg) translate(-100%);
+  position: absolute;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  text-align: center;
+}
+
+main #right #account-only #clock #time {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 0.085em;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  padding: 6px 33px 10px 20px;
+  text-align: center;
+}
+
+main #right #account-only #clock #clock-date {
+  width: 91px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.085em;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  padding: 61px 80px 0px 25px;
+  text-align: center;
+}
+
+main #right #account-only #clock #Month {
+  width: 91px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.085em;
+  color: #FFFFFF;
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  text-align: center;
+}
+
+main #right #account-only #clock #Year {
+  width: 91px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 0.085em;
+  color: #FFFFFF;
+  position: absolute;
+  right: 25px;
+  top: 125px;
+  text-align: center;
 }
 
 main #right #account-only #invoice {
@@ -438,18 +507,214 @@ main #right #account-only #invoice {
 }
 
 main #right #account-only #add-invoice {
-  -ms-grid-row: 6;
-      grid-row-start: 6;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
   grid-row-end: 13;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
+  padding: 23px 31px;
+}
+
+main #right #account-only #add-invoice #invoice-heading {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 19px;
+}
+
+main #right #account-only #add-invoice #cstmr-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #right #account-only #add-invoice #cstmr-name, main #right #account-only #add-invoice #cstmr-num, main #right #account-only #add-invoice #cstmr-email, main #right #account-only #add-invoice #cstmr-date {
+  width: 208px;
+  padding: 7px 25px;
+  margin-bottom: 13px;
+  background: #F1F1F1;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+}
+
+main #right #account-only #add-invoice #table-scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+  border-bottom: 4px solid #000000;
+  height: 130px;
+}
+
+main #right #account-only #add-invoice #table-scroll::-webkit-scrollbar {
+  width: 2px;
+}
+
+main #right #account-only #add-invoice #table-scroll::-webkit-scrollbar-track {
+  width: 2px;
+  background-color: transparent;
+}
+
+main #right #account-only #add-invoice #table-scroll::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: grey;
+}
+
+main #right #account-only #add-invoice table {
+  width: 100%;
+  margin-top: 16px;
+  border-spacing: 0;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+main #right #account-only #add-invoice table thead {
+  width: 100%;
+}
+
+main #right #account-only #add-invoice table thead tr {
+  width: 100%;
+}
+
+main #right #account-only #add-invoice table thead tr th {
+  width: 16.66%;
+  text-align: center;
+  color: white;
+  padding: 7px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #000000;
+}
+
+main #right #account-only #add-invoice table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main #right #account-only #add-invoice table thead tr th:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main #right #account-only #add-invoice table tbody {
+  width: 100%;
+}
+
+main #right #account-only #add-invoice table tbody tr {
+  width: 100%;
+}
+
+main #right #account-only #add-invoice table tbody tr td {
+  width: 16.66%;
+  height: 30px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 12px;
+}
+
+main #right #account-only #add-invoice #add-invoice-btn {
+  padding: 3px 15px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  -webkit-transform: translateY(-17px);
+          transform: translateY(-17px);
+  cursor: pointer;
+}
+
+main #right #account-only #add-invoice #invoice-add-button {
+  padding: 20px 78px 0px 61px;
+}
+
+main #right #account-only #add-invoice #invoice-add-button #print {
+  margin-right: 28px;
+  padding: 8px 18px;
+  border: none;
+  background: #F9B80A;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+main #right #account-only #add-invoice #invoice-add-button #save {
+  margin-right: 28px;
+  padding: 8px 18px;
+  border: none;
+  background: black;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+main #right #account-only #add-invoice #calculation {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+main #right #account-only #add-invoice #calculation table {
+  padding: 10px;
+}
+
+main #right #account-only #add-invoice #calculation th {
+  text-align: right;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+main #right #account-only #add-invoice #calculation #paid {
+  border: 2px dashed black;
 }
 
 main #right #account-only #tax {
   -ms-grid-row: 9;
       grid-row-start: 9;
   grid-row-end: 13;
+}
+
+#right::-webkit-scrollbar {
+  width: 8px;
+}
+
+#right::-webkit-scrollbar-track {
+  width: 8px;
+  background-color: transparent;
+}
+
+#right::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: #F9B80A;
+  border-radius: 10px;
 }
 
 @-webkit-keyframes slide-up {

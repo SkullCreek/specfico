@@ -57,9 +57,70 @@
                 <section id="card">
                     <p>$7,61,000</p>
                 </section>
-                <section id="clock"></section>
-                <section id="invoice"></section>
-                <section id="add-invoice"></section>
+                <section id="clock">
+                    <pre id="day">WEDNESDAY</pre>
+                    <Pre id="time">10:30</Pre>
+                    <Pre id="clock-date">26</Pre>
+                    <Pre id="Month">November</Pre>
+                    <Pre id="Year">2021</Pre>
+                </section>
+                <section id="invoice">
+                    
+                </section>
+                <section id="add-invoice">
+                    <h3 id="invoice-heading">Invoice number <span id="invoice-number">#1</span></h3>
+                    <div id="cstmr-info">
+                        <input type="text" id="cstmr-name" placeholder="Customer Name">
+                        <input type="number" id="cstmr-num" placeholder="Phone Number">
+                        <input type="email" id="cstmr-email" placeholder="Email">
+                        <input type="date" id="cstmr-date" placeholder="dd-mm-yyyy">
+                    </div>
+                    <div id="table-scroll">
+                        <table class="add-invoice-table">
+                            <thead>
+                            <tr>
+                                <th class="tg-0pky">Des</th>
+                                <th class="tg-0lax">Price</th>
+                                <th class="tg-0lax">Qty.</th>
+                                <th class="tg-0lax">Unit</th>
+                                <th class="tg-0lax">Amt</th>
+                                <th class="tg-0lax">Del</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="tg-0lax" contenteditable="true">Shoe</td>
+                                <td class="tg-0lax" contenteditable="true">3000</td>
+                                <td class="tg-0lax" contenteditable="true">10</td>
+                                <td class="tg-0lax">N.A.</td>
+                                <td class="tg-0lax">30000</td>
+                                <td class="tg-0lax"><img src="images/delete2.svg" style="cursor: pointer;" alt=""></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button id="add-invoice-btn">+</button>
+                    <div id="invoice-add-button">
+                        <button id="print">Print</button>
+                        <button id="save">Save</button>
+                    </div>
+                    <div id="calculation">
+                        <table>
+                            <tr>
+                                <th>Sub-Total</th>
+                                <td>30000.00</td>
+                            </tr>
+                            <tr>
+                                <th>Paid</th>
+                                <td id="paid" contenteditable="true">20000.00</td>
+                            </tr>
+                            <tr>
+                                <th>Due</th>
+                                <td>10000.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
                 <section id="tax"></section>
             </main>
 

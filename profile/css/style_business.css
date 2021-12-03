@@ -745,7 +745,7 @@ main #right #account-only #tax h3 {
           justify-content: space-between;
 }
 
-main #right #account-only #tax h3 #add-invoice-btn {
+main #right #account-only #tax h3 #add-tax-btn {
   padding: 3px 15px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -770,6 +770,68 @@ main #right #account-only #tax h3 #add-invoice-btn {
   display: grid;
   place-items: center;
   display: none;
+}
+
+#add-tax section {
+  width: 390px;
+  height: 404px;
+  background: url(../images/add-tax.svg) no-repeat center center;
+  background-size: contain;
+  position: relative;
+  z-index: 20;
+  -webkit-animation: popon 1s infinite;
+          animation: popon 1s infinite;
+}
+
+#add-tax section h1 {
+  width: 100%;
+  padding: 34px 0px;
+  text-align: center;
+  font-family: 'montserrat';
+  font-weight: bolder;
+}
+
+#add-tax section form {
+  padding: 40px 49px;
+}
+
+#add-tax section form p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 2px;
+}
+
+#add-tax section form input[type=text], #add-tax section form input[type=number] {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #C4C4C4;
+  background-color: transparent;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'montserrat';
+  outline: none;
+}
+
+#add-tax section form div {
+  margin-bottom: 40px;
+}
+
+#add-tax section form input[type=button] {
+  width: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  background-color: #F9B80A;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
 }
 
 #right::-webkit-scrollbar {

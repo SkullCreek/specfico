@@ -115,12 +115,27 @@
                     </div>
                 </section>
                 <section id="tax">
-                    <h3 id="tax-heading"><p>Add Tax</p><button id="add-invoice-btn">+</button></h3>
+                    <h3 id="tax-heading"><p>Add Tax</p><button id="add-tax-btn">+</button></h3>
                 </section>
             </main>
 
             <main id="add-tax">
-                <section></section>
+                <section id="add-tax-pop">
+                    <h1>TAX SETUP</h1>
+                    <form action="">
+                        <div>
+                            <p>Tax Name</p>
+                            <input type="text" id="tax-name" placeholder="Goods and Service Tax">
+                            <p id="wrn-tax1" style="font-size: 8px;color: red;"></p>
+                        </div>
+                        <div>
+                            <p>Tax Percentage</p>
+                            <input type="text" id="tax-per" placeholder="0.00%">
+                            <p id="wrn-tax2" style="font-size: 8px;color: red;"></p>
+                        </div>
+                        <input type="button" value="Submit" disabled id="submit-button-addtax">
+                    </form>
+                </section>
             </main>
 
             <!-- Account Only Coding Ending-->

@@ -440,3 +440,77 @@ function clock(){
 }
 setInterval(clock,1000);
 //clock coding started
+
+//add tax
+
+let add_tax_btn = document.getElementById("add-tax-btn");
+add_tax_btn.onclick = () => {
+    let add_tax = document.getElementById("add-tax");
+    let add_tax_pop = document.getElementById("add-tax-pop");
+    add_tax.style.display = "grid";
+    add_tax_pop.style.animation = "popon 0.5s";
+    add_tax_pop.style.animationFillMode = "forwards";
+    document.onclick = function(e){
+        if(e.target.id == 'add-tax'){
+            add_tax_pop.style.animation = "popout 0.5s";
+            add_tax_pop.style.animationFillMode = "forwards";
+            setTimeout(function(){
+                add_tax.style.display = 'none';
+            },400);     
+        }
+    }
+    let submit_btn_addtax = document.getElementById("submit-button-addtax");
+    submit_btn_addtax.onclick = () => {
+        add_tax_pop.style.animation = "popout 0.5s";
+        add_tax_pop.style.animationFillMode = "forwards";
+        setTimeout(function(){
+            add_tax.style.display = 'none';
+        },400);
+    }
+    let tax_name = document.getElementById("tax-name");
+    let wrn = document.getElementById("wrn-tax1");
+    let wrn2 = document.getElementById("wrn-tax2");
+    let tax_per = document.getElementById("tax-per");
+    submit_btn_addtax = document.getElementById("submit-button-addtax");
+    tax_name.onblur = () => {
+        if(tax_name.value.indexOf("tax") != -1){
+            tax_per.oninput = () => {
+                if(tax_per.value.charAt(0).indexOf("%") == -1){
+                    if(tax_per.value.indexOf("%") == -1){
+                        tax_per.style.borderColor = "red";
+                        wrn2.innerHTML = "must add percent symbol";
+                        tax_per.onclick = () => {
+                            tax_per.style.borderColor = "#C4C4C4";
+                            wrn2.innerHTML = "";
+                            tax_per.value = "";
+                        }
+                    }
+                    else{
+                        submit_btn_addtax.disabled = false;
+                    }
+                }
+                else{
+                    tax_per.style.borderColor = "red";
+                    wrn2.innerHTML = "This field should not contain % symbol in the start";
+                    tax_per.onclick = () => {
+                        tax_per.style.borderColor = "#C4C4C4";
+                        wrn2.innerHTML = "";
+                        tax_per.value = "";
+                    }
+                }
+            }
+        }
+        else{
+            tax_name.style.borderColor = "red";
+            wrn.innerHTML = "This field should contain a word named 'tax'";
+        }
+        tax_name.onclick = () => {
+            tax_name.style.borderColor = "#C4C4C4";
+            wrn.innerHTML = "";
+        }
+    }
+}
+
+
+
+//add tax

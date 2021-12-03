@@ -5,6 +5,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -437,6 +441,7 @@ main #right #account-only #clock pre {
 }
 
 main #right #account-only #clock #day {
+  width: 100%;
   font-style: normal;
   font-weight: 900;
   font-size: 20px;
@@ -626,6 +631,16 @@ main #right #account-only #add-invoice table tbody tr td {
   font-family: 'Montserrat';
   font-style: normal;
   font-size: 12px;
+  padding: 2px;
+}
+
+main #right #account-only #add-invoice table tbody tr td input {
+  width: 100%;
+  outline: none;
+  border: 1px dashed grey;
+  font-family: 'Montserrat';
+  padding: 2px;
+  font-size: 12px;
 }
 
 main #right #account-only #add-invoice #add-invoice-btn {
@@ -641,6 +656,8 @@ main #right #account-only #add-invoice #add-invoice-btn {
   -webkit-transform: translateY(-17px);
           transform: translateY(-17px);
   cursor: pointer;
+  position: absolute;
+  z-index: 100;
 }
 
 main #right #account-only #add-invoice #invoice-add-button {
@@ -696,10 +713,63 @@ main #right #account-only #add-invoice #calculation #paid {
   border: 2px dashed black;
 }
 
+main #right #account-only #add-invoice #invoice-date {
+  padding-left: 35%;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  font-weight: bold;
+}
+
 main #right #account-only #tax {
   -ms-grid-row: 9;
       grid-row-start: 9;
   grid-row-end: 13;
+  padding: 23px 31px;
+}
+
+main #right #account-only #tax h3 {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #right #account-only #tax h3 #add-invoice-btn {
+  padding: 3px 15px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#add-tax {
+  width: 100%;
+  position: absolute;
+  height: 120vh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  display: none;
 }
 
 #right::-webkit-scrollbar {

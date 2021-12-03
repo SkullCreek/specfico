@@ -277,3 +277,166 @@ function form_val(){
 }
 
 form_val();
+
+//ending new company form
+
+
+//starting account only add invoice coding
+
+//invoice number coding
+
+//invoce number coding
+
+//add button
+function add_item(){
+    var product_tbody = document.getElementById("add-invoice-tr");
+    var tr = document.createElement("TR");
+    var td_item = document.createElement("TD");
+    var td_price = document.createElement("TD");
+    var td_qty = document.createElement("TD");
+    var td_unit = document.createElement("TD");
+    var td_amount = document.createElement("TD");
+    var td_delete = document.createElement("TD");
+    var input_item = document.createElement("INPUT");
+    input_item.className = "item";
+    input_item.type = "text";
+    input_item.placeholder = "Item";
+    var input_price = document.createElement("INPUT");
+    input_price.type = "number";
+    input_price.disabled = 'true';
+    input_price.placeholder = "0.00";
+    var input_qty = document.createElement("INPUT");
+    input_qty.type = "number";
+    input_qty.disabled = 'true';
+    input_qty.placeholder = "1";
+    var input_unit = document.createElement("INPUT");
+    input_unit.type = "text";
+    input_unit.placeholder = "Nos.";
+    var input_amount = document.createElement("INPUT");
+    input_amount.type = "number";
+    input_amount.className = "amount";
+    // input_amount.disabled = 'true';
+    input_amount.placeholder = "0.00";
+    var img = document.createElement("IMG");
+    img.src = "images/delete2.svg";
+    img.style="cursor:pointer";
+    product_tbody.append(tr);
+    tr.append(td_item);
+    tr.append(td_price);
+    tr.append(td_qty);
+    tr.append(td_unit);
+    tr.append(td_amount);
+    tr.append(td_delete);
+    td_item.append(input_item);
+    td_price.append(input_price);
+    td_qty.append(input_qty);
+    td_unit.append(input_unit);
+    td_amount.append(input_amount);
+    td_delete.append(img);
+    img.onclick = function(){
+        let del_icon_td = this.parentElement;
+        let remove_element = del_icon_td.parentElement;
+        remove_element.remove();
+        let amount_input = document.getElementsByClassName("amount");
+        let sub_total = document.getElementById("sub-total");
+        let i, sum = Number(0);
+        for(i=0;i<amount_input.length;i++){
+            sum = sum + Number(amount_input[i].value);
+        }
+        sub_total.innerHTML = sum;
+    }
+
+    input_amount.onkeydown = function(){
+        return false;
+    }
+
+    input_amount.oncontextmenu = function (){
+        return false;
+    }
+
+    input_item.oninput = function() {
+        input_price.disabled = false;
+        input_price.oninput = function(){
+            input_qty.disabled = false;
+            input_qty.oninput = function(){
+                input_amount.value = input_price.value*input_qty.value;
+                let amount_input = document.getElementsByClassName("amount");
+                let sub_total = document.getElementById("sub-total");
+                let i, sum = Number(0);
+                for(i=0;i<amount_input.length;i++){
+                    sum = sum + Number(amount_input[i].value);
+                }
+                sub_total.innerHTML = sum;
+
+                this.onkeyup = function(event){
+                    if(event.keyCode == 13){
+                        document.getElementById("add-invoice-btn").click();
+                        var items = document.getElementsByClassName("item");
+                        items[amount_input.length-1].focus();
+                    }
+                }
+            }
+        }
+    }
+}
+
+function adding_item(){
+    document.getElementById("add-invoice-btn").onclick = () => {
+        add_item();
+    }
+}
+adding_item();
+//add button
+
+//current-date-invoice
+function showing_date(){
+    let date = new Date();
+    let current_date = date.getDate();
+    let current_month = date.getMonth();
+    let current_year = date.getFullYear();
+    document.getElementById("invoice-date").innerText = `Date: ${current_date}/${current_month+1}/${current_year}`;
+}
+showing_date();
+//current-date-invoice
+
+//ending account only add invoice coding
+
+//clock coding started
+
+function clock(){
+    let date = new Date();
+    const weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    const month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    let current_day = weekday[date.getDay()];
+    let current_hour = date.getHours();
+    let current_min = date.getMinutes();
+    let current_date = date.getDate();
+    let current_month = month[date.getMonth()];
+    let current_year = date.getFullYear();
+    document.getElementById("day").innerText = current_day;
+    document.getElementById("time").innerText = `${current_hour}:${current_min}`;
+    document.getElementById("clock-date").innerText = `${current_date}`;
+    document.getElementById("Month").innerText = `${current_month}`;
+    document.getElementById("Year").innerText = `${current_year}`;
+}
+setInterval(clock,1000);
+//clock coding started

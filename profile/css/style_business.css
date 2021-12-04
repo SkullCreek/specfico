@@ -693,18 +693,21 @@ main #right #account-only #add-invoice #invoice-add-button #save {
 main #right #account-only #add-invoice #calculation {
   width: 100%;
   position: absolute;
-  right: 0;
+  right: 20px;
   bottom: 0;
+  padding-right: 10px;
+  margin: 10px;
+  height: 105px;
+  overflow-y: scroll;
 }
 
 main #right #account-only #add-invoice #calculation table {
-  padding: 10px;
+  border-spacing: 0;
 }
 
 main #right #account-only #add-invoice #calculation th {
   text-align: right;
   font-family: 'Montserrat';
-  font-style: normal;
   font-size: 12px;
   padding-right: 20px;
 }
@@ -832,6 +835,21 @@ main #right #account-only #tax h3 #add-tax-btn {
   text-align: center;
   color: white;
   cursor: pointer;
+}
+
+#calculation::-webkit-scrollbar {
+  width: 2px;
+}
+
+#calculation::-webkit-scrollbar-track {
+  width: 2px;
+  background-color: transparent;
+}
+
+#calculation::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: #F9B80A;
+  border-radius: 10px;
 }
 
 #right::-webkit-scrollbar {

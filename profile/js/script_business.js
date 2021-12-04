@@ -368,6 +368,16 @@ function add_item(){
                 }
                 sub_total.innerHTML = sum;
 
+                var reserve=0;
+                for(i=0;i<localStorage.length;i++){
+                    var tax_key = localStorage.key(i);
+                    if(tax_key.indexOf("tax") != -1){
+                        var tax_item = localStorage.getItem(tax_key);
+                        var extract = JSON.parse(tax_item);
+                        reserve = reserve + extract.tax + "<br>";
+                        document.getElementById("tax").innerHTML = `${reserve.replace(0,"")}`;
+                    }
+                }
                 this.onkeyup = function(event){
                     if(event.keyCode == 13){
                         document.getElementById("add-invoice-btn").click();
@@ -383,6 +393,18 @@ function add_item(){
 function adding_item(){
     document.getElementById("add-invoice-btn").onclick = () => {
         add_item();
+    }
+    var tax_display = document.getElementById("tax-col");
+    var j;
+    for(j=0; j<localStorage.length; j++){
+        let tax_name = localStorage.key(j);
+        if(tax_name.indexOf("tax") != -1){
+            var tax_item = localStorage.getItem(tax_name);
+            var extract = JSON.parse(tax_item);
+            tax_display.innerHTML += `${extract.name}(${extract.tax}) <br>`;
+            var sub_total = document.getElementById("sub-total").innerHTML;
+            document.getElementById("tax").innerHTML += `${sub_total} <br>`
+        }
     }
 }
 adding_item();
@@ -461,11 +483,7 @@ add_tax_btn.onclick = () => {
     }
     let submit_btn_addtax = document.getElementById("submit-button-addtax");
     submit_btn_addtax.onclick = () => {
-        add_tax_pop.style.animation = "popout 0.5s";
-        add_tax_pop.style.animationFillMode = "forwards";
-        setTimeout(function(){
-            add_tax.style.display = 'none';
-        },400);
+        
     }
     let tax_name = document.getElementById("tax-name");
     let wrn = document.getElementById("wrn-tax1");
@@ -487,6 +505,16 @@ add_tax_btn.onclick = () => {
                     }
                     else{
                         submit_btn_addtax.disabled = false;
+                        submit_btn_addtax.onclick = () =>{
+                            let tax_details = {name:tax_name.value, tax:tax_per.value};
+                            let tax_string = JSON.stringify(tax_details);
+                            localStorage.setItem(tax_name.value, tax_string);  
+                            add_tax_pop.style.animation = "popout 0.5s";
+                            add_tax_pop.style.animationFillMode = "forwards";
+                            setTimeout(function(){
+                                add_tax.style.display = 'none';
+                            },400);
+                        }
                     }
                 }
                 else{

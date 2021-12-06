@@ -68,6 +68,10 @@
                     
                 </section>
                 <section id="add-invoice">
+                    <div id="printin">
+                        <h1 id="company-name-print"></h1>
+                        <img id="company-logo-print" src="../images/logo.png">
+                    </div>
                     <h3 id="invoice-heading">Invoice number <span id="invoice-number">#1</span><span id="invoice-date"></span></h3>
                     <div id="cstmr-info">
                         <input type="text" id="cstmr-name" placeholder="Customer Name">
@@ -101,19 +105,28 @@
                         <table>
                             <tr>
                                 <th>Sub-Total</th>
-                                <td id="sub-total">0.00</td>
+                                <th style="width: 10px;"><span class="material-icons" style="font-size: 15px;">currency_rupee</span></th>
+                                <td id="sub-total" style="text-align: right;">0.00</td>
                             </tr>
                             <tr>
                                 <th id="tax-col" style="line-height: 25px;" ></th>
-                                <td id="tax" style="line-height: 25px;" contenteditable="true"></td>
+                                <th style="width: 10px;"><span class="material-icons" style="font-size: 15px;">currency_rupee</span></th>
+                                <td id="tax" style="line-height: 25px;text-align: right;"></td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <th style="width: 10px;"><span class="material-icons" style="font-size: 15px;">currency_rupee</span></th>
+                                <td id="total" style="text-align: right;">0.00</td>
                             </tr>
                             <tr>
                                 <th>Paid</th>
-                                <td id="paid" contenteditable="true"></td>
+                                <th style="width: 10px;"><span class="material-icons" style="font-size: 15px;">currency_rupee</span></th>
+                                <td id="paid" style="text-align: right;"><input type="number" id="paid2" placeholder="Amount"></td>
                             </tr>
                             <tr>
                                 <th>Due</th>
-                                <td>0.00</td>
+                                <th style="width: 10px;"><span class="material-icons" style="font-size: 15px;">currency_rupee</span></th>
+                                <td id="due" style="text-align: right;">0.00</td>
                             </tr>
                         </table>
                     </div>
@@ -144,6 +157,7 @@
 
             <!-- Account Only Coding Ending-->
 
+            
 
 
 

@@ -355,8 +355,22 @@ function add_item(){
     }
 
     input_item.oninput = function() {
+        this.onkeyup = function(event){
+            if(event.keyCode == 13){
+                let item_parent = this.parentElement;
+                let tr = item_parent.parentElement;
+                tr.getElementsByTagName("INPUT")[1].focus();
+            }
+        }
         input_price.disabled = false;
         input_price.oninput = function(){
+            this.onkeyup = function(event){
+                if(event.keyCode == 13){
+                    let item_parent = this.parentElement;
+                    let tr = item_parent.parentElement;
+                    tr.getElementsByTagName("INPUT")[2].focus();
+                }
+            }
             input_qty.disabled = false;
             input_qty.oninput = function(){
                 input_amount.value = input_price.value*input_qty.value;
@@ -375,9 +389,28 @@ function add_item(){
                         var tax_item = localStorage.getItem(tax_key);
                         var extract = JSON.parse(tax_item);
                         reserve = reserve + extract.tax + "<br>";
-                        document.getElementById("tax").innerHTML = `${reserve.replace(0,"")}`;
+                        document.getElementById("tax").innerHTML = `<span id="percentage" style="display:none">${reserve.replace(0,"")}<span>`;
                     }
                 }
+
+                let total1 = 0;
+                split_num = document.getElementById("percentage").innerText;
+                var final_num = split_num.split("%");
+                for(i=0;i<final_num.length-1;i++){
+                    var fixed =  Number((sum*final_num[i]/100).toFixed(2));
+                    document.getElementById("tax").innerHTML += `${fixed}<br>`;
+                    total1 = total1 + fixed;
+                }
+                var total = Number((total1+sum).toFixed(2));
+                document.getElementById("total").innerHTML = ((total1+sum).toFixed(2));
+                document.getElementById("due").innerHTML = ((total1+sum).toFixed(2));
+                let paid = document.getElementById("paid");
+                paid.oninput = () =>{
+                    var paid_value = Number(document.getElementById("paid2").value);
+                    var due_amt = Number(total - paid_value);
+                    document.getElementById("due").innerHTML = due_amt;
+                }
+
                 this.onkeyup = function(event){
                     if(event.keyCode == 13){
                         document.getElementById("add-invoice-btn").click();
@@ -542,3 +575,59 @@ add_tax_btn.onclick = () => {
 
 
 //add tax
+
+
+//printing
+
+
+function getbill(){
+    let i;
+    let print = document.getElementById("print");
+    print.onclick = () => {
+        let print_section = document.getElementById("add-invoice");
+        let calculation = document.getElementById("calculation");
+        let printin = document.getElementById("printin");
+        let add_invoice = document.getElementById("add-invoice-btn");
+        add_invoice.style.display = "none";
+        let table_scroll = document.getElementById("table-scroll");
+        table_scroll.style.height = "auto";
+        document.getElementById("invoice-heading").style.display = "flex";
+        document.getElementById("invoice-heading").style.justifyContent = "space-between";
+        let cstmr_info = document.getElementById("cstmr-info");
+        printin.style.display = "flex";
+        printin.style.justifyContent = "space-between";
+        print_section.style.position = "fixed";
+        print_section.style.top = "0";
+        print_section.style.left = "0";
+        print_section.style.width = "100%";
+        print_section.style.height = "100vh";
+        print_section.style.zIndex = "1000";
+        calculation.style.width = "100%";
+        calculation.style.height = "300px";
+        calculation.style.position = "relative";
+        calculation.style.lineHeight = "40px";
+        print_section.style.textAlign = "left";
+        let input_ele = print_section.getElementsByTagName("INPUT");
+        cstmr_info.style.width = "200px";
+        for(i=0;i<input_ele.length;i++){
+            input_ele[i].style.backgroundColor = "white";
+            input_ele[i].style.textAlign = "center";
+            input_ele[i].style.border = "none";
+        }
+        let print_btn = document.getElementById("print");
+        let save = document.getElementById("save");
+        print_btn.style.display = "none";
+        save.style.display = "none";
+        let company_data = localStorage.getItem("company");
+        let company_details = JSON.parse(company_data);
+        document.getElementById("company-name-print").innerHTML =`${company_details.cmp_name} <br>  <span id="about-company-print"> ${company_details.mailing_name} <br> ${company_details.address} <br> ${company_details.phone} <br> ${company_details.website} </span>`;
+        document.getElementById("about-company-print").style.fontSize = "12px";
+        document.getElementById("about-company-print").style.paddingBottom = "30px";
+        let company_logo = document.getElementById("company-logo-print");
+        company_logo.src = "../../images/logo.png";
+        window.print();
+    }
+    
+}
+getbill();
+//printing

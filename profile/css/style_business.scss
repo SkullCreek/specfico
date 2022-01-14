@@ -411,12 +411,94 @@ main{
             }
             #invoice{
                 grid-row-start: 1;
-                grid-row-end: 9;   
+                grid-row-end: 9;  
+                padding: 23px 31px; 
+                overflow-y: scroll;
+                h3{
+                    width: 100%;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-bottom: 19px;
+                }
+                table{
+                    width: 100%;
+                    margin-top: 16px;
+                    border-spacing: 0px 12px;
+                    height: 100px;
+                    overflow-y: scroll;
+                    thead{
+                        width: 100%;
+                        tr{
+                            width: 100%;
+                            
+                            th{
+                                width: 16.66%;
+                                text-align: center;
+                                color: white;
+                                padding: 7px 20px;
+                                font-family: 'Montserrat';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 15px;
+                                background-color: #000000;
+                            }
+                            th:first-child {
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                            }
+                            
+                            th:last-child {
+                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        }
+                    }
+                    tbody{
+                        width: 100%;
+                        tr{
+                            width: 100%;
+                            background-color: #F1F1F1;
+                            td{
+                                text-align: center;
+                                padding: 7px 20px;
+                                font-family: 'Montserrat';
+                                font-style: normal;
+                                font-weight: 500;
+                                width: 16.66%;
+                                font-size: 12px;
+                                                               
+                            }
+                            td:first-child {
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                            }
+                            td:last-child {
+                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        }
+                    }
+                }
             }
+            #invoice::-webkit-scrollbar{
+                width: 2px;
+            }
+            #invoice::-webkit-scrollbar-track{
+                width: 2px;
+                background-color: transparent;
+            }
+            #invoice::-webkit-scrollbar-thumb{
+                width: 2px;
+                background-color: grey;
+            }
+            
             #tax{
                 grid-row-start: 9;
                 grid-row-end: 13;
                 padding: 23px 31px;
+                overflow-y: scroll;
                 h3{
                     width: 100%;
                     font-family: 'Montserrat';
@@ -440,6 +522,80 @@ main{
                         cursor: pointer;
                     } 
                 }
+                table{
+                    width: 100%;
+                    margin-top: 16px;
+                    border-spacing: 0px 12px;
+                    height: 100px;
+                    overflow-y: scroll;
+                    thead{
+                        width: 100%;
+                        tr{
+                            width: 100%;
+                            
+                            th{
+                                width: 16.66%;
+                                text-align: center;
+                                color: white;
+                                padding: 7px 20px;
+                                font-family: 'Montserrat';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 15px;
+                                background-color: #000000;
+                            }
+                            th:first-child {
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                            }
+                            
+                            th:last-child {
+                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        }
+                    }
+                    tbody{
+                        width: 100%;
+                        tr{
+                            width: 100%;
+                            background-color: #F1F1F1;
+                            td{
+                                text-align: center;
+                                font-family: 'Montserrat';
+                                font-style: normal;
+                                font-weight: 500;
+                                width: 16.66%;
+                                font-size: 12px;
+                                img{
+                                    cursor: pointer;
+                                    width: 20px;
+                                }
+                                                               
+                            }
+                            td:first-child {
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                            }
+                            td:last-child {
+                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+            #tax::-webkit-scrollbar{
+                width: 2px;
+            }
+            #tax::-webkit-scrollbar-track{
+                width: 2px;
+                background-color: transparent;
+            }
+            #tax::-webkit-scrollbar-thumb{
+                width: 2px;
+                background-color: grey;
             }
         }
 

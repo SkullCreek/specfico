@@ -288,6 +288,8 @@ form_val();
 //invoce number coding
 
 //add button
+var store_subtotal, store_tax = [], store_total, store_paid, store_dues;
+var all_voucher_no = 1;
 function add_item(){
     var product_tbody = document.getElementById("add-invoice-tr");
     var tr = document.createElement("TR");
@@ -302,17 +304,21 @@ function add_item(){
     input_item.type = "text";
     input_item.placeholder = "Item";
     var input_price = document.createElement("INPUT");
+    input_price.className = "price";
     input_price.type = "number";
     input_price.disabled = 'true';
     input_price.placeholder = "0.00";
     var input_qty = document.createElement("INPUT");
+    input_qty.className = "qty";
     input_qty.type = "number";
     input_qty.disabled = 'true';
     input_qty.placeholder = "1";
     var input_unit = document.createElement("INPUT");
+    input_unit.className = "unit";
     input_unit.type = "text";
     input_unit.placeholder = "Nos.";
     var input_amount = document.createElement("INPUT");
+    input_amount.className = "amount";
     input_amount.type = "number";
     input_amount.className = "amount";
     // input_amount.disabled = 'true';
@@ -341,6 +347,7 @@ function add_item(){
         let sub_total = document.getElementById("sub-total");
         let i, sum = Number(0);
         for(i=0;i<amount_input.length;i++){
+            store_subtotal = sum + Number(amount_input[i].value);
             sum = sum + Number(amount_input[i].value);
         }
         sub_total.innerHTML = sum;
@@ -398,16 +405,20 @@ function add_item(){
                 var final_num = split_num.split("%");
                 for(i=0;i<final_num.length-1;i++){
                     var fixed =  Number((sum*final_num[i]/100).toFixed(2));
+                    store_tax[i] = Number((sum*final_num[i]/100).toFixed(2));
                     document.getElementById("tax").innerHTML += `${fixed}<br>`;
                     total1 = total1 + fixed;
                 }
                 var total = Number((total1+sum).toFixed(2));
+                store_total = ((total1+sum).toFixed(2));
                 document.getElementById("total").innerHTML = ((total1+sum).toFixed(2));
                 document.getElementById("due").innerHTML = ((total1+sum).toFixed(2));
                 let paid = document.getElementById("paid");
                 paid.oninput = () =>{
+                    store_paid = Number(document.getElementById("paid2").value);
                     var paid_value = Number(document.getElementById("paid2").value);
                     var due_amt = Number(total - paid_value);
+                    store_dues = Number(total - paid_value);
                     document.getElementById("due").innerHTML = due_amt;
                 }
 
@@ -595,3 +606,139 @@ printme.onclick = function(){
 }
 
 // printing
+
+//storing voucher details
+var saved = document.getElementById("save");
+var i, storeItem = [], storePrice = [], storeQty = [], storeUnit = [], storeAmount = [];
+saved.onclick = () =>{
+    saving();
+}
+function saving(){
+    let buyer_name = document.getElementById("cstmr-name").value;
+    let buyer_email = document.getElementById("cstmr-email").value;
+    let buyer_date = document.getElementById("cstmr-date").value;
+    let buyer_phone = document.getElementById("cstmr-num").value;
+    let buyer_item = document.getElementsByClassName("item");
+    for(i=0;i<buyer_item.length;i++){
+        storeItem[i] = buyer_item[i].value;
+    }
+    let buyer_price = document.getElementsByClassName("price");
+    for(i=0;i<buyer_price.length;i++){
+        storePrice[i] = buyer_price[i].value;
+    }
+    let buyer_qty = document.getElementsByClassName("qty");
+    for(i=0;i<buyer_qty.length;i++){
+        storeQty[i] = buyer_qty[i].value;
+    }
+    let buyer_unit = document.getElementsByClassName("unit");
+    for(i=0;i<buyer_unit.length;i++){
+        storeUnit[i] = buyer_unit[i].value;
+    }
+    let buyer_amount = document.getElementsByClassName("amount");
+    for(i=0;i<buyer_amount.length;i++){
+        storeAmount[i] = buyer_amount[i].value;
+    }
+    let buyer_object = {buyer_name:buyer_name,buyer_email:buyer_email,buyer_date:buyer_date,buyer_phone:buyer_phone,storeItem:storeItem,storePrice:storePrice,storeQty:storeQty,storeUnit:storeUnit,storeAmount:storeAmount,store_subtotal:store_subtotal,store_tax:store_tax,store_total:store_total,store_paid:store_paid,store_dues:store_dues};
+    let buyer_details = JSON.stringify(buyer_object);
+
+    localStorage.setItem("voucher_no_" + all_voucher_no, buyer_details);
+    var count = localStorage.length - 3;
+    voucherNo(count);
+    history.go(0);
+}
+
+
+function voucherNo(count){
+    for(i=0;i<=localStorage.length;i++){
+        let all_keys = localStorage.key(i);
+        if(all_keys.match("voucher_no_")){
+            count = count + 1;
+            all_voucher_no = count;
+            document.getElementById("invoice-number").innerHTML = all_voucher_no;
+            return false;  
+        }
+    }
+}
+voucherNo(localStorage.length - 3);
+
+//search voucher
+
+function search_voucher()
+{
+    var search_field = document.getElementById("search-field");
+    search_field.onkeyup = (event) =>
+    {
+        if(event.keyCode == 13)
+        {
+            var user_input = `voucher_no_` + search_field.value;
+            var i;
+            for(i=0;i<=localStorage.length;i++){
+                var all_keys = localStorage.key(i);
+                if(all_keys == user_input){
+                    var buyer_string = localStorage.getItem(all_keys);
+                }
+            }
+        }
+    }
+}
+search_voucher();
+//search voucher
+
+function invoice_sheet(){
+    let i,j;
+    let count = 1;
+    for(i=1;i<localStorage.length+10;i++){
+        for(j=0;j<localStorage.length;j++){
+            if(localStorage.key(j) == `voucher_no_${i}`){
+
+                var details = localStorage.getItem(`voucher_no_${i}`);
+                var data = JSON.parse(details);
+
+                let tbody_sheet = document.getElementById("invoice-body");
+                let tr = document.createElement("TR");
+                let td1 = document.createElement("TD");
+                td1.innerHTML = count;
+                count++;
+                let td2 = document.createElement("TD");
+                td2.innerHTML = data.buyer_date;
+                let td3 = document.createElement("TD");
+                td3.innerHTML = data.buyer_name;
+                let td4 = document.createElement("TD");
+                td4.innerHTML = data.store_dues;
+                let td5 = document.createElement("TD");
+                let img = document.createElement("IMG");
+                if(data.store_dues > 0){
+                    img.src = "images/due.svg";
+                }
+                else if(data.store_dues < 0){
+                    img.src = "images/na.svg";
+                }
+                else{
+                    img.src = "images/paid.svg";
+                }
+                td5.appendChild(img);
+                tbody_sheet.appendChild(tr);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tr.appendChild(td5);
+
+            }
+        }
+    }
+}
+invoice_sheet();
+
+//showing tax
+// function tax_showing(){
+//     for(i=1;i<localStorage.length+10;i++){
+//         let all_keys = localStorage.getItem(i);
+//         if(all_keys.match("tax")){
+
+            
+
+//         }
+//     }
+// }
+// tax_showing();

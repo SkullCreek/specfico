@@ -509,6 +509,98 @@ main #right #account-only #invoice {
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 9;
+  padding: 23px 31px;
+  overflow-y: scroll;
+}
+
+main #right #account-only #invoice h3 {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 19px;
+}
+
+main #right #account-only #invoice table {
+  width: 100%;
+  margin-top: 16px;
+  border-spacing: 0px 12px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+main #right #account-only #invoice table thead {
+  width: 100%;
+}
+
+main #right #account-only #invoice table thead tr {
+  width: 100%;
+}
+
+main #right #account-only #invoice table thead tr th {
+  width: 16.66%;
+  text-align: center;
+  color: white;
+  padding: 7px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #000000;
+}
+
+main #right #account-only #invoice table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main #right #account-only #invoice table thead tr th:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main #right #account-only #invoice table tbody {
+  width: 100%;
+}
+
+main #right #account-only #invoice table tbody tr {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+main #right #account-only #invoice table tbody tr td {
+  text-align: center;
+  padding: 7px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  width: 16.66%;
+  font-size: 12px;
+}
+
+main #right #account-only #invoice table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main #right #account-only #invoice table tbody tr td:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main #right #account-only #invoice::-webkit-scrollbar {
+  width: 2px;
+}
+
+main #right #account-only #invoice::-webkit-scrollbar-track {
+  width: 2px;
+  background-color: transparent;
+}
+
+main #right #account-only #invoice::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: grey;
 }
 
 main #right #account-only #tax {
@@ -516,6 +608,7 @@ main #right #account-only #tax {
       grid-row-start: 9;
   grid-row-end: 13;
   padding: 23px 31px;
+  overflow-y: scroll;
 }
 
 main #right #account-only #tax h3 {
@@ -547,6 +640,91 @@ main #right #account-only #tax h3 #add-tax-btn {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+main #right #account-only #tax table {
+  width: 100%;
+  margin-top: 16px;
+  border-spacing: 0px 12px;
+  height: 100px;
+  overflow-y: scroll;
+}
+
+main #right #account-only #tax table thead {
+  width: 100%;
+}
+
+main #right #account-only #tax table thead tr {
+  width: 100%;
+}
+
+main #right #account-only #tax table thead tr th {
+  width: 16.66%;
+  text-align: center;
+  color: white;
+  padding: 7px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #000000;
+}
+
+main #right #account-only #tax table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main #right #account-only #tax table thead tr th:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main #right #account-only #tax table tbody {
+  width: 100%;
+}
+
+main #right #account-only #tax table tbody tr {
+  width: 100%;
+  background-color: #F1F1F1;
+}
+
+main #right #account-only #tax table tbody tr td {
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  width: 16.66%;
+  font-size: 12px;
+}
+
+main #right #account-only #tax table tbody tr td img {
+  cursor: pointer;
+  width: 20px;
+}
+
+main #right #account-only #tax table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main #right #account-only #tax table tbody tr td:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main #right #account-only #tax::-webkit-scrollbar {
+  width: 2px;
+}
+
+main #right #account-only #tax::-webkit-scrollbar-track {
+  width: 2px;
+  background-color: transparent;
+}
+
+main #right #account-only #tax::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: grey;
 }
 
 #add-invoice {

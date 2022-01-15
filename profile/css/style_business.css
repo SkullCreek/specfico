@@ -567,11 +567,12 @@ main #right #account-only #invoice table tbody {
 main #right #account-only #invoice table tbody tr {
   width: 100%;
   background-color: #F1F1F1;
+  cursor: pointer;
 }
 
 main #right #account-only #invoice table tbody tr td {
   text-align: center;
-  padding: 7px 20px;
+  padding: 7px 10px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -690,6 +691,7 @@ main #right #account-only #tax table tbody tr {
 }
 
 main #right #account-only #tax table tbody tr td {
+  height: 30px;
   text-align: center;
   font-family: 'Montserrat';
   font-style: normal;
@@ -700,7 +702,6 @@ main #right #account-only #tax table tbody tr td {
 
 main #right #account-only #tax table tbody tr td img {
   cursor: pointer;
-  width: 20px;
 }
 
 main #right #account-only #tax table tbody tr td:first-child {

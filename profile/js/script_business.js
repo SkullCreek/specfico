@@ -347,9 +347,9 @@ function add_item(){
         let sub_total = document.getElementById("sub-total");
         let i, sum = Number(0);
         for(i=0;i<amount_input.length;i++){
-            store_subtotal = sum + Number(amount_input[i].value);
             sum = sum + Number(amount_input[i].value);
         }
+        store_subtotal = sum;
         sub_total.innerHTML = sum;
     }
 
@@ -693,12 +693,10 @@ function invoice_sheet(){
 
                 var details = localStorage.getItem(`voucher_no_${i}`);
                 var data = JSON.parse(details);
-
                 let tbody_sheet = document.getElementById("invoice-body");
                 let tr = document.createElement("TR");
                 let td1 = document.createElement("TD");
-                td1.innerHTML = count;
-                count++;
+                td1.innerHTML = i;
                 let td2 = document.createElement("TD");
                 td2.innerHTML = data.buyer_date;
                 let td3 = document.createElement("TD");
@@ -707,6 +705,10 @@ function invoice_sheet(){
                 td4.innerHTML = data.store_dues;
                 let td5 = document.createElement("TD");
                 let img = document.createElement("IMG");
+                let td6 = document.createElement("TD");
+                let img2 = document.createElement("IMG");
+                img2.src = "images/delete2.svg";
+                td6.appendChild(img2);
                 if(data.store_dues > 0){
                     img.src = "images/due.svg";
                 }
@@ -723,22 +725,74 @@ function invoice_sheet(){
                 tr.appendChild(td3);
                 tr.appendChild(td4);
                 tr.appendChild(td5);
-
+                tr.appendChild(td6);
+                tr.onclick = () =>{
+                    let details = localStorage.getItem("voucher_no_" + td1.innerHTML);
+                    let data = JSON.parse(details);
+                    document.getElementById("invoice-number").innerHTML = td1.innerHTML;
+                    document.getElementById("cstmr-name").value = data.buyer_name;
+                    document.getElementById("cstmr-num").value = data.buyer_phone;
+                    document.getElementById("cstmr-email").value = data.buyer_email;
+                    document.getElementById("cstmr-date").value = data.buyer_date;
+                    var item = document.getElementsByClassName("item");
+                    var price = document.getElementsByClassName("price");
+                    var qty = document.getElementsByClassName("qty");
+                    var unit = document.getElementsByClassName("unit");
+                    var amount = document.getElementsByClassName("amount");
+                    let item_length = data.storeItem.length;
+                    let j;
+                    let sum2 = 0;
+                    for(j=0; j<item_length;j++){
+                        document.getElementById("add-invoice-btn").click();
+                        item[j].value = data.storeItem[j];
+                        price[j].value = data.storePrice[j];
+                        price[j].disabled = false;
+                        qty[j].value = data.storeQty[j];
+                        qty[j].disabled = false;
+                        unit[j].value = data.storeUnit[j];
+                        amount[j].value = data.storeAmount[j];
+                        sum2 = sum2 + Number(data.storeAmount[j]); 
+                    }
+                    document.getElementById("sub-total").innerHTML = sum2;
+                }
+                td6.onclick = () =>{
+                    localStorage.removeItem("voucher_no_" + td1.innerHTML);
+                    history.go(0);
+                }
             }
         }
     }
 }
 invoice_sheet();
 
-//showing tax
-// function tax_showing(){
-//     for(i=1;i<localStorage.length+10;i++){
-//         let all_keys = localStorage.getItem(i);
-//         if(all_keys.match("tax")){
-
+// showing tax
+function tax_showing(){
+    let i;
+    for(i=0;i<localStorage.length;i++){
+        let all_keys = localStorage.key(i);
+        if(all_keys.indexOf("tax") != -1){
+            let details = localStorage.getItem(all_keys);
+            let data2 = JSON.parse(details);
             
-
-//         }
-//     }
-// }
-// tax_showing();
+            let tax_body = document.getElementById("tax-body");
+            let tr = document.createElement("TR");
+            let td_1 = document.createElement("TD");
+            td_1.innerHTML = data2.name;
+            let td_2 = document.createElement("TD");
+            td_2.innerHTML = data2.tax;
+            let td_3 = document.createElement("TD");
+            let img = document.createElement("IMG");
+            img.src = "images/delete2.svg";
+            td_3.appendChild(img);
+            tax_body.appendChild(tr);
+            tr.appendChild(td_1);
+            tr.appendChild(td_2);
+            tr.appendChild(td_3);
+            img.onclick = () =>{
+                localStorage.removeItem(td_1.innerHTML);
+                history.go(0);
+            }
+        }
+    }
+}
+tax_showing();

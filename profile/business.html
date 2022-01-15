@@ -168,8 +168,15 @@
                         </tbody>
                     </table>
                 </section>
+                <div id="option-menu">
+                    <ul>
+                        <li>Invoice</li>
+                        <li>Tax</li>
+                        <li id="about-company">Company</li>
+                    </ul>
+                </div>
             </main>
-
+            
             <main id="add-tax">
                 <section id="add-tax-pop">
                     <h1>TAX SETUP</h1>
@@ -185,6 +192,46 @@
                             <p id="wrn-tax2" style="font-size: 8px;color: red;"></p>
                         </div>
                         <input type="button" value="Submit" disabled id="submit-button-addtax">
+                    </form>
+                </section>
+            </main>
+
+            <main id="edit-company">
+                <section id="add-company-pop">
+                    <h1>Profile</h1>
+                    <form action="">
+                        <div id="divider">
+                            <div id="heading">
+                                <h4><img src="images/uploadcmp.svg" alt=""></h4>
+                                <h3>Darpan.pvt.ltd <br> <span>Remove logo</span></h3>
+                            </div>
+                            <p>Company Name</p>
+                            <input type="text" id="cmp-name-pro">
+                            <p>bio</p>
+                            <textarea name="" id="" cols="30" rows="3"></textarea>
+                            <p>Mailing Name</p>
+                            <input type="text" id="cmp-name-pro">
+                            <p>Phone Number</p>
+                            <input type="text" id="cmp-name-pro">
+                            <p>Address</p>
+                            <input type="text" id="cmp-name-pro">
+                            <p>Website</p>
+                            <input type="text" id="cmp-name-pro">
+                            <!-- <p id="wrn-tax2" style="font-size: 8px;color: red;"></p> -->
+                        </div>
+                        <div id="divider">
+                            <p id="fin-year">Financial Year</p>
+                            <input type="date" id="cmp-name-pro">
+                            <p>Account Type</p>
+                            <input type="text" id="cmp-name-pro">
+                            <h5>All of the fields on this page are optional and can be deleted at any time, and by filling them out.</h5>
+                            <input type="button" value="Update Profile">
+                            <h3 style="margin-bottom: 30px;color: #FF0000;">Delete account</h3>
+                            <h5>Once you delete your account, there is no going back. Please be certain.</h5>
+                            <input type="button" value="Delete Account" style="background-color: #FF0000;">
+                            <!-- <p id="wrn-tax2" style="font-size: 8px;color: red;"></p> -->
+                        </div>
+                        <!-- <input type="button" value="Submit" disabled id="submit-button-addtax"> -->
                     </form>
                 </section>
             </main>

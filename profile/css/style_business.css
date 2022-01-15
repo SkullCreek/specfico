@@ -893,7 +893,7 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
-  z-index: 200;
+  z-index: 1;
 }
 
 #add-invoice #invoice-add-button #save {
@@ -908,7 +908,7 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
-  z-index: 200;
+  z-index: 1;
 }
 
 #add-invoice #calculation {
@@ -1054,6 +1054,183 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: #F9B80A;
   border-radius: 10px;
+}
+
+#option-menu {
+  position: absolute;
+  width: 50px;
+  right: -10px;
+  bottom: 0%;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#option-menu ul {
+  display: inline-block;
+}
+
+#option-menu ul li {
+  border-radius: 10px;
+  width: 173px;
+  text-align: center;
+  position: relative;
+  -webkit-transform: rotate(-90deg) translate(-75%, 150%);
+          transform: rotate(-90deg) translate(-75%, 150%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background-color: #323232;
+  padding: 12px 50px;
+  color: #F9B80A;
+  cursor: pointer;
+}
+
+#option-menu ul li:hover {
+  -webkit-transform: rotate(-90deg) translate(-75%, 140%);
+          transform: rotate(-90deg) translate(-75%, 140%);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#edit-company {
+  width: 100%;
+  position: absolute;
+  height: 120vh;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#edit-company section {
+  width: 95%;
+  height: 853px;
+  padding: 34px 75px;
+  background-color: white;
+  background-size: contain;
+  position: relative;
+  z-index: 20;
+}
+
+#edit-company section h1 {
+  width: 100%;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  font-family: 'montserrat';
+  padding: 0;
+  margin: 0;
+}
+
+#edit-company section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#edit-company section form h5 {
+  padding-bottom: 30px;
+}
+
+#edit-company section form h4 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: #323232;
+  cursor: pointer;
+}
+
+#edit-company section form p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 2px;
+}
+
+#edit-company section form input[type=text], #edit-company section form input[type=number], #edit-company section form input[type=date] {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #C4C4C4;
+  background-color: transparent;
+  border-radius: 10px;
+  font-family: 'montserrat';
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#edit-company section form #divider {
+  width: 46%;
+  padding: 51px 0px;
+  padding-right: 10px;
+}
+
+#edit-company section form #divider #heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 35px;
+}
+
+#edit-company section form #divider #heading h3 {
+  padding: 29px;
+}
+
+#edit-company section form #divider #heading h3 span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #1400FF;
+  cursor: pointer;
+}
+
+#edit-company section form #divider textarea {
+  width: 100%;
+  border: 1px solid #C4C4C4;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#edit-company section form #divider #fin-year {
+  margin-top: 135px;
+}
+
+#edit-company section form input[type=button] {
+  width: 40%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px;
+  border: none;
+  background-color: #F9B80A;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 30px;
 }
 
 @-webkit-keyframes slide-up {

@@ -370,65 +370,67 @@ function add_item(){
             }
         }
         input_price.disabled = false;
-        input_price.oninput = function(){
-            this.onkeyup = function(event){
-                if(event.keyCode == 13){
-                    let item_parent = this.parentElement;
-                    let tr = item_parent.parentElement;
-                    tr.getElementsByTagName("INPUT")[2].focus();
-                }
+        
+    }
+    input_price.oninput = function(){
+        this.onkeyup = function(event){
+            if(event.keyCode == 13){
+                let item_parent = this.parentElement;
+                let tr = item_parent.parentElement;
+                tr.getElementsByTagName("INPUT")[2].focus();
             }
-            input_qty.disabled = false;
-            input_qty.oninput = function(){
-                input_amount.value = input_price.value*input_qty.value;
-                let amount_input = document.getElementsByClassName("amount");
-                let sub_total = document.getElementById("sub-total");
-                let i, sum = Number(0);
-                for(i=0;i<amount_input.length;i++){
-                    sum = sum + Number(amount_input[i].value);
-                }
-                sub_total.innerHTML = sum;
+        }
+        input_qty.disabled = false;
+        
+    }
+    input_qty.oninput = function(){
+        input_amount.value = input_price.value*input_qty.value;
+        let amount_input = document.getElementsByClassName("amount");
+        let sub_total = document.getElementById("sub-total");
+        let i, sum = Number(0);
+        for(i=0;i<amount_input.length;i++){
+            sum = sum + Number(amount_input[i].value);
+        }
+        sub_total.innerHTML = sum;
 
-                var reserve=0;
-                for(i=0;i<localStorage.length;i++){
-                    var tax_key = localStorage.key(i);
-                    if(tax_key.indexOf("tax") != -1){
-                        var tax_item = localStorage.getItem(tax_key);
-                        var extract = JSON.parse(tax_item);
-                        reserve = reserve + extract.tax + "<br>";
-                        document.getElementById("tax").innerHTML = `<span id="percentage" style="display:none">${reserve.replace(0,"")}<span>`;
-                    }
-                }
+        var reserve=0;
+        for(i=0;i<localStorage.length;i++){
+            var tax_key = localStorage.key(i);
+            if(tax_key.indexOf("tax") != -1){
+                var tax_item = localStorage.getItem(tax_key);
+                var extract = JSON.parse(tax_item);
+                reserve = reserve + extract.tax + "<br>";
+                document.getElementById("tax").innerHTML = `<span id="percentage" style="display:none">${reserve.replace(0,"")}<span>`;
+            }
+        }
 
-                let total1 = 0;
-                split_num = document.getElementById("percentage").innerText;
-                var final_num = split_num.split("%");
-                for(i=0;i<final_num.length-1;i++){
-                    var fixed =  Number((sum*final_num[i]/100).toFixed(2));
-                    store_tax[i] = Number((sum*final_num[i]/100).toFixed(2));
-                    document.getElementById("tax").innerHTML += `${fixed}<br>`;
-                    total1 = total1 + fixed;
-                }
-                var total = Number((total1+sum).toFixed(2));
-                store_total = ((total1+sum).toFixed(2));
-                document.getElementById("total").innerHTML = ((total1+sum).toFixed(2));
-                document.getElementById("due").innerHTML = ((total1+sum).toFixed(2));
-                let paid = document.getElementById("paid");
-                paid.oninput = () =>{
-                    store_paid = Number(document.getElementById("paid2").value);
-                    var paid_value = Number(document.getElementById("paid2").value);
-                    var due_amt = Number(total - paid_value);
-                    store_dues = Number(total - paid_value);
-                    document.getElementById("due").innerHTML = due_amt;
-                }
+        let total1 = 0;
+        split_num = document.getElementById("percentage").innerText;
+        var final_num = split_num.split("%");
+        for(i=0;i<final_num.length-1;i++){
+            var fixed =  Number((sum*final_num[i]/100).toFixed(2));
+            store_tax[i] = Number((sum*final_num[i]/100).toFixed(2));
+            document.getElementById("tax").innerHTML += `${fixed}<br>`;
+            total1 = total1 + fixed;
+        }
+        var total = Number((total1+sum).toFixed(2));
+        store_total = ((total1+sum).toFixed(2));
+        document.getElementById("total").innerHTML = ((total1+sum).toFixed(2));
+        document.getElementById("due").innerHTML = ((total1+sum).toFixed(2));
+        let paid = document.getElementById("paid");
+        paid.oninput = () =>{
+            store_paid = Number(document.getElementById("paid2").value);
+            var paid_value = Number(document.getElementById("paid2").value);
+            var due_amt = Number(total - paid_value);
+            store_dues = Number(total - paid_value);
+            document.getElementById("due").innerHTML = due_amt;
+        }
 
-                this.onkeyup = function(event){
-                    if(event.keyCode == 13){
-                        document.getElementById("add-invoice-btn").click();
-                        var items = document.getElementsByClassName("item");
-                        items[amount_input.length-1].focus();
-                    }
-                }
+        this.onkeyup = function(event){
+            if(event.keyCode == 13){
+                document.getElementById("add-invoice-btn").click();
+                var items = document.getElementsByClassName("item");
+                items[amount_input.length-1].focus();
             }
         }
     }
@@ -796,3 +798,8 @@ function tax_showing(){
     }
 }
 tax_showing();
+
+let about_company = document.getElementById("about-company");
+about_company.onclick = () => {
+    alert();
+}

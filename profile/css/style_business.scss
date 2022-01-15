@@ -741,7 +741,7 @@ main{
             font-weight: 500;
             font-size: 15px;
             cursor: pointer;
-            z-index: 200;
+            z-index: 1;
         }
         #save{
             margin-right: 28px;
@@ -755,7 +755,7 @@ main{
             font-weight: 500;
             font-size: 15px;
             cursor: pointer;
-            z-index: 200;
+            z-index: 1;
         }
         
     }
@@ -889,6 +889,153 @@ main{
     background-color: #F9B80A;
     border-radius: 10px;
 }
+
+#option-menu{
+    position: absolute;
+    width: 50px;
+    
+    right: -10px;
+    bottom: 0%;
+    height: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    ul{
+        display: inline-block;
+        li{
+            border-radius: 10px;
+            width: 173px;
+            text-align: center;
+            position: relative;
+            transform: rotate(-90deg) translate(-75%,150%);
+            transform-origin: top left;
+            background-color: #323232;
+            padding: 12px 50px;
+            color: #F9B80A;
+            cursor: pointer;
+        }
+        li:hover{
+            transform: rotate(-90deg) translate(-75%,140%);
+            transition: all 0.2s;
+        }
+    }
+}
+
+#edit-company{
+    width: 100%;
+    position: absolute;
+    height: 120vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: grid;
+    place-items: center;
+    section{
+        width: 95%;
+        height: 853px;
+        padding: 34px 75px;
+        background-color: white;
+        background-size: contain;
+        position: relative;
+        z-index: 20;
+        // animation: popon 1s infinite;
+        h1{
+            width: 100%;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            font-family: 'montserrat';
+            padding: 0;
+            margin: 0;
+        }
+        form{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            h5{
+                padding-bottom: 30px;
+            }
+            h4{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+                background-color: #323232;
+                cursor: pointer;
+            }
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                padding: 2px;
+            }
+            input[type=text],input[type=number],input[type=date]{
+                width: 100%;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                padding: 10px;
+                border: 1px solid #C4C4C4;
+                background-color: transparent;
+                border-radius: 10px;
+                font-family: 'montserrat';
+                outline: none;
+                margin-bottom: 30px;
+            }
+            #divider{
+                width: 46%;
+                // background-color: yellowgreen;
+                padding: 51px 0px;
+                padding-right: 10px;
+                #heading
+                {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 35px;
+                    h3{
+                        padding: 29px;
+                        span{
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 14px;
+                            color: #1400FF;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    border: 1px solid #C4C4C4;
+                    padding: 10px;
+                    border-radius: 10px;
+                    outline: none;
+                    margin-bottom: 30px;
+                }
+                #fin-year{
+                    margin-top: 135px;
+                }
+            }
+            input[type=button]{
+                width: 40%;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                padding: 10px;
+                border: none;
+                background-color: #F9B80A;
+                border-radius: 10px;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
 @keyframes slide-up {
     0%{bottom: -500px;}
     70%{bottom: 10px;}

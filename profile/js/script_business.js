@@ -199,7 +199,7 @@ function form_val(){
                                             var fax_number = document.getElementById("fax-number");
                                             var website = document.getElementById("website");
                                             var stock_type=document.getElementById("stock-type");
-                                            var cmp_details = {cmp_name:company_name.value,mailing_name:mailing_name.value,address:company_address.value,phone:phone_number.value,fax:fax_number.value,website:website.value,fine:date.value,stock_type:stock_type.value};
+                                            var cmp_details = {cmp_name:company_name.value,mailing_name:mailing_name.value,address:company_address.value,phone:phone_number.value,fax:fax_number.value,website:website.value,fine:date.value,stock_type:stock_type.value,bio:"bio"};
                                             var cmp_data = JSON.stringify(cmp_details);
                                             localStorage.setItem("company",cmp_data);
                                             document.getElementById("new-business").style.display="none";
@@ -653,11 +653,17 @@ function saving(){
 function voucherNo(count){
     for(i=0;i<=localStorage.length;i++){
         let all_keys = localStorage.key(i);
-        if(all_keys.match("voucher_no_")){
+        if(all_keys.indexOf("voucher_no_") != -1){
             count = count + 1;
             all_voucher_no = count;
             document.getElementById("invoice-number").innerHTML = all_voucher_no;
             return false;  
+        }
+        else{
+            count = localStorage.length - 2;
+            all_voucher_no = count;
+            document.getElementById("invoice-number").innerHTML = all_voucher_no;
+            return false;
         }
     }
 }
@@ -802,4 +808,175 @@ tax_showing();
 let about_company = document.getElementById("about-company");
 about_company.onclick = () => {
     alert();
+}
+
+let company_btn = document.getElementById("about-company");
+company_btn.onclick = () => {
+    let company_edit = document.getElementById("edit-company");
+    let add_company_pop = document.getElementById("add-company-pop");
+    company_edit.style.display = "grid";
+    add_company_pop.style.animation = "popon 0.5s";
+    add_company_pop.style.animationFillMode = "forwards";
+    document.onclick = function(e){
+        if(e.target.id == 'edit-company'){
+            add_company_pop.style.animation = "popout 0.5s";
+            add_company_pop.style.animationFillMode = "forwards";
+            setTimeout(function(){
+                company_edit.style.display = 'none';
+            },400);     
+        }
+    }
+    let details = localStorage.getItem('company');
+    let data = JSON.parse(details);
+    let cmp_name_pro = document.getElementById("cmp-name-pro");
+    cmp_name_pro.value = data.cmp_name;
+    let cmp_mn_pro = document.getElementById("cmp-mn-pro");
+    cmp_mn_pro.value = data.mailing_name;
+    let cmp_pn_pro = document.getElementById("cmp-pn-pro");
+    cmp_pn_pro.value = data.phone;
+    let cmp_add_pro = document.getElementById("cmp-add-pro");
+    cmp_add_pro.value = data.address;
+    let cmp_web_pro = document.getElementById("cmp-web-pro");
+    cmp_web_pro.value = data.website;
+    let cmp_fin_pro = document.getElementById("cmp-fin-pro");
+    cmp_fin_pro.value = data.fine;
+    let cmp_acc_pro = document.getElementById("cmp-acc-pro");
+    cmp_acc_pro.value = data.stock_type;
+    let cmp_fax_pro = document.getElementById("cmp-fax-pro");
+    cmp_fax_pro.value = data.fax;
+    let cmp_bio = document.getElementById("bio");
+    cmp_bio.innerHTML = data.bio;
+    let head = document.getElementById("head");
+    head.innerHTML = `${data.mailing_name} <br> <h6 id="remove-img10">Remove logo</h6>`;
+    const update_profile = document.getElementById("update-profile");
+    update_profile.onclick = () =>{
+        var cmp_d = {cmp_name:cmp_name_pro.value,mailing_name:cmp_mn_pro.value,address:cmp_add_pro.value,phone:cmp_pn_pro.value,fax:cmp_fax_pro.value,website:cmp_web_pro.value,fine:cmp_fin_pro.value,stock_type:cmp_acc_pro.value,bio:cmp_bio.innerHTML};
+        var cmp_data = JSON.stringify(cmp_d);
+        localStorage.setItem("company",cmp_data);
+    }
+    
+    
+}
+input = document.querySelector('#bio');
+
+settings = {
+    maxLen: 110,
+}
+
+keys = {
+    'backspace': 8,
+    'shift': 16,
+    'ctrl': 17,
+    'alt': 18,
+    'delete': 46,
+    // 'cmd':
+    'leftArrow': 37,
+    'upArrow': 38,
+    'rightArrow': 39,
+    'downArrow': 40,
+}
+
+utils = {
+    special: {},
+    navigational: {},
+    isSpecial(e) {
+    return typeof this.special[e.keyCode] !== 'undefined';
+    },
+    isNavigational(e) {
+    return typeof this.navigational[e.keyCode] !== 'undefined';
+    }
+}
+
+utils.special[keys['backspace']] = true;
+utils.special[keys['shift']] = true;
+utils.special[keys['ctrl']] = true;
+utils.special[keys['alt']] = true;
+utils.special[keys['delete']] = true;
+
+utils.navigational[keys['upArrow']] = true;
+utils.navigational[keys['downArrow']] = true;
+utils.navigational[keys['leftArrow']] = true;
+utils.navigational[keys['rightArrow']] = true;
+
+input.addEventListener('keydown', function(event) {
+    let len = event.target.innerText.trim().length;
+    hasSelection = false;
+    selection = window.getSelection();
+    isSpecial = utils.isSpecial(event);
+    isNavigational = utils.isNavigational(event);
+    
+    if (selection) {
+    hasSelection = !!selection.toString();
+    }
+    
+    if (isSpecial || isNavigational) {
+    return true;
+    }
+    
+    if (len >= settings.maxLen && !hasSelection) {
+    event.preventDefault();
+    return false;
+    }
+    
+});
+
+//upload company logo
+var click_upload = document.getElementById("company-logo");
+click_upload.onchange = () =>{
+    let upload2 = document.getElementById("upload2");
+    var input = document.getElementById("company-img");
+    var freader = new FileReader();
+    freader.readAsDataURL(input.files[0]);
+    freader.onloadend =function(event){
+        var image;
+        image=event.target.result;
+        let show = document.getElementById("company-logo");
+        show.style.background="url("+event.target.result+")";
+        show.style.backgroundColor="none";
+        show.style.backgroundRepeat="no-repeat";
+        show.style.backgroundSize="contain";
+        upload2.style.display = "none";
+        localStorage.setItem("company_img",image);
+    }
+    
+}
+
+function show_cmp_img(){
+    if(localStorage.getItem("company_img") != null){
+        var image_name = localStorage.getItem("company_img");
+        let show = document.getElementById("company-logo");
+        show.style.backgroundColor="none";
+        show.style.background="url("+image_name+")";
+        show.style.backgroundRepeat="no-repeat";
+        show.style.backgroundSize="contain";
+        upload2.style.display = "none";
+    }
+    
+}
+show_cmp_img();
+
+let delete_account = document.getElementById("delete-account");
+delete_account.onclick = () => {
+    let ans = confirm("Confirm Your Delete");
+    let i;
+    if(ans==true){
+        localStorage.removeItem("company");
+        localStorage.removeItem("company_img");
+        for(i=0;i<=localStorage.length;i++){
+            let all_keys = localStorage.key(i);
+            if(all_keys.indexOf("tax") != -1){
+                localStorage.removeItem(all_keys);
+            }
+            if(all_keys.indexOf("voucher_no_") != -1){
+                localStorage.removeItem(all_keys);
+            }
+        }
+        history.go(0);
+    }
+}
+function logout(){
+    sessionStorage.clear();
+    setTimeout(function(){
+        window.location="../../index.html";
+    },1000);
 }

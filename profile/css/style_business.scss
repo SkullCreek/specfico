@@ -899,6 +899,7 @@ main{
     height: 700px;
     display: flex;
     justify-content: space-evenly;
+    
     ul{
         display: inline-block;
         li{
@@ -930,6 +931,31 @@ main{
     background: rgba(0, 0, 0, 0.4);
     display: grid;
     place-items: center;
+    display: none;
+    #company-img{
+        z-index: 2;
+        opacity: 0;
+        height: 200px;
+        width: 100%;
+        cursor: pointer;
+    }
+    #bio{
+        width: 100%;
+        font-style: normal;
+        font-weight: normal;
+        height: 70px;
+        font-size: 12px;
+        padding: 10px;
+        border: 1px solid #C4C4C4;
+        background-color: transparent;
+        border-radius: 10px;
+        font-family: 'montserrat';
+        outline: none;
+        margin-bottom: 30px;
+    }
+    #upload2{
+        transform: translateY(30px);
+    }
     section{
         width: 95%;
         height: 853px;
@@ -938,7 +964,8 @@ main{
         background-size: contain;
         position: relative;
         z-index: 20;
-        // animation: popon 1s infinite;
+        border-radius: 10px;
+        animation: popon 1s infinite;
         h1{
             width: 100%;
             font-size: 25px;
@@ -986,7 +1013,6 @@ main{
             }
             #divider{
                 width: 46%;
-                // background-color: yellowgreen;
                 padding: 51px 0px;
                 padding-right: 10px;
                 #heading
@@ -996,7 +1022,7 @@ main{
                     padding-bottom: 35px;
                     h3{
                         padding: 29px;
-                        span{
+                        h6{
                             font-style: normal;
                             font-weight: normal;
                             font-size: 14px;

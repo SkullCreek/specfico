@@ -1107,6 +1107,35 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  display: none;
+}
+
+#edit-company #company-img {
+  z-index: 2;
+  opacity: 0;
+  height: 200px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#edit-company #bio {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  height: 70px;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #C4C4C4;
+  background-color: transparent;
+  border-radius: 10px;
+  font-family: 'montserrat';
+  outline: none;
+  margin-bottom: 30px;
+}
+
+#edit-company #upload2 {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 #edit-company section {
@@ -1117,6 +1146,9 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   background-size: contain;
   position: relative;
   z-index: 20;
+  border-radius: 10px;
+  -webkit-animation: popon 1s infinite;
+          animation: popon 1s infinite;
 }
 
 #edit-company section h1 {
@@ -1197,7 +1229,7 @@ main #right #account-only #tax::-webkit-scrollbar-thumb {
   padding: 29px;
 }
 
-#edit-company section form #divider #heading h3 span {
+#edit-company section form #divider #heading h3 h6 {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

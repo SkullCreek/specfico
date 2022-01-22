@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+}
+
+body{
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    #left{
+        width: 300px;
+        min-height: 100vh;
+        border-right: 2px solid #F5F5F5;
+        padding:15px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        #logo-profile{
+            width: 129px;
+            padding:20px 0 35px 0;
+        }
+        #profile-info{
+            width: 100%;
+            background: #FAFAFC;
+            border-radius: 15px;
+            padding: 15px 16px;
+            display: flex;
+            overflow: hidden;
+            #profile-img-section{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: black;
+                #status{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #3AC48E;
+                    border: 1px solid white;
+                    transform: translate(28px,30px);
+                }
+                
+            }
+            #user{
+                padding-left: 16px;
+                overflow: hidden;
+                #user-name{
+                    overflow: hidden;
+                    font-size: 15px;
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                #email-id{
+                    overflow: hidden;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 10px;
+                    color: #BCBCBC;
+                }
+            }
+        }
+
+        ul{
+            list-style: none;
+            width: 100%;
+            align-self: left;
+            padding: 35px 10px 10px 10px;
+            li{
+                color: #C4C4C4;
+                display: flex;
+                align-items: center;
+                margin-bottom: 33px;
+                transition: all 0.3s;
+                a{
+                    text-decoration: none;
+                    color: #C4C4C4;
+                    padding-left: 18px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    transition: all 0.3s;
+                }
+            }
+            li:hover,a:hover{
+                color: black;
+            }
+        }
+    }
+    #right{
+        width: 100%;
+        padding: 35px 35px 0 35px;
+        overflow-x:hidden;
+        position: relative;
+        ul{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            li{
+                input{
+                    width: 60vw;
+                    padding: 10px 100px;
+                    font-size: 18px;
+                    background: #FAFAFC;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+        }
+        h1{
+            padding: 44px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        #add-notes-btn{
+            width: 100px;
+            height: 100px;
+            background-color: #FF8A00;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: fixed;
+            z-index: 2;
+            right: 60px;
+            bottom: 40px;
+            cursor: pointer;
+        }
+        #notes{
+            width: 100%;
+            background-color: #F1F1F1;
+            position: absolute;
+            left: 0;
+            padding: 36px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            div{
+                width: 265px;
+                height: 245px;
+                background-color: white;
+                box-shadow: 4px 4px 34px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                margin-bottom: 36px;
+                padding: 20px 28px;
+                position: relative;
+                h3{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    display: flex;
+                    margin-bottom: 2px;
+                    justify-content: space-between;
+                    img{
+                        cursor: pointer;
+                    }
+                    
+                }
+                #date{
+                    font-family: 'Montserrat';
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #B1B1B1;
+                    padding-bottom: 19px;
+                }
+                #notes-sum{
+                    width: 100%;
+                    height: 100px;
+                    overflow: hidden;
+                    font-weight: 500;
+                    font-size: 16px;
+                    word-wrap: break-word;
+                }
+                h4{
+                    width: 125px;
+                    height: 20px;
+                    position: absolute;
+                    bottom: 20px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #8A8A8A;
+                    padding: 1px;
+                    text-align: center;
+                    background: #F1F1F1;
+                    border-radius: 10px;
+                }
+                .edit-btn{
+                    position: absolute;
+                    bottom: 22px;
+                    right: 30px;
+                    cursor: pointer;
+                }
+                #dwnld-btn{
+                    position: absolute;
+                    bottom: 22px;
+                    right: 70px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
+
+
+@keyframes slide-up {
+    0%{bottom: -500px;}
+    70%{bottom: 10px;}
+    100%{bottom: 0;}
+}
+@keyframes slide-down {
+    0%{bottom: 0px;}
+    70%{bottom: 10px;}
+    100%{bottom: -500px;}
+}
+@keyframes popout {
+    0%{transform: scale(1);display: block;}
+    60%{transform: scale(1.04);opacity: 1;display: block;}
+    100%{transform: scale(0.6);opacity: 0.3;display: none;}
+}
+@keyframes popout2{
+    0%{bottom: 0;transform: scale(1);}
+    60%{bottom: 0;transform: scale(1.04);opacity: 1;}
+    100%{bottom: 0;transform: scale(0.6);opacity: 0.3;}
+}
+@keyframes popon {
+    0%{transform: scale(0.6);opacity: 0.3;display: none;}
+    60%{transform: scale(1.04);opacity: 1;display: block;}
+    100%{transform: scale(1);display: block;}
+}
+@keyframes popon2 {
+    0%{bottom: 0;transform: scale(0.6);opacity: 0.3;display: none;}
+    60%{bottom: 0;transform: scale(1.04);opacity: 1;display: block;}
+    100%{bottom: 0;transform: scale(1);display: block;}
+}
+@keyframes darpan_slide{
+    0%{left: -300px;}
+    100%{left: 0;}
+}
+@keyframes darpan_slide_exit{
+    0%{left: 0;}
+    100%{left: -300;}
+}
+
+#add-notes{
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: grid;
+    place-items: center;
+    display: none;
+    section{
+        width: 923px;
+        height: 616px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 49px 37px;
+        position: relative;
+        z-index: 20;
+        animation: popon 1s infinite;
+        #note{
+            width: 100%;
+            padding: 10px 0px;
+            border: none;
+            outline: none;
+            font-weight: 500;
+            font-size: 30px;
+            border-bottom: 4px solid #C4C4C4;
+            margin-bottom: 60px;
+            
+        }
+        textarea{
+            width: 100%;
+            height: 300px;
+            outline: none;
+            font-weight: 500;
+            font-size: 25px;
+            color: #C5C5C5;
+            overflow: hidden;
+            border: none;
+        }
+        h3{
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+        }
+        
+        #hashtag{
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 400px;
+            font-weight: 500;
+            font-size: 25px;
+        }
+        input[type=button]{
+            width: 141px;
+            height: 50px;   
+            margin: 10px;
+            border: none;
+            background-color: #FF8A00;
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
